@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>
-      {{ name }}
+      {{ store.getters.getMsg }}
     </h3>
     <button @click="changeTitle">点我切换标题</button>
   </div>
@@ -9,24 +9,29 @@
 
 <script lang="ts">
 import {ref} from "vue";
+import {useStore} from "vuex";
 
 export default {
   name: "Home",
   setup() {
+    const store = useStore();
     const name = ref("Home")
 
     function changeTitle() {
-      name.value = "world"
+      store.commit("change")
     }
 
     return {
       name,
-      changeTitle
+      changeTitle,
+      store
     }
   }
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="less">
+h3 {
+  color: blanchedalmond;
+}
 </style>
