@@ -11,6 +11,13 @@ const router = createRouter({
             meta: {
                 title: "Home"
             }
+        },
+        {
+            path: '/element',
+            component: () => import("../pages/Element.vue"),
+            meta: {
+                title: 'Element'
+            }
         }
     ]
 })

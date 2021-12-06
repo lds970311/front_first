@@ -5,17 +5,25 @@
     </h3>
     <button @click="changeTitle">点我切换标题</button>
   </div>
+  <JsxComponent></JsxComponent>
 </template>
 
 <script lang="ts">
-import {ref} from "vue";
+import {AppContext, getCurrentInstance, Prop, ref} from "vue";
 import {useStore} from "vuex";
+import JsxComponent from "../components/JsxComponent.vue"
+import service from "../utils/request";
 
 export default {
   name: "Home",
-  setup() {
+  components: {
+    JsxComponent
+  },
+  setup(props: Prop<any>, ctx: AppContext) {
     const store = useStore();
     const name = ref("Home")
+    const instance = getCurrentInstance()
+    service.get('/name').then(res => console.log(res))
 
     function changeTitle() {
       store.commit("change")
@@ -26,7 +34,7 @@ export default {
       changeTitle,
       store
     }
-  }
+  },
 }
 </script>
 
