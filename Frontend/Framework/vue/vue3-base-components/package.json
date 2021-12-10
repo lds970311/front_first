@@ -4,17 +4,32 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "jest",
+    "nocache": "jest --no-cache",
+    "watch": "jest --watchAll",
+    "coverage": "jest --coverage",
+    "verbose": "npx jest --verbose"
   },
   "dependencies": {
     "@vitejs/plugin-vue-jsx": "^1.3.1",
+    "@vue/test-utils": "^1.3.0",
     "vue": "^3.2.23",
     "vue-router": "4",
     "vuex": "4"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-typescript": "^7.16.0",
+    "@types/jest": "^27.0.3",
     "@vitejs/plugin-vue": "^1.10.2",
+    "babel-jest": "^27.4.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "jest": "^27.4.3",
     "less": "^4.1.2",
+    "ts-jest": "^27.1.1",
+    "ts-node": "^10.4.0",
     "typescript": "^4.4.4",
     "vite": "^2.7.0",
     "vue-tsc": "^0.28.10"
