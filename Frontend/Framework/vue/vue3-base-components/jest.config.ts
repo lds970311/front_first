@@ -1,15 +1,26 @@
 //CREATE AT: 2021-12-09
+
+import * as path from "path";
+
 export default {
-    extensionsToTreatAsEsm: [".ts"],
-    preset: 'ts-jest',
-    testEnvironment: 'node',
-    /*testMatch: ["<rootDir>/<source>/test/!**!/!*.(spec|test).ts?(x)"],
-    transform: {
-        // 将.js后缀的文件使用babel-jest处理
-        "^.+\\.js$": "babel-jest",
-        "^.+\\.(ts|tsx)$": "ts-jest"
+    rootDir: path.resolve(__dirname),
+    clearMocks: true,
+    coverageDirectory: 'coverage',
+    coverageProvider: 'v8',
+    moduleFileExtensions: ['vue', 'js', 'json', 'jsx', 'ts', 'tsx', 'node'],
+    // 别名设置
+    moduleNameMapper: {
+        '@/(.*)$': '<rootDir>/src/components/$1'
     },
-    // 下面非要从重要, 将不忽略 lodash-es, other-es-lib 这些es库, 从而使babel-jest去处理它们
-    transformIgnorePatterns: ["<rootDir>/node_modules/(?!(lodash-es|other-es-lib))"]*/
+    preset: 'ts-jest',
+    testEnvironment: 'jsdom',
+    // 测试文件
+    // testMatch: ['<rootDir>/tests/unit/*.spec.ts?(x)'],
+
+    transform: {
+        '^.+\\.vue$': 'vue-jest',
+        '^.+\\js$': 'babel-jest',
+        '^.+\\.(t|j)sx?$': 'ts-jest'
+    }
 
 }
