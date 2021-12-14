@@ -2,36 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3c49bf7-2624-45b9-815c-1d180b084131" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vue3-elementplus.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vscode/extensions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/babel.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jest.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navigator.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TestComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/container/Container.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/Home.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/toLowerLine.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Province.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AreaChooser/AreaChooser.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AreaChooser/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/IconChooser/IconChooser.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/container/Header.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/container/MainMenu.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/container/MainSection.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useCopy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/modules/containerOptions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigator.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigator.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/Container.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/container/Container.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +34,9 @@
       <list>
         <option value="Less File" />
         <option value="Vue Single File Component" />
-        <option value="TypeScript File" />
+        <option value="Sql File" />
         <option value="Vue3 Component" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -128,11 +117,24 @@
       <updated>1639313766753</updated>
       <workItem from="1639313769293" duration="2024000" />
       <workItem from="1639315814753" duration="730000" />
-      <workItem from="1639316553940" duration="5153000" />
+      <workItem from="1639316553940" duration="27124000" />
     </task>
+    <task id="LOCAL-00001" summary="1. 二次封装element组件, 工程初始化">
+      <created>1639362076040</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639362076040</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1. 二次封装element组件, 工程初始化" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 二次封装element组件, 工程初始化" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

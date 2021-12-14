@@ -40,23 +40,23 @@ export default defineComponent({
 
 <style scoped lang="less">
 .navigator {
-  max-width: 1196px;
-  margin: 0 auto;
+  max-width: 100%;
   background-color: bisque;
-  height: 50px;
-
+  height: 50px;;
+  text-align: center;
 
   ul {
-    width: 100%;
+    margin: 0 auto;
+    max-width: 1196px;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
     padding: 0;
 
     li {
       font-weight: bold;
+      font-size: 14px;
       list-style: none;
       width: 100%;
       cursor: pointer;

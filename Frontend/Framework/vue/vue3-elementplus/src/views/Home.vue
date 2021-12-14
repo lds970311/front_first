@@ -1,36 +1,27 @@
 <template>
-  <div style="font-size: 20px;">
-    <!-- Since svg icons do not carry any attributes by default -->
-    <!-- You need to provide attributes directly -->
-    <edit style="width: 1em; height: 1em; margin-right: 8px;"/>
-    <share style="width: 1em; height: 1em; margin-right: 8px;"/>
-    <delete style="width: 1em; height: 1em; margin-right: 8px;"/>
-    <search style="width: 1em; height: 1em; margin-right: 8px;"/>
+  <div class="icon">
+    <IconChooser
+        title="选择图标"
+        v-model:visible="visible"
+        button-type="warning"></IconChooser>
   </div>
 </template>
 
 <script lang="ts">
-import {computed, defineComponent} from "vue"
-import {mapState, useStore} from "vuex";
-
+import {defineComponent, ref} from "vue"
+import IconChooser from "../components/IconChooser/IconChooser.vue";
 
 export default defineComponent({
   name: "",
   components: {
-    Navigator
+    Navigator,
+    IconChooser
   },
   setup() {
-    const store = useStore()
-    const stateFuncs = mapState(['homeTitle'])
-    const storeState = {}
-    Object.keys(stateFuncs).forEach((key: any) => {
-      const fn = stateFuncs[key].bind({$store: store})
-      storeState[key] = computed(fn)
-    })
+    let visible = ref<boolean>(false)
 
     return {
-      store,
-      storeState,
+      visible
     }
   }
 })

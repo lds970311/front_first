@@ -1,21 +1,9 @@
 <template>
-  <Navigator :nav-list="navList"></Navigator>
-  <router-view></router-view>
+  <container></container>
 </template>
 
 <script setup lang="ts">
-
-import Navigator from "./components/Navigator.vue";
-
-const navList = [
-  {
-    name: '首页',
-    path: '/'
-  }, {
-    name: '伸缩菜单',
-    path: '/container'
-  }]
-</script>
+import Container from "./components/container/Container.vue";</script>
 
 
 <style scoped>
