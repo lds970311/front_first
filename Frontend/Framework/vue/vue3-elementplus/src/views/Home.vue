@@ -1,28 +1,18 @@
 <template>
-  <div class="icon">
-    <IconChooser
-        title="选择图标"
-        v-model:visible="visible"
-        button-type="warning"></IconChooser>
-  </div>
+  <Navigator></Navigator>
 </template>
 
 <script lang="ts">
 import {defineComponent, ref} from "vue"
-import IconChooser from "../components/IconChooser/IconChooser.vue";
+import Navigator from "../components/Navigator.vue";
 
 export default defineComponent({
   name: "",
   components: {
     Navigator,
-    IconChooser
   },
   setup() {
-    let visible = ref<boolean>(false)
 
-    return {
-      visible
-    }
   }
 })
 </script>

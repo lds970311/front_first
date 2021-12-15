@@ -81,11 +81,6 @@ export default defineComponent({
   margin: 30px;
 }
 
-.icon {
-  width: 30px;
-  height: 30px;
-}
-
 .icon-list {
   height: 300px;
   overflow: auto;
