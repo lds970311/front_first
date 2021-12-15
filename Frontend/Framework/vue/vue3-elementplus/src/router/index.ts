@@ -1,7 +1,8 @@
 //CREATE AT: 2021-12-12
 import {createRouter, createWebHistory, RouteRecordRaw} from "vue-router";
-import IconChooser from "../components/IconChooser/IconChooser.vue";
+import IconChooser from "../components/IconChooser/index.vue";
 import AreaChooser from "../components/AreaChooser/index.vue";
+import TrendSign from "../components/TrendSign/index.vue";
 
 const routes: RouteRecordRaw[] = [
     {
@@ -25,6 +26,14 @@ const routes: RouteRecordRaw[] = [
         meta: {
             title: "省市区选择器",
             icon: "Location"
+        }
+    },
+    {
+        path: '/trend',
+        component: TrendSign,
+        meta: {
+            title: '趋势标记',
+            icon: 'Discount'
         }
     }
 ]

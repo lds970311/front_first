@@ -2,22 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3c49bf7-2624-45b9-815c-1d180b084131" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/Province.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AreaChooser/AreaChooser.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AreaChooser/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/IconChooser/IconChooser.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/container/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/container/MainMenu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/container/MainSection.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useCopy.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/modules/containerOptions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AreaChooser/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/IconChooser/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/IconChooser/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TrendSign/TrendSign.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TrendSign/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TrendSign/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/request.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigator.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigator.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/container/Container.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/container/Container.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AreaChooser/AreaChooser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AreaChooser/AreaChooser.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AreaChooser/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AreaChooser/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/IconChooser/IconChooser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IconChooser/IconChooser.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
     </list>
@@ -33,10 +31,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Less File" />
-        <option value="Vue Single File Component" />
         <option value="Sql File" />
-        <option value="Vue3 Component" />
         <option value="TypeScript File" />
+        <option value="Vue Single File Component" />
+        <option value="Vue3 Component" />
       </list>
     </option>
   </component>
@@ -117,7 +115,9 @@
       <updated>1639313766753</updated>
       <workItem from="1639313769293" duration="2024000" />
       <workItem from="1639315814753" duration="730000" />
-      <workItem from="1639316553940" duration="27124000" />
+      <workItem from="1639316553940" duration="34130000" />
+      <workItem from="1639483435733" duration="4705000" />
+      <workItem from="1639491339367" duration="4543000" />
     </task>
     <task id="LOCAL-00001" summary="1. 二次封装element组件, 工程初始化">
       <created>1639362076040</created>
@@ -126,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639362076040</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1. 完成可伸缩菜单开发&#10;2. 完成图标选择器开发">
+      <created>1639464477492</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639464477492</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,7 +141,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1. 二次封装element组件, 工程初始化" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 二次封装element组件, 工程初始化" />
+    <MESSAGE value="1. 完成可伸缩菜单开发&#10;2. 完成图标选择器开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 完成可伸缩菜单开发&#10;2. 完成图标选择器开发" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

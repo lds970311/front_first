@@ -1,19 +1,21 @@
 <template>
-  <AreaChooser></AreaChooser>
+  <AreaChooser @change="handleSelectorChange"></AreaChooser>
 </template>
 
 <script lang="ts">
 import {defineComponent} from "vue"
-import AreaChooser from "./AreaChooser.vue";
+
 
 export default defineComponent({
   name: "",
-  components: {
-    AreaChooser
-  },
   setup(props, {slots, attrs, emit}) {
+    function handleSelectorChange(data: any) {
+      console.log(data)
+    }
 
-    return {}
+    return {
+      handleSelectorChange
+    }
   }
 })
 </script>
