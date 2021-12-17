@@ -2,16 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3c49bf7-2624-45b9-815c-1d180b084131" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Notifier/ComplexNotifier.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Notifier/NotifyList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Notifier/SimpleNotifier.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Notifier/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Notifier/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Notifier/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Menu/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Menu/src/InfiniteMenu.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Menu/src/Menu.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Menu/src/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Menu/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Progress/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Progress/src/Progress.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Progress/src/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Progress/src/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AreaChooser/AreaChooser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AreaChooser/src/AreaChooser.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AreaChooser/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AreaChooser/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AreaChooser/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AreaChooser/src/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/IconChooser/IconChooser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IconChooser/src/IconChooser.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/IconChooser/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IconChooser/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/IconChooser/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IconChooser/src/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Notifier/ComplexNotifier.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notifier/src/ComplexNotifier.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Notifier/NotifyList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notifier/src/NotifyList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Notifier/SimpleNotifier.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notifier/src/SimpleNotifier.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Notifier/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notifier/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Notifier/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notifier/src/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Notifier/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notifier/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TrendSign/TrendSign.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TrendSign/src/TrendSign.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TrendSign/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TrendSign/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TrendSign/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TrendSign/src/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/MainMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/container/MainMenu.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +45,8 @@
         <option value="Less File" />
         <option value="Sql File" />
         <option value="Vue Single File Component" />
-        <option value="Vue3 Component" />
         <option value="TypeScript File" />
+        <option value="Vue3 Component" />
       </list>
     </option>
   </component>
@@ -62,10 +80,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Java\front_first\Frontend\Framework\vue\vue3-elementplus\src\store" />
+      <recent name="F:\Java\front_first\Frontend\Framework\vue\vue3-elementplus\src\components\Progress\src" />
+      <recent name="F:\Java\front_first\Frontend\Framework\vue\vue3-elementplus\src\components\TrendSign\src" />
+      <recent name="F:\Java\front_first\Frontend\Framework\vue\vue3-elementplus\src\components\AreaChooser\src" />
+      <recent name="F:\Java\front_first\Frontend\Framework\vue\vue3-elementplus\src\components\IconChooser\src" />
+      <recent name="F:\Java\front_first\Frontend\Framework\vue\vue3-elementplus\src\components\Notifier\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.component test (1)">
+  <component name="RunManager" selected="npm.build">
     <configuration name="component test (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -92,8 +114,19 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="Jest.component test (1)" />
         <item itemvalue="Jest.component test" />
       </list>
@@ -111,7 +144,7 @@
       <workItem from="1639315814753" duration="730000" />
       <workItem from="1639316553940" duration="34130000" />
       <workItem from="1639483435733" duration="4705000" />
-      <workItem from="1639491339367" duration="17818000" />
+      <workItem from="1639491339367" duration="33550000" />
     </task>
     <task id="LOCAL-00001" summary="1. 二次封装element组件, 工程初始化">
       <created>1639362076040</created>
@@ -134,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639566263047</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1. 开发通知菜单组件">
+      <created>1639649992264</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1639649992265</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +184,8 @@
     <MESSAGE value="1. 二次封装element组件, 工程初始化" />
     <MESSAGE value="1. 完成可伸缩菜单开发&#10;2. 完成图标选择器开发" />
     <MESSAGE value="1. 注册全局组件&#10;2. 开发趋势标记组件&#10;3. 开发多级联动菜单" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 注册全局组件&#10;2. 开发趋势标记组件&#10;3. 开发多级联动菜单" />
+    <MESSAGE value="1. 开发通知菜单组件" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 开发通知菜单组件" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
