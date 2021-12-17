@@ -21,7 +21,7 @@
 import {computed, defineComponent} from "vue"
 import {createNamespacedHelpers, useStore} from "vuex";
 import {routes} from "../../router"
-import {useRouter} from "vue-router";
+import {useRoute, useRouter} from "vue-router";
 
 export default defineComponent({
   name: "",
@@ -30,9 +30,12 @@ export default defineComponent({
     const router = useRouter()
     const {mapState} = createNamespacedHelpers("containerOptions")
     const states = {}
+    const route = useRoute()
     const funcs = mapState(['isCollapse'])
     Object.keys(funcs).forEach(key => {
+      //@ts-ignore
       const fn = funcs[key].bind({$store: store})
+      //@ts-ignore
       states[key] = computed(fn)
     })
 
@@ -46,7 +49,7 @@ export default defineComponent({
       store,
       ...states,
       routes,
-      changePath
+      changePath,
     }
   }
 })

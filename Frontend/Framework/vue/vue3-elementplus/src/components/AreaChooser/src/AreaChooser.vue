@@ -35,6 +35,7 @@
 
 <script lang="ts">
 import {defineComponent, getCurrentInstance, reactive, ref, watch} from "vue"
+import allData from "../../../../data/Province.json"
 
 // import useAxios from "../../hooks/useAxios";
 
@@ -59,13 +60,7 @@ export default defineComponent({
     let provinces = reactive<District[]>([])
 
     //获取所有数据
-    proxy.$axios.get("/provinces").then(response => {
-      /*provinces = response.data.data
-      console.log(provinces)*/
-      provinces.push(...response.data.data)
-    }).catch(error => {
-      console.log(error)
-    })
+    provinces.push(...allData)
     const provinceRef = ref('')
     const cityRef = ref('')
     const districtRef = ref('')

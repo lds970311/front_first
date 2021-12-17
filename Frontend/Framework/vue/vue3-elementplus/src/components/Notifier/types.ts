@@ -1,5 +1,5 @@
 //CREATE AT: 2021-12-15
-interface Content {
+export interface Content {
     title: string,
     time: string,
     avatar: string,

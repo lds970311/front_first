@@ -31,7 +31,7 @@
 <script lang="ts">
 import {defineComponent, ref, watch} from "vue"
 import * as Icons from "@element-plus/icons-vue"
-import useCopy from "../../hooks/useCopy";
+import useCopy from "../../../hooks/useCopy";
 import {ElMessage} from 'element-plus'
 
 export default defineComponent({

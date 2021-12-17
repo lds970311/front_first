@@ -1,15 +1,15 @@
 <template>
   <div class="list-tabs-item">
     <el-tabs>
-      <el-tab-pane v-for="(item, index) in dataList"
+      <el-tab-pane v-for="item in dataList"
                    :key="item.title"
                    :label="item.title"
                    :stretch="true">
         <el-scrollbar max-height="300px">
           <div
               class="container"
-              @click="clickItem(item1, index1)"
               v-for="(item1, index1) in item.content"
+              @click="clickItem(item1, index1)"
               :key="index1"
           >
             <div class="avatar" v-if="item1.avatar">
@@ -27,7 +27,7 @@
           <div class="actions">
             <div
                 class="a-item"
-                :class="{ 'border': i !== actions.length }"
+                :class="{ 'border': i !== actions?.length }"
                 v-for="(action, i) in actions"
                 :key="i"
                 @click="clickAction(action, i)"
@@ -46,7 +46,7 @@
 
 <script lang="ts">
 import {defineComponent, onMounted, PropType} from "vue"
-import {ActionOptions, ListItem} from "./types";
+import {ActionOptions, Content, ListItem} from "../types";
 
 export default defineComponent({
   name: "",
@@ -61,13 +61,13 @@ export default defineComponent({
       // default: []
     }
   },
-  setup(props, {slots, attrs, emit}) {
+  setup(props, {emit}) {
     onMounted(() => {
       console.log(props.actions)
       console.log(props.dataList)
     })
 
-    function clickItem(item: ListItem, index: number) {
+    function clickItem(item: Content, index: number) {
       emit("clickItem", item, index)
     }
 

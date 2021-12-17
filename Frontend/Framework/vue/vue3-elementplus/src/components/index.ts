@@ -4,12 +4,14 @@ import AreaChooser from "./AreaChooser/index";
 import IconChooser from "./IconChooser";
 import TrendSign from "./TrendSign/index";
 import SimpleNotifier from "./Notifier/index";
+import Menu from "./Menu/index";
 
 const components = [
     AreaChooser,
     IconChooser,
     TrendSign,
-    SimpleNotifier
+    SimpleNotifier,
+    Menu
 ]
 
 export default {
