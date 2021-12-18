@@ -2,34 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3c49bf7-2624-45b9-815c-1d180b084131" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Menu/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Menu/src/InfiniteMenu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Menu/src/Menu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Menu/src/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Menu/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Progress/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Progress/src/Progress.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Progress/src/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Progress/src/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CitySelector/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CitySelector/src/CitySelector.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CitySelector/src/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CitySelector/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DatePicker/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DatePicker/src/DatePicker.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DatePicker/src/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DatePicker/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TimePicker/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TimePicker/src/TimePicker.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TimePicker/src/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TimePicker/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AreaChooser/AreaChooser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AreaChooser/src/AreaChooser.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AreaChooser/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AreaChooser/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AreaChooser/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AreaChooser/src/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/IconChooser/IconChooser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IconChooser/src/IconChooser.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/IconChooser/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IconChooser/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/IconChooser/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IconChooser/src/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Notifier/ComplexNotifier.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notifier/src/ComplexNotifier.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Notifier/NotifyList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notifier/src/NotifyList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Notifier/SimpleNotifier.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notifier/src/SimpleNotifier.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Notifier/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notifier/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Notifier/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notifier/src/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Notifier/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notifier/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TrendSign/TrendSign.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TrendSign/src/TrendSign.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TrendSign/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TrendSign/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TrendSign/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TrendSign/src/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/container/MainMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/container/MainMenu.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +58,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/CitySelector/src" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -79,6 +67,10 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Java\front_first\Frontend\Framework\vue\vue3-elementplus\src\components\CitySelector\src" />
+      <recent name="F:\Java\front_first\Frontend\Framework\vue\vue3-elementplus\src\components\CitySelector" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Java\front_first\Frontend\Framework\vue\vue3-elementplus\src\components\Progress\src" />
       <recent name="F:\Java\front_first\Frontend\Framework\vue\vue3-elementplus\src\components\TrendSign\src" />
@@ -144,7 +136,7 @@
       <workItem from="1639315814753" duration="730000" />
       <workItem from="1639316553940" duration="34130000" />
       <workItem from="1639483435733" duration="4705000" />
-      <workItem from="1639491339367" duration="33550000" />
+      <workItem from="1639491339367" duration="49961000" />
     </task>
     <task id="LOCAL-00001" summary="1. 二次封装element组件, 工程初始化">
       <created>1639362076040</created>
@@ -174,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639649992265</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1. 开发导航菜单组件&#10;2. 开发进度条组件">
+      <created>1639737265081</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1639737265081</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +184,8 @@
     <MESSAGE value="1. 完成可伸缩菜单开发&#10;2. 完成图标选择器开发" />
     <MESSAGE value="1. 注册全局组件&#10;2. 开发趋势标记组件&#10;3. 开发多级联动菜单" />
     <MESSAGE value="1. 开发通知菜单组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 开发通知菜单组件" />
+    <MESSAGE value="1. 开发导航菜单组件&#10;2. 开发进度条组件" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 开发导航菜单组件&#10;2. 开发进度条组件" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

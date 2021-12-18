@@ -6,6 +6,9 @@ import TrendSign from "../components/TrendSign/src/index.vue";
 import Notifier from "../components/Notifier/src/index.vue";
 import Menu from "../components/Menu/src/index.vue";
 import Progress from "../components/Progress/src/index.vue";
+import TimePicker from "../components/TimePicker/src/index.vue";
+import DatePicker from "../components/DatePicker/src/index.vue";
+import CitySelector from "../components/CitySelector/src/index.vue";
 
 const routes: RouteRecordRaw[] = [
     {
@@ -61,6 +64,30 @@ const routes: RouteRecordRaw[] = [
         meta: {
             title: "进度条",
             icon: "Operation"
+        }
+    },
+    {
+        path: '/timepicker',
+        component: TimePicker,
+        meta: {
+            title: "时间选择器",
+            icon: "Timer"
+        }
+    },
+    {
+        path: '/datepicker',
+        component: DatePicker,
+        meta: {
+            title: "日期选择器",
+            icon: "DataBoard"
+        }
+    },
+    {
+        path: '/cityselector',
+        component: CitySelector,
+        meta: {
+            title: "城市选择器",
+            icon: "Coin"
         }
     }
 ]
