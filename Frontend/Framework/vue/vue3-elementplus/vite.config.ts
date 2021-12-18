@@ -8,6 +8,7 @@ export default defineConfig({
         vueJsx()
     ],
     server: {
-        port: 9988
+        port: 9988,
+        host: true
     }
 })

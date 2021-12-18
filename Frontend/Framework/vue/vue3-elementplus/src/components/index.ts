@@ -5,13 +5,19 @@ import IconChooser from "./IconChooser";
 import TrendSign from "./TrendSign/index";
 import SimpleNotifier from "./Notifier/index";
 import Menu from "./Menu/index";
+import TimePicker from "./TimePicker/index";
+import DatePicker from "./DatePicker/index";
+import CitySelector from "./CitySelector/index";
 
 const components = [
     AreaChooser,
     IconChooser,
     TrendSign,
     SimpleNotifier,
-    Menu
+    Menu,
+    TimePicker,
+    DatePicker,
+    CitySelector
 ]
 
 export default {
