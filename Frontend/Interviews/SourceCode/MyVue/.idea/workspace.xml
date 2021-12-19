@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c5a45fdb-8fde-487c-aebb-2f6dcc12747c" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/MyVue.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/markdown.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/vue.runtime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/rollupTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/alias.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/build.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/@types/configure.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/@types/vueOptions.type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/instance/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/instance/init.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/util/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platforms/web/entry-runtime-with-compiler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platforms/web/entry-runtime.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platforms/web/runtime/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platforms/web/util/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/RemoveJs.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Framework/vue/vue3-elementplus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Framework/vue/vue3-elementplus/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="22S62sV45QjdyK6WL6LbO1coOjc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="ts.external.directory.path" value="F:\Java\front_first\Frontend\Interviews\SourceCode\MyVue\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Java\front_first\Frontend\Interviews\SourceCode\MyVue\src\platforms\web" />
+      <recent name="F:\Java\front_first\Frontend\Interviews\SourceCode\MyVue\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.build">
+    <configuration name="build.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/ts-dist/scripts/build.js" working-dir="$PROJECT_DIR$/ts-dist/scripts">
+      <method v="2" />
+    </configuration>
+    <configuration name="RemoveJs.ts" type="TypeScriptProgramRunner" factoryName="TypeScript" temporary="true">
+      <module name="MyVue" />
+      <option name="interpreterRef" value="project" />
+      <option name="enabledTsNodeEsmLoader" value="false" />
+      <option name="interpreterOptions" value="" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/utils" />
+      <option name="tsconfigFile" value="" />
+      <option name="extraTypeScriptOptions" value="" />
+      <option name="scriptName" value="$PROJECT_DIR$/utils/RemoveJs.ts" />
+      <option name="programParameters" value="" />
+      <option name="tsnodePackage" value="F:\Java\front_first\Frontend\Interviews\SourceCode\MyVue\node_modules\ts-node" />
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="remove" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="remove" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.remove" />
+        <item itemvalue="TypeScript.RemoveJs.ts" />
+        <item itemvalue="Node.js.build.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="c5a45fdb-8fde-487c-aebb-2f6dcc12747c" name="变更" comment="" />
+      <created>1639818436759</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639818436759</updated>
+      <workItem from="1639818438120" duration="801000" />
+      <workItem from="1639819260780" duration="17041000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/@types/configure.types.js" />
+        <option value="$PROJECT_DIR$/scripts/build.js" />
+        <option value="$PROJECT_DIR$/scripts/config.js" />
+        <option value="$PROJECT_DIR$/scripts/alias.js" />
+        <option value="$PROJECT_DIR$/src/core/index.js" />
+        <option value="$PROJECT_DIR$/src/core/instance/index.js" />
+        <option value="$PROJECT_DIR$/src/platforms/web/entry-runtime-with-compiler.js" />
+        <option value="$PROJECT_DIR$/src/platforms/web/entry-runtime.js" />
+        <option value="$PROJECT_DIR$/src/platforms/web/runtime/index.js" />
+        <option value="$PROJECT_DIR$/src/@types/configure.types.js" />
+        <option value="$PROJECT_DIR$/src/core/index.js" />
+        <option value="$PROJECT_DIR$/src/@types/configure.types.js" />
+        <option value="$PROJECT_DIR$/src/core/util/index.js" />
+        <option value="$PROJECT_DIR$/src/core/instance/index.js" />
+        <option value="$PROJECT_DIR$/src/platforms/web/entry-runtime-with-compiler.js" />
+        <option value="$PROJECT_DIR$/src/platforms/web/entry-runtime.js" />
+        <option value="$PROJECT_DIR$/src/platforms/web/runtime/index.js" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

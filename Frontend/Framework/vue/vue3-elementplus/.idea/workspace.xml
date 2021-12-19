@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3c49bf7-2624-45b9-815c-1d180b084131" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/CitySelector/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CitySelector/src/CitySelector.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CitySelector/src/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CitySelector/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/DatePicker/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/DatePicker/src/DatePicker.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/DatePicker/src/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/DatePicker/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TimePicker/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TimePicker/src/TimePicker.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TimePicker/src/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TimePicker/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
-    </list>
+    <list default="true" id="a3c49bf7-2624-45b9-815c-1d180b084131" name="变更" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,7 +119,7 @@
       <workItem from="1639315814753" duration="730000" />
       <workItem from="1639316553940" duration="34130000" />
       <workItem from="1639483435733" duration="4705000" />
-      <workItem from="1639491339367" duration="49961000" />
+      <workItem from="1639491339367" duration="50040000" />
     </task>
     <task id="LOCAL-00001" summary="1. 二次封装element组件, 工程初始化">
       <created>1639362076040</created>
@@ -173,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639737265081</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1. 开发时间选择组件&#10;2. 开发日期选择组件">
+      <created>1639818185558</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639818185558</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +175,8 @@
     <MESSAGE value="1. 注册全局组件&#10;2. 开发趋势标记组件&#10;3. 开发多级联动菜单" />
     <MESSAGE value="1. 开发通知菜单组件" />
     <MESSAGE value="1. 开发导航菜单组件&#10;2. 开发进度条组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 开发导航菜单组件&#10;2. 开发进度条组件" />
+    <MESSAGE value="1. 开发时间选择组件&#10;2. 开发日期选择组件" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 开发时间选择组件&#10;2. 开发日期选择组件" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
