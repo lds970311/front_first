@@ -450,8 +450,8 @@ public class LevelOrderPrinter extends Printer {
             int rightHeight = treeHeight(right);
             int minSpace = Integer.MAX_VALUE;
             for (int i = 0; i < thisHeight && i < rightHeight; i++) {
-                int space = right.levelInfo(i).leftX
-                        - this.levelInfo(i).rightX;
+                int space = Objects.requireNonNull(right.levelInfo(i)).leftX
+                        - Objects.requireNonNull(this.levelInfo(i)).rightX;
                 minSpace = Math.min(minSpace, space);
             }
             return minSpace;
