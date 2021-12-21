@@ -7,11 +7,14 @@ package com.evan.datastructure.tree.binarysearchtree;
 // STATEMENT: 二叉搜索树实现类
 
 
+import com.evan.datastructure.queue.CircleQueue;
 import com.evan.datastructure.test.printer.BinaryTreeInfo;
 
 import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class BinarySearchTree<E> implements IBST<E>, BinaryTreeInfo {
+public class BinarySearchTree<E> implements IBST<E>, BinaryTreeInfo, TraversalTree<E> {
     private int size;
     private TreeNode<E> root; //根节点
     private final Comparator<E> comparator;
@@ -76,6 +79,7 @@ public class BinarySearchTree<E> implements IBST<E>, BinaryTreeInfo {
             } else if (cmp > 0) {
                 node = node.getLeft();
             } else {
+                node.setElement(element);
                 return;
             }
         }
@@ -109,6 +113,128 @@ public class BinarySearchTree<E> implements IBST<E>, BinaryTreeInfo {
     @Override
     public boolean contains(E element) {
         return false;
+    }
+
+    public void preorderTraversal() {
+        this.preorderTraversal(this.getRoot());
+    }
+
+    public void inorderTraversal() {
+        this.inorderTraversal(this.getRoot());
+    }
+
+    public void postorderTraversal() {
+        this.postorderTraversal(this.getRoot());
+    }
+
+    public void levelOrderTraversal() {
+        this.levelOrderTraversal(this.getRoot());
+    }
+
+    public void preorderTraversal(BSTVisitor<E> visitor, TreeNode<E> node) {
+        if (node == null || visitor.stop) return;
+        visitor.stop = visitor.visit(node.getElement());
+        preorderTraversal(visitor, node.getLeft());
+        preorderTraversal(visitor, node.getRight());
+    }
+
+    public void inorderTraversal(BSTVisitor<E> visitor, TreeNode<E> node) {
+        if (node == null || visitor.stop) return;
+        inorderTraversal(visitor, node.getLeft());
+        if (visitor.stop) return;
+        visitor.stop = visitor.visit(node.getElement());
+        inorderTraversal(visitor, node.getRight());
+    }
+
+    public void postorderTraversal(BSTVisitor<E> visitor, TreeNode<E> node) {
+        if (node == null || visitor.stop) return;
+        postorderTraversal(visitor, node.getLeft());
+        postorderTraversal(visitor, node.getRight());
+//        System.out.println(node.getElement());
+        if (visitor.stop) return;
+        visitor.stop = visitor.visit(node.getElement());
+    }
+
+    public void levelOrderTraversal(BSTVisitor<E> visitor, TreeNode<E> node) {
+        if (node == null) return;
+        //使用队列
+        Queue<TreeNode<E>> queue = new LinkedList<>();
+        queue.offer(node);
+        while (!queue.isEmpty()) {
+            TreeNode<E> parent = queue.poll();
+            if (visitor.visit(parent.getElement())) {
+                return;
+            }
+            if (parent.getLeft() != null) {
+                queue.offer(parent.getLeft());
+            }
+            if (parent.getRight() != null) {
+                queue.offer(parent.getRight());
+            }
+        }
+    }
+
+
+    /**
+     * 前序遍历
+     *
+     * @param node 根节点
+     */
+    @Override
+    public void preorderTraversal(TreeNode<E> node) {
+        if (node == null) return;
+        System.out.println(node.getElement());
+        preorderTraversal(node.getLeft());
+        preorderTraversal(node.getRight());
+    }
+
+    /**
+     * 中序遍历
+     *
+     * @param node 根节点
+     */
+    @Override
+    public void inorderTraversal(TreeNode<E> node) {
+        if (node == null) return;
+        inorderTraversal(node.getLeft());
+        System.out.println(node.getElement());
+        inorderTraversal(node.getRight());
+    }
+
+    /**
+     * 后序遍历
+     *
+     * @param node 根节点
+     */
+    @Override
+    public void postorderTraversal(TreeNode<E> node) {
+        if (node == null) return;
+        postorderTraversal(node.getLeft());
+        postorderTraversal(node.getRight());
+        System.out.println(node.getElement());
+    }
+
+    /**
+     * 层序遍历
+     *
+     * @param node 根节点
+     */
+    @Override
+    public void levelOrderTraversal(TreeNode<E> node) {
+        if (node == null) return;
+        //使用队列
+        CircleQueue<TreeNode> queue = new CircleQueue<>();
+        queue.enqueue(node);
+        while (!queue.isEmpty()) {
+            TreeNode parent = queue.dequeue();
+            System.out.println(parent.getElement());
+            if (parent.getLeft() != null) {
+                queue.enqueue(parent.getLeft());
+            }
+            if (parent.getRight() != null) {
+                queue.enqueue(parent.getRight());
+            }
+        }
     }
 
     @Override
