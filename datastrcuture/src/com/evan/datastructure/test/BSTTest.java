@@ -16,7 +16,8 @@ import org.junit.Test;
 public class BSTTest<E> {
     public static BinarySearchTree<Integer> initTree() {
         BinarySearchTree<Integer> bst = new BinarySearchTree<>(8);
-        int[] arr = {3, 1, 6, 4, 7, 10, 13, 14};
+//        int[] arr = {3, 1, 6, 4, 7, 10, 13, 14};
+        int[] arr = {4, 2, 7, 1, 3, 6, 9};
         for (int i : arr) {
             bst.add(i);
         }
@@ -50,5 +51,25 @@ public class BSTTest<E> {
                 return false;
             }
         }, bst.getRoot());
+    }
+
+    @Test
+    public void height() {
+        BinarySearchTree<Integer> bst = initTree();
+        System.out.println(bst.height());
+        System.out.println(bst.height(bst.getRoot()));
+    }
+
+    @Test
+    public void isComplete() {
+        BinarySearchTree<Integer> bst = initTree();
+        System.out.println(bst.isComplete());
+    }
+
+    @Test
+    public void reverse() {
+        BinarySearchTree<Integer> bst = initTree();
+        bst.reverseTree();
+        BinaryTrees.println(bst);
     }
 }
