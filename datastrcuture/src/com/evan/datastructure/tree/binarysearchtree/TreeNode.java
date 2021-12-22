@@ -20,9 +20,19 @@ public class TreeNode<E> {
         this.right = null;
     }
 
+    /**
+     * 是否是叶子节点
+     *
+     * @return true
+     */
+    public boolean isLeaf() {
+        return this.left == null && this.right == null;
+    }
+
     public E getElement() {
         return element;
     }
+
 
     public void setElement(E element) {
         this.element = element;

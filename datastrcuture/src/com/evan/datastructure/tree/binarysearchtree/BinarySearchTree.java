@@ -47,12 +47,54 @@ public class BinarySearchTree<E> implements IBST<E>, BinaryTreeInfo, TraversalTr
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return this.root == null;
     }
 
     @Override
     public void clearAll() {
 
+    }
+
+    /**
+     * @return 二叉树高度
+     */
+    public int height() {
+        if (root == null) return 0;
+        int height = 0;
+        int levelCount = 1; //记录每一层未访问节点的数量
+        TreeNode<E> temp = this.root;
+        Queue<TreeNode<E>> queue = new LinkedList<>();
+        queue.offer(temp);
+        while (!queue.isEmpty()) {
+            TreeNode<E> node = queue.poll();
+            levelCount--;
+
+            if (node.getRight() != null) {
+                queue.offer(node.getRight());
+            }
+            if (node.getLeft() != null) {
+                queue.offer(node.getLeft());
+            }
+            if (levelCount == 0) {
+                //表示该层已经 访问完毕
+                levelCount = queue.size();
+                height++;
+            }
+        }
+        return height;
+    }
+
+    /**
+     * 递归计算二叉树高度
+     *
+     * @param node 传入的节点
+     * @return height
+     */
+    public int height(TreeNode<E> node) {
+        if (node == null) {
+            return 0;
+        }
+        return 1 + Math.max(height(node.getLeft()), height(node.getRight()));
     }
 
     /**
@@ -90,6 +132,53 @@ public class BinarySearchTree<E> implements IBST<E>, BinaryTreeInfo, TraversalTr
             parent.setLeft(newNode);
         }
         this.size++;
+    }
+
+    /**
+     * 是否是完全二叉树
+     *
+     * @return true | false
+     */
+    public boolean isComplete() {
+        if (root == null) return false;
+        boolean leaf = false;
+        Queue<TreeNode<E>> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            TreeNode<E> node = queue.poll();
+            if (leaf && !node.isLeaf()) return false;
+            if (node.getLeft() == null && node.getRight() != null) {
+                return false;
+            } else if (node.getLeft() != null && node.getRight() != null) {
+                queue.offer(node.getLeft());
+                queue.offer(node.getRight());
+            } else {
+                //判断是否只有左节点 或者是叶子节点
+                leaf = true;
+                if (node.getLeft() != null) {
+                    queue.offer(node.getLeft());
+                }
+            }
+        }
+        return true;
+    }
+
+
+    /**
+     * 翻转二叉树
+     */
+    public void reverseTree(TreeNode<E> node) {
+        //中序遍历翻转
+        if (node == null || node.isLeaf()) return;
+        TreeNode<E> temp = node.getLeft();
+        node.setLeft(node.getRight());
+        node.setRight(temp);
+        reverseTree(node.getLeft());
+        reverseTree(node.getRight());
+    }
+
+    public void reverseTree() {
+        this.reverseTree(this.getRoot());
     }
 
     private int compare(E e1, E e2) {
