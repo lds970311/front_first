@@ -17,4 +17,8 @@ public interface IBST<E> {
     void remove(E element);
 
     boolean contains(E element);
+
+    TreeNode<E> find(E element);
+
+    ;
 }

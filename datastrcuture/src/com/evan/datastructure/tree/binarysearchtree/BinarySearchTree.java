@@ -52,7 +52,25 @@ public class BinarySearchTree<E> implements IBST<E>, BinaryTreeInfo, TraversalTr
 
     @Override
     public void clearAll() {
+        this.root = null;
+        this.size = 0;
+    }
 
+    @Override
+    public TreeNode<E> find(E element) {
+        if (element == null) return null;
+        TreeNode<E> temp = root;
+        while (temp != null) {
+            int cmp = this.compare(element, temp.getElement());
+            if (cmp == 0) {
+                return temp;
+            } else if (cmp > 0) {
+                temp = temp.getRight();
+            } else {
+                temp = temp.getLeft();
+            }
+        }
+        return null;
     }
 
     /**
@@ -196,12 +214,48 @@ public class BinarySearchTree<E> implements IBST<E>, BinaryTreeInfo, TraversalTr
 
     @Override
     public void remove(E element) {
-
+        if (element == null) return;
+        this.size--;
+        TreeNode<E> nodeToDelete = this.find(element);
+        if (nodeToDelete.hasChildren()) {
+            //是叶子节点
+            TreeNode<E> predecessor = this.predecessor(element); //找到前驱节点
+            nodeToDelete.setElement(predecessor.getElement()); //覆盖原来的值
+            nodeToDelete = predecessor;
+        }
+        //要删除德节点度为0 或1
+        TreeNode<E> replacement = nodeToDelete.getLeft() != null ? nodeToDelete.getLeft() : null;
+        //度为1
+        if (replacement != null) {
+            //度为1
+            replacement.setParent(nodeToDelete.getParent());
+            if (nodeToDelete.getParent() == null) {
+                //度为1的根节点
+                this.root = replacement;
+            } else if (nodeToDelete == nodeToDelete.getParent().getLeft()) {
+                nodeToDelete.getParent().setLeft(replacement);
+            } else {
+                nodeToDelete.getParent().setRight(replacement);
+            }
+        } else if (nodeToDelete.getParent() == null) {
+            //度为0且为叶子节点
+            root = null;
+        } else {
+            //普通叶子节点
+            if (nodeToDelete == nodeToDelete.getParent().getLeft()) {
+                //是父节点的左子节点
+                nodeToDelete.getParent().setLeft(null);
+            } else {
+                nodeToDelete.getParent().setRight(null);
+            }
+        }
     }
 
     @Override
     public boolean contains(E element) {
-        return false;
+        if (element == null) return false;
+        TreeNode<E> find = this.find(element);
+        return find != null;
     }
 
     public void preorderTraversal() {
@@ -324,6 +378,47 @@ public class BinarySearchTree<E> implements IBST<E>, BinaryTreeInfo, TraversalTr
                 queue.enqueue(parent.getRight());
             }
         }
+    }
+
+    /**
+     * 获取前驱节点
+     *
+     * @param element 节点值
+     * @return 前驱节点
+     */
+    public TreeNode<E> predecessor(E element) {
+        TreeNode<E> node = this.find(element);
+        if (node == null) return null;
+        //左子树不为null , 获取其左子树的最大值
+        TreeNode<E> temp = node.getLeft();
+        if (temp != null) {
+            while (temp.getRight() != null) {
+                temp = temp.getRight();
+            }
+            return temp;
+        }
+        //左子树为null, 寻找parent,知道node在parent的右子树为止
+        while (node.getParent() != null && node == node.getParent().getLeft()) {
+            node = node.getParent();
+        }
+        return node.getParent();
+    }
+
+    public TreeNode<E> successor(E element) {
+        TreeNode<E> node = this.find(element);
+        if (node == null) return null;
+        //右子树不为null , 获取其右子树的最小值
+        TreeNode<E> temp = node.getRight();
+        if (temp != null) {
+            while (temp.getLeft() != null) {
+                temp = temp.getLeft();
+            }
+            return temp;
+        }
+        while (node.getParent() != null && node == node.getParent().getRight()) {
+            node = node.getParent();
+        }
+        return node.getParent();
     }
 
     @Override

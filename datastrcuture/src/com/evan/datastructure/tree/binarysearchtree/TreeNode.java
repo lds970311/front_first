@@ -61,4 +61,13 @@ public class TreeNode<E> {
     public void setParent(TreeNode<E> parent) {
         this.parent = parent;
     }
+
+    public boolean hasChildren() {
+        return this.left != null && this.right != null;
+    }
+
+    @Override
+    public String toString() {
+        return "TreeNode:" + element;
+    }
 }

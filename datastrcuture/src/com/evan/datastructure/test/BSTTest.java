@@ -9,6 +9,7 @@ package com.evan.datastructure.test;
 import com.evan.datastructure.test.printer.BinaryTrees;
 import com.evan.datastructure.tree.binarysearchtree.BSTVisitor;
 import com.evan.datastructure.tree.binarysearchtree.BinarySearchTree;
+import com.evan.datastructure.tree.binarysearchtree.TreeNode;
 import com.evan.datastructure.utils.WriteFiles;
 import org.junit.Test;
 
@@ -70,6 +71,22 @@ public class BSTTest<E> {
     public void reverse() {
         BinarySearchTree<Integer> bst = initTree();
         bst.reverseTree();
+        BinaryTrees.println(bst);
+    }
+
+    @Test
+    public void predecessor() {
+        BinarySearchTree<Integer> bst = initTree();
+        TreeNode<Integer> node = bst.predecessor(6);
+        TreeNode<Integer> node1 = bst.successor(3);
+        System.out.println(node.getElement());
+        System.out.println(node1.getElement());
+    }
+
+    @Test
+    public void delete() {
+        BinarySearchTree<Integer> bst = initTree();
+        bst.remove(9);
         BinaryTrees.println(bst);
     }
 }
