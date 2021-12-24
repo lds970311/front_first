@@ -9,15 +9,16 @@ package com.evan.datastructure.tree.binarysearchtree;
 
 import com.evan.datastructure.queue.CircleQueue;
 import com.evan.datastructure.test.printer.BinaryTreeInfo;
+import com.evan.datastructure.tree.TreeNode;
 
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class BinarySearchTree<E> implements IBST<E>, BinaryTreeInfo, TraversalTree<E> {
-    private int size;
-    private TreeNode<E> root; //根节点
-    private final Comparator<E> comparator;
+    public int size;
+    public TreeNode<E> root; //根节点
+    public Comparator<E> comparator;
 
     public BinarySearchTree() {
         this.size = 0;
@@ -199,7 +200,7 @@ public class BinarySearchTree<E> implements IBST<E>, BinaryTreeInfo, TraversalTr
         this.reverseTree(this.getRoot());
     }
 
-    private int compare(E e1, E e2) {
+    protected int compare(E e1, E e2) {
         if (comparator != null) {
             return comparator.compare(e1, e2);
         }
@@ -444,5 +445,9 @@ public class BinarySearchTree<E> implements IBST<E>, BinaryTreeInfo, TraversalTr
             parentString = myNode.getParent().getElement().toString();
         }
         return myNode.getElement();
+    }
+
+    public void setRoot(TreeNode<E> root) {
+        this.root = root;
     }
 }

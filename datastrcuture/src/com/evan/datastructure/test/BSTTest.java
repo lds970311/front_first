@@ -9,7 +9,7 @@ package com.evan.datastructure.test;
 import com.evan.datastructure.test.printer.BinaryTrees;
 import com.evan.datastructure.tree.binarysearchtree.BSTVisitor;
 import com.evan.datastructure.tree.binarysearchtree.BinarySearchTree;
-import com.evan.datastructure.tree.binarysearchtree.TreeNode;
+import com.evan.datastructure.tree.TreeNode;
 import com.evan.datastructure.utils.WriteFiles;
 import org.junit.Test;
 
