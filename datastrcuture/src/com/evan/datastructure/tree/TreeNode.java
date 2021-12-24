@@ -1,4 +1,4 @@
-package com.evan.datastructure.tree.binarysearchtree;
+package com.evan.datastructure.tree;
 
 // Author : CSR丶SUSE
 // Time ： 2021-12-19  23:04
@@ -7,7 +7,7 @@ package com.evan.datastructure.tree.binarysearchtree;
 // STATEMENT: 
 
 
-public class TreeNode<E> {
+public class TreeNode<E> implements INode<E> {
     private E element;
     private TreeNode<E> left;
     private TreeNode<E> right;

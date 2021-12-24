@@ -5,6 +5,8 @@ package com.evan.datastructure.tree.binarysearchtree;
 // FILENAME : TraversalTree.java
 // STATEMENT: 
 
+import com.evan.datastructure.tree.TreeNode;
+
 public interface TraversalTree<E> {
 
     void preorderTraversal(TreeNode<E> node);

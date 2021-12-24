@@ -5,6 +5,8 @@ package com.evan.datastructure.tree.binarysearchtree;
 // FILENAME : IBST.java
 // STATEMENT: 二叉搜索树接口
 
+import com.evan.datastructure.tree.TreeNode;
+
 public interface IBST<E> {
     int size();
 
