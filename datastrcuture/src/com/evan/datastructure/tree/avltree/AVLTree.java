@@ -7,12 +7,13 @@ package com.evan.datastructure.tree.avltree;
 // STATEMENT: AVL树(平衡二叉搜索树的一种)
 
 
+import com.evan.datastructure.test.printer.BinaryTreeInfo;
 import com.evan.datastructure.tree.AVLNode;
 import com.evan.datastructure.tree.binarysearchtree.BinarySearchTree;
 
 import java.util.Comparator;
 
-public class AVLTree<T> extends BinarySearchTree<T> {
+public class AVLTree<T> extends BinarySearchTree<T> implements BinaryTreeInfo {
     private AVLNode<T> root; //根节点
 
     public AVLTree() {
@@ -57,7 +58,7 @@ public class AVLTree<T> extends BinarySearchTree<T> {
         } else {
             parent.setLeft(newNode);
         }
-        afterAdd(newNode);
+        afterAdd(newNode); //bst -> avl
         this.size++;
     }
 
@@ -68,7 +69,7 @@ public class AVLTree<T> extends BinarySearchTree<T> {
                 node.updateHeight(node);
             } else {
                 //不平衡, 恢复平衡
-                this.rebalance(node);
+                this.reBalance(node);
                 break;
             }
         }
@@ -79,8 +80,112 @@ public class AVLTree<T> extends BinarySearchTree<T> {
      *
      * @param grand node
      */
-    private void rebalance(AVLNode<T> grand) {
+    private void reBalance(AVLNode<T> grand) {
         AVLNode<T> parent = grand.tallerChild();
         AVLNode<T> node = parent.tallerChild();
+        if (parent.isLeftChild()) {
+            //L
+            if (node.isLeftChild()) {
+                //LL
+                this.rightRotate(grand);
+            } else {
+                //LR
+                this.leftRotate(parent);
+                this.rightRotate(grand);
+                //不平衡的节点在parent 的l R ,先左旋转再有旋转
+            }
+        } else {
+            //R
+            if (node.isLeftChild()) {
+                //RL
+                this.rightRotate(parent);
+                this.leftRotate(grand);
+            } else {
+                //RR
+                this.leftRotate(grand);
+            }
+        }
+    }
+
+    /**
+     * 右旋转
+     *
+     * @param grand 不平衡的那个节点
+     */
+    private void rightRotate(AVLNode<T> grand) {
+        AVLNode<T> parent = grand.getLeft();
+        AVLNode<T> child = parent.getRight();
+        grand.setLeft(child);
+        parent.setRight(grand);
+        this.afterRotate(grand, parent, child);
+    }
+
+
+    /**
+     * 左旋转
+     *
+     * @param grand 不平衡的那个节点
+     */
+    private void leftRotate(AVLNode<T> grand) {
+        AVLNode<T> parent = grand.getRight();
+        AVLNode<T> child = parent.getLeft();
+        grand.setRight(child);
+        parent.setLeft(grand);
+        //更新父节点
+        this.afterRotate(grand, parent, child);
+    }
+
+    /**
+     * 左旋转 右旋转中相同的逻辑
+     *
+     * @param grand
+     * @param parent
+     * @param child
+     */
+    private void afterRotate(AVLNode<T> grand, AVLNode<T> parent, AVLNode<T> child) {
+        //更新父节点
+        parent.setParent(grand.getParent());
+        //grand成为原先grand的位置, 其父节点需要更新
+        if (grand.isLeftChild()) {
+            grand.getParent().setLeft(parent);
+        } else if (grand.isRightChild()) {
+            grand.getParent().setRight(parent);
+        } else {
+            //说明没有parent
+            this.root = parent;
+        }
+        //更新左子树的parent
+        if (child != null) {
+            child.setParent(grand); //应该没必要更新吧...
+        }
+        grand.setParent(parent);
+        grand.updateHeight();
+        parent.updateHeight();
+
+    }
+
+    @Override
+    public Object root() {
+        return this.root;
+    }
+
+    @Override
+    public Object left(Object node) {
+        return ((AVLNode<T>) node).getLeft();
+    }
+
+    @Override
+    public Object right(Object node) {
+        return ((AVLNode<T>) node).getRight();
+    }
+
+    @Override
+    public Object string(Object node) {
+        AVLNode<T> myNode = (AVLNode<T>) node;
+        String parentString = "null";
+        if (myNode.getParent() != null) {
+            parentString = myNode.getParent().getElement().toString();
+        }
+        return myNode.getElement();
     }
 }
