@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES5",
+    "esModuleInterop": true,
+    "sourceMap": false,
+    "strict": true,
+    "outDir": "./dist",
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "typeRoots": [
+      "node_modules/@types",
+      "@types"
+    ],
+    "jsx": "react"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

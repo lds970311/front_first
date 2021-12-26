@@ -13,8 +13,8 @@ import org.junit.Test;
 
 public class AVLTest {
     public static AVLTree<Integer> initAVLTree() {
-        AVLTree<Integer> avlTree = new AVLTree<>(10);
-        int[] arr = {9, 8, 7, 6, 5, 4};
+        AVLTree<Integer> avlTree = new AVLTree<>(96);
+        int[] arr = {99, 62, 4, 89, 86, 59, 72, 58, 12, 85, 3, 91, 40, 80};
         for (int i : arr) {
             avlTree.add(i);
         }
@@ -24,6 +24,14 @@ public class AVLTest {
     @Test
     public void add() {
         AVLTree<Integer> avlTree = initAVLTree();
+        System.out.println(avlTree.size());
+        BinaryTrees.println(avlTree);
+    }
+
+    @Test
+    public void remove() {
+        AVLTree<Integer> avlTree = initAVLTree();
+        avlTree.remove(86);
         System.out.println(avlTree.size());
         BinaryTrees.println(avlTree);
     }
