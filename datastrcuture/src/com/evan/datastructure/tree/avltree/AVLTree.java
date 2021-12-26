@@ -75,6 +75,7 @@ public class AVLTree<T> extends BinarySearchTree<T> implements BinaryTreeInfo {
         }
     }
 
+
     /**
      * 恢复平衡(核心)
      *
@@ -162,6 +163,93 @@ public class AVLTree<T> extends BinarySearchTree<T> implements BinaryTreeInfo {
         grand.updateHeight();
         parent.updateHeight();
 
+    }
+
+    public AVLNode<T> findElement(T element) {
+        if (element == null) return null;
+        AVLNode<T> temp = root;
+        while (temp != null) {
+            int cmp = this.compare(element, temp.getElement());
+            if (cmp == 0) {
+                return temp;
+            } else if (cmp > 0) {
+                temp = temp.getRight();
+            } else {
+                temp = temp.getLeft();
+            }
+        }
+        return null;
+    }
+
+    private AVLNode<T> getPredecessor(T element) {
+        if (element == null) return null;
+        AVLNode<T> node = this.findElement(element);
+        if (node == null) return null;
+        //左子树不为null , 获取其左子树的最大值
+        AVLNode<T> temp = node.getLeft();
+        if (temp != null) {
+            while (temp.getRight() != null) {
+                temp = temp.getRight();
+            }
+            return temp;
+        }
+        //左子树为null, 寻找parent,知道node在parent的右子树为止
+        while (node.getParent() != null && node == node.getParent().getLeft()) {
+            node = node.getParent();
+        }
+        return node.getParent();
+    }
+
+    public void remove(T element) {
+        if (element == null) return;
+        this.size--;
+        AVLNode<T> nodeToDelete = this.findElement(element);
+        if (nodeToDelete == null) return;
+        if (nodeToDelete.hasChildren()) {
+            //是叶子节点
+            AVLNode<T> predecessor = this.getPredecessor(element); //找到前驱节点
+            nodeToDelete.setElement(predecessor.getElement()); //覆盖原来的值
+            nodeToDelete = predecessor;
+        }
+        //要删除德节点度为0 或1
+        AVLNode<T> replacement = nodeToDelete.getLeft() != null ? nodeToDelete.getLeft() : null;
+        //度为1
+        if (replacement != null) {
+            //度为1
+            replacement.setParent(nodeToDelete.getParent());
+            if (nodeToDelete.getParent() == null) {
+                //度为1的根节点
+                this.root = replacement;
+            } else if (nodeToDelete == nodeToDelete.getParent().getLeft()) {
+                nodeToDelete.getParent().setLeft(replacement);
+            } else {
+                nodeToDelete.getParent().setRight(replacement);
+            }
+            afterRemove(nodeToDelete);
+        } else if (nodeToDelete.getParent() == null) {
+            //度为0且为叶子节点
+            root = null;
+            afterRemove(nodeToDelete);
+        } else {
+            //普通叶子节点
+            if (nodeToDelete == nodeToDelete.getParent().getLeft()) {
+                //是父节点的左子节点
+                nodeToDelete.getParent().setLeft(null);
+            } else {
+                nodeToDelete.getParent().setRight(null);
+            }
+            afterRemove(nodeToDelete);
+        }
+    }
+
+    private void afterRemove(AVLNode<T> node) {
+        while ((node = node.getParent()) != null) {
+            if (node.isBalance()) {
+                node.updateHeight();
+            } else {
+                this.reBalance(node);
+            }
+        }
     }
 
     @Override

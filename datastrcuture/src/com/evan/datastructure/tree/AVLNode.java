@@ -44,6 +44,10 @@ public class AVLNode<E> implements INode<E> {
         return Math.abs(node.balanceFactor()) <= 1;
     }
 
+    public boolean isBalance() {
+        return Math.abs(this.balanceFactor()) <= 1;
+    }
+
 
     public void setElement(E element) {
         this.element = element;
