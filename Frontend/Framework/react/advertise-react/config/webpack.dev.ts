@@ -5,26 +5,26 @@ import {merge} from "webpack-merge"
 import HtmlWebpackPlugin from "html-webpack-plugin"
 import baseConfig from "./wepack.base";
 
+const OpenBrowserPlugin = require('open-browser-webpack4-plugin');
+
 
 const devConfig: webpack.Configuration = {
     mode: "development",
     // @ts-ignore
     devServer: {
-        compress: true,
         allowedHosts: 'all',
-        open: true,
+        open: false,
         port: 13288,
+        historyApiFallback: false,
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            inject: 'body',
             title: "react app",
             filename: 'index.html',
-            hot: true,
             template: path.resolve(__dirname, "../index.html")
         }),
     ]
 }
 
-export default merge(devConfig, baseConfig)
+export default merge(baseConfig, devConfig)
