@@ -3,7 +3,7 @@
     <h3>
       {{ store.getters.getMsg }}
     </h3>
-    <button @click="changeTitle">点我切换标题</button>
+    <button @click="changeTitle">点我切换标题123</button>
   </div>
   <JsxComponent></JsxComponent>
 </template>

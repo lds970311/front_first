@@ -3,10 +3,10 @@ import * as path from 'path';
 import webpack from "webpack";
 
 const baseConfig: webpack.Configuration = {
-    entry: path.resolve(__dirname, "../src/main.js"),
+    entry: path.resolve(__dirname, "../src/main.tsx"),
     output: {
         path: path.resolve(__dirname, "../dist"),
-        filename: '[name].[fullhase:4].js',
+        filename: '[name].bundle.js',
         clean: true
     },
     resolve: {
