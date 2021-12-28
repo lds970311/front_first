@@ -35,4 +35,8 @@ public class AVLTest {
         System.out.println(avlTree.size());
         BinaryTrees.println(avlTree);
     }
+
+    public void myTest() {
+    }
+
 }

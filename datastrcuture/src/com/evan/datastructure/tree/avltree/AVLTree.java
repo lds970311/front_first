@@ -162,7 +162,6 @@ public class AVLTree<T> extends BinarySearchTree<T> implements BinaryTreeInfo {
         grand.setParent(parent);
         grand.updateHeight();
         parent.updateHeight();
-
     }
 
     public AVLNode<T> findElement(T element) {
