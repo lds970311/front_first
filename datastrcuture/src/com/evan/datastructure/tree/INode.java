@@ -9,4 +9,5 @@ public interface INode<E> {
     boolean isLeaf();
 
     boolean hasChildren();
+
 }

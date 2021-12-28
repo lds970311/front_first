@@ -11,9 +11,8 @@ import com.evan.datastructure.queue.CircleQueue;
 import com.evan.datastructure.test.printer.BinaryTreeInfo;
 import com.evan.datastructure.tree.TreeNode;
 
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.io.FileReader;
+import java.util.*;
 
 public class BinarySearchTree<E> implements IBST<E>, BinaryTreeInfo, TraversalTree<E> {
     public int size;
