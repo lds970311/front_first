@@ -1,6 +1,7 @@
 <template>
   <div class="router">
-    <h3>router</h3>
+    <h3>{{ $store.state.count }}</h3>
+    <button @click="$store.dispatch('getAdd',10)">++</button>
   </div>
 </template>
 

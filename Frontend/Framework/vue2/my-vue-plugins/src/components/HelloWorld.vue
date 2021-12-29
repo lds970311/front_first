@@ -7,6 +7,7 @@
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
     <my-link to="/router">路由测试</my-link>
+    <my-view></my-view>
   </div>
 </template>
 

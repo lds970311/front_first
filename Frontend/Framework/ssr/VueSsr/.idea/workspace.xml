@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2500a25b-7927-4ef0-8489-f6cfd1cf4796" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/VueSsr.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ssr/ssrTest.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/Home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/VueSSR.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/expressTest.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../vue2/my-vue-plugins/src/MyStore/MyVuex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../vue2/my-vue-plugins/src/MyStore/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../vue2/my-vue-plugins/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue2/my-vue-plugins/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue2/my-vue-plugins/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue2/my-vue-plugins/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue2/my-vue-plugins/src/components/HelloWorld.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue2/my-vue-plugins/src/components/RouterTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue2/my-vue-plugins/src/components/RouterTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue2/my-vue-plugins/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue2/my-vue-plugins/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue2/my-vue-plugins/src/router/MyRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue2/my-vue-plugins/src/router/MyRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vue2/my-vue-plugins/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue2/my-vue-plugins/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Interviews/JavaScript/Part1/Test.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Interviews/JavaScript/Part1/Test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PHP/Base/First.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PHP/Base/First.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="TypeScript File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="22utlQds1vAQrEszUHb5se4P8XS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+    <property name="ts.external.directory.path" value="F:\Java\front_first\Frontend\Framework\ssr\VueSsr\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2500a25b-7927-4ef0-8489-f6cfd1cf4796" name="Changes" comment="" />
+      <created>1640699450669</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640699450669</updated>
+      <workItem from="1640699452014" duration="2890000" />
+      <workItem from="1640706361897" duration="132000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

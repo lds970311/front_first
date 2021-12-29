@@ -5,12 +5,19 @@ class MyRouter {
     constructor(options) {
         this.$options = options
         this.hash = "/"
-        window.addEventListener("hashchange", this.handleHashChange)
+        Vue.util.defineReactive(this, 'hash', '/')
+        window.addEventListener("hashchange", () => {
+            this.hash = window.location.hash.substring(1);
+        })
+        window.addEventListener("load", () => {
+            this.hash = window.location.hash.substring(1);
+        })
     }
 
     static install(MyVue) {
         Vue = MyVue
         //挂载$router
+
         Vue.mixin({
             beforeCreate() {
                 if (this.$options.router) {
@@ -20,6 +27,7 @@ class MyRouter {
             }
         })
         MyRouter.initLink(Vue)
+        MyRouter.initView(Vue)
     }
 
     static initLink(MyVue) {
@@ -32,17 +40,28 @@ class MyRouter {
                 }
             },
             render(h) {
+
                 return h("a", {attrs: {href: '#' + this.to}}, this.$slots.default)
             }
         })
     }
 
-    handleHashChange() {
-        const {router} = this.$options
-        this.hash = window.location.hash.substring(1);
-        const route = router.find(item => item.path === this.hash);
-        document.body = route.component
+    static initView(MyVue) {
+        MyVue.component('my-view', {
+            render(h) {
+                const {routes} = this.$router.$options
+                console.log(this.$router.hash)
+                let comp;
+                routes.forEach(route => {
+                    if (route.path === this.$router.hash) {
+                        comp = route.component
+                    }
+                })
+                return h(comp)
+            }
+        })
     }
+
 }
 
 
