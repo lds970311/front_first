@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c56478d9-7fbd-4012-93dd-ee8303acb498" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/advertise-react.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/advertise-react.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack.dev.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.dev.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/wepack.base.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/wepack.base.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn-error.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vue/my-vite-vue/auto-imports.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue/my-vite-vue/auto-imports.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vue/my-vite-vue/src/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue/my-vite-vue/src/pages/Home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../PHP/Base/BinarySearchTree.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../PHP/Base/TreeNode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ssr/VueSsr/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ssr/VueSsr/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ssr/VueSsr/src/test/VueSSR.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../ssr/VueSsr/src/test/VueSSR.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +92,7 @@
       <workItem from="1640493115912" duration="4680000" />
       <workItem from="1640498333854" duration="5332000" />
       <workItem from="1640514153442" duration="1505000" />
+      <workItem from="1640789745967" duration="27000" />
     </task>
     <task id="LOCAL-00001" summary="1. AVL树,删除节点后恢复平衡&#10;2. webpack搭建react工程">
       <created>1640510542488</created>

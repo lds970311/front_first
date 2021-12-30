@@ -2,42 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bb4edf0-9509-49e2-8dba-75962c4f1cc4" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/advertise-app-react.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/router/MyRouter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/App.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/reportWebVitals.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/setupTests.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Home/Home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../advertise-react/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../advertise-react/.idea/advertise-react.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../advertise-react/.idea/advertise-react.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/@types/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Product.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ProductDetail.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ProductList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/productAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/constants/action-types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/productReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../advertise-react/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../PHP/Base/BinarySearchTree.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../PHP/Base/TreeNode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../advertise-react/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../advertise-react/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../advertise-react/config/webpack.dev.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../advertise-react/config/webpack.dev.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../advertise-react/config/wepack.base.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../advertise-react/config/wepack.base.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../advertise-react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../advertise-react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../advertise-react/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../advertise-react/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../advertise-react/src/views/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../advertise-react/src/views/Home/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../advertise-react/yarn-error.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../advertise-react/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../advertise-react/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vue/my-vite-vue/auto-imports.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue/my-vite-vue/auto-imports.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vue/my-vite-vue/src/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../vue/my-vite-vue/src/pages/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ssr/VueSsr/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ssr/VueSsr/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ssr/VueSsr/src/test/VueSSR.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../ssr/VueSsr/src/test/VueSSR.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +38,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
       </list>
     </option>
@@ -72,7 +61,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -82,6 +71,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Java\front_first\Frontend\Framework\react\advertise-app-react\src\store\constants" />
       <recent name="F:\Java\front_first\Frontend\Framework\react\advertise-app-react\src\test" />
     </key>
   </component>
@@ -125,6 +115,7 @@
       <workItem from="1640520884471" duration="5864000" />
       <workItem from="1640535261994" duration="669000" />
       <workItem from="1640588422607" duration="12000" />
+      <workItem from="1640789785682" duration="10180000" />
     </task>
     <servers />
   </component>
