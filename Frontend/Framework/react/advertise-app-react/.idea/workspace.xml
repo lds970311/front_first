@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bb4edf0-9509-49e2-8dba-75962c4f1cc4" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/@types/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Product.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProductDetail.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProductList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/productAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/constants/action-types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/productReducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../advertise-react/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../PHP/Base/BinarySearchTree.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../PHP/Base/TreeNode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../advertise-react/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../advertise-react/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ssr/VueSsr/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ssr/VueSsr/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ssr/VueSsr/src/test/VueSSR.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../ssr/VueSsr/src/test/VueSSR.js" afterDir="false" />
-    </list>
+    <list default="true" id="9bb4edf0-9509-49e2-8dba-75962c4f1cc4" name="变更" comment="1. react-hook 结合redux" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,8 +90,16 @@
       <workItem from="1640520884471" duration="5864000" />
       <workItem from="1640535261994" duration="669000" />
       <workItem from="1640588422607" duration="12000" />
-      <workItem from="1640789785682" duration="10180000" />
+      <workItem from="1640789785682" duration="10867000" />
     </task>
+    <task id="LOCAL-00001" summary="1. react-hook 结合redux">
+      <created>1640858110637</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640858110637</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,5 +109,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/yapi/vendors" />
     </ignored-roots>
+    <MESSAGE value="1. react-hook 结合redux" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. react-hook 结合redux" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

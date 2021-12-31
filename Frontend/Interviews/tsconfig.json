@@ -6,6 +6,7 @@
     "sourceMap": false,
     "strict": true,
     "outDir": "./dist",
+    "noImplicitAny": false,
     "removeComments": true,
     "experimentalDecorators": true,
     "typeRoots": [
