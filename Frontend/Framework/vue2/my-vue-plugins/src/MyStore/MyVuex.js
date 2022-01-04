@@ -35,7 +35,7 @@ function install(MyVue) {
             if (this.$options.store) {
                 Vue.prototype.$store = this.$options.store
             }
-        }
+        },
     })
 }
 
