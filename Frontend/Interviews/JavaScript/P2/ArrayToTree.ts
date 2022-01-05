@@ -36,6 +36,8 @@ const input = [
 
 function arrayToTree(input: Array<any>): any {
     const res: any = [];
+    const map = new Map();
+
     input.forEach(item => {
         let parentId = item.id;
         if (parentId != null) {
