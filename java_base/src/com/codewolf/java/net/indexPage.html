@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        header {
+            width: 100%;
+            background-color: #8ae7c3;
+        }
+
+        header > ul {
+            max-width: 1196px;
+            height: 50px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        header > ul > li {
+            list-style: none;
+            color: #8d8181;
+        }
+
+        header > ul > li:hover {
+            cursor: pointer;
+            color: #d72f2f;
+        }
+
+        main {
+            width: 100%;
+            background-color: #e5e6e5;
+            height: calc(100% - 50px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        main .left {
+            border: 1px dashed gray;
+            background-color: blue;
+            flex: 1;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        main .mid {
+            border: 1px dashed gray;
+            background-color: #3ead51;
+            flex: 2;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        main .right {
+            border: 1px dashed gray;
+            background-color: #c49d56;
+            flex: 1;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <ul>
+        <li>主板</li>
+        <li>外设</li>
+        <li>显卡</li>
+        <li>游戏主机</li>
+        <li>代练</li>
+    </ul>
+</header>
+<main>
+    <div class="left">111</div>
+    <div class="mid"></div>
+    <div class="right"></div>
+</main>
+</body>
+</html>
