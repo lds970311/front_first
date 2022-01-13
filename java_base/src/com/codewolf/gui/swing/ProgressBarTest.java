@@ -5,6 +5,8 @@
 
 package com.codewolf.gui.swing;
 
+import lombok.Getter;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,6 +17,35 @@ public class ProgressBarTest {
     private final JProgressBar progressBar = new JProgressBar(JProgressBar.HORIZONTAL);//进度条
     private final JCheckBox progress = new JCheckBox("不确定进度");
     private final JCheckBox border = new JCheckBox("不绘制边框");
+
+    private static class ProgressThread implements Runnable {
+        @Getter
+        private volatile Integer currentVal = 0;
+        @Getter
+        private Integer totalVal;
+
+        public ProgressThread(Integer totalVal) {
+            this.totalVal = totalVal;
+        }
+
+        @Override
+        public void run() {
+            while (true) {
+                if (currentVal < totalVal) {
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    currentVal++;
+                } else {
+                    break;
+                }
+            }
+        }
+    }
+
+    private ProgressThread task;
 
     private void addListener() {
         progress.addActionListener(new ActionListener() {
@@ -50,16 +81,24 @@ public class ProgressBarTest {
         frame.add(progressBar);
         frame.setBounds(200, 200, 400, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
         frame.setVisible(true);
-        for (int i = 0; i < 100; i++) {
-            progressBar.setValue(i);
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        //启动进度条线程
+        this.task = new ProgressThread(100);
+        new Thread(this.task).start();
+        //使用定时器轮训任务的完成比例,并显示在任务条上
+
+        Timer progressTimer = new Timer(500, e -> {
+            int percent = (int) (((double) task.getCurrentVal() / (double) task.getTotalVal()) * 100);
+            System.out.println(percent);
+            progressBar.setValue(percent);
+        });
+
+        progressTimer.start();
+        progressBar.addChangeListener(e -> {
+            if (progressBar.getValue() == 100) {
+                progressTimer.stop();
             }
-        }
+        });
     }
 
     public static void main(String[] args) {
