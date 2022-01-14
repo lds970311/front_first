@@ -16,7 +16,7 @@ where department_id <=> 20
    or department_id <=> 50;
 
 # 3.选择公司中没有管理者的员工姓名及job_id
-select job_id
+select `1`
 from employees
 where manager_id IS NULL;
 

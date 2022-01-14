@@ -9,7 +9,7 @@ select first_name, salary * 12 * (1 + ifnull(commission_pct, 0)) as "total_salar
 from employees;
 
 # 2.查询employees表中去除重复的job_id以后的数据
-select distinct job_id
+select distinct `1`
 from employees;
 
 # 3.查询工资大于12000的员工姓名和工资
