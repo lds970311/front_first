@@ -4,6 +4,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/temp" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -19,6 +20,15 @@
           <root url="jar://$MODULE_DIR$/../../lib/javaweb/junit-jupiter-params-5.8.1.jar!/" />
           <root url="jar://$MODULE_DIR$/../../lib/javaweb/junit-jupiter-engine-5.8.1.jar!/" />
           <root url="jar://$MODULE_DIR$/../../lib/javaweb/junit-platform-engine-1.8.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../lib/se/lombok-1.18.20.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
