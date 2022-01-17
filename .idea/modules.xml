@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/datastrcuture/datastrcuture.iml" filepath="$PROJECT_DIR$/datastrcuture/datastrcuture.iml" />
       <module fileurl="file://$PROJECT_DIR$/front_first.iml" filepath="$PROJECT_DIR$/front_first.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_base/java_base.iml" filepath="$PROJECT_DIR$/java_base/java_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaweb/javaweb.iml" filepath="$PROJECT_DIR$/javaweb/javaweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaweb/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/javaweb/jdbc/jdbc.iml" />
     </modules>
   </component>
 </project>
