@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link href="//unpkg.com/layui@2.6.8/dist/css/layui.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .layui-form {
+            width: 600px;
+            padding: 30px 20px;
+            border: 1px solid black;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+<form action="/first_web_proj/login" class="layui-form" method="post">
+    <div class="layui-form-item">
+        <label class="layui-form-label">请输入用户名</label>
+        <div class="layui-input-block">
+            <label>
+                <input autocomplete="off" class="layui-input" lay-verify="required" name="username" placeholder="请输入标题"
+                       required
+                       type="text">
+            </label>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">请输入密码</label>
+        <div class="layui-input-block">
+            <label>
+                <input autocomplete="off" class="layui-input" lay-verify="required" name="password" placeholder="请输入密码"
+                       required
+                       type="password">
+            </label>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-filter="formDemo" type="submit">立即提交</button>
+            <button class="layui-btn layui-btn-primary" type="reset">重置</button>
+        </div>
+    </div>
+</form>
+
+<script>
+
+</script>
+
+</body>
+</html>

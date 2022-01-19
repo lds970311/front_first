@@ -7,6 +7,25 @@
         <element id="directory" name="classes">
           <element id="module-output" name="first_web_proj" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/apiguardian-api-1.1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/commons-dbcp2-2.9.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/commons-dbutils-1.7.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/commons-logging-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/commons-pool2-2.11.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/druid-1.2.8.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/junit-jupiter-5.8.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/junit-jupiter-api-5.8.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/junit-jupiter-engine-5.8.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/junit-jupiter-params-5.8.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/junit-platform-commons-1.8.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/junit-platform-engine-1.8.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/mchange-commons-java-0.2.11.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/mysql-connector-java-8.0.26.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/opentest4j-1.2.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/se/lombok-1.18.20.jar" />
+          <element id="library" level="project" name="commons-beanutils-1.8.0" />
+        </element>
       </element>
     </root>
   </artifact>
