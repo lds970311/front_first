@@ -1,18 +1,20 @@
 // Author : evan lee
-// Time ： 2022-01-19  0:43
-// FILENAME : FirstServlet.java
+// Time ： 2022-01-19  12:26
+// FILENAME : NewServlet.java
 // STATEMENT: 
 
 package com.evan.web.servlet;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 
-public class FirstServlet implements Servlet {
+@WebServlet("/new")
+public class NewServlet implements Servlet {
 
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
-        System.out.println(servletConfig.getServletName());
+
     }
 
     @Override
@@ -22,7 +24,7 @@ public class FirstServlet implements Servlet {
 
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        System.out.println("Hello Servlet");
+        System.out.println("servlet 3.0 123!");
     }
 
     @Override

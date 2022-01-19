@@ -8,6 +8,7 @@
     <servlet>
         <servlet-name>first_servlet</servlet-name>
         <servlet-class>com.evan.web.servlet.FirstServlet</servlet-class>
+        <load-on-startup>5</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>first_servlet</servlet-name>
