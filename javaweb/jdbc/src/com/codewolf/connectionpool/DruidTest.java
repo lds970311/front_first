@@ -1,7 +1,7 @@
 // Author : evan lee
 // Time ： 2022-01-18  13:42
-// FILENAME : DruildTest.java
-// STATEMENT: 
+// FILENAME : DruidTest.java
+// STATEMENT: alibaba数据库连接池 Druid
 
 package com.codewolf.connectionpool;
 
@@ -15,12 +15,12 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class DruildTest {
+public class DruidTest {
     private static DataSource ds = null;
 
     static {
         Properties properties = new Properties();
-        InputStream stream = DruildTest.class.getClassLoader().getResourceAsStream("druid.properties");
+        InputStream stream = DruidTest.class.getClassLoader().getResourceAsStream("druid.properties");
         try {
             properties.load(stream);
             ds = DruidDataSourceFactory.createDataSource(properties);
@@ -31,7 +31,7 @@ public class DruildTest {
 
     @SneakyThrows
     @Test
-    public void druild() {
+    public void druid() {
         Connection conn = ds.getConnection();
         System.out.println(conn);
     }

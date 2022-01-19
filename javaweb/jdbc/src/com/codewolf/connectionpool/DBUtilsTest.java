@@ -22,7 +22,7 @@ public class DBUtilsTest {
     public void queryTest() {
         QueryRunner runner = new QueryRunner();
         try {
-            Connection connection = DruildTest.getDruidConnection();
+            Connection connection = DruidTest.getDruidConnection();
             String sql = "select id,name,email,birth from my_jdbc.customers where id = ?";
             BeanHandler<Customer> handler = new BeanHandler<>(Customer.class);
             Customer customer = runner.query(connection, sql, handler, 16);
@@ -36,7 +36,7 @@ public class DBUtilsTest {
     public void queryTest2() {
         QueryRunner runner = new QueryRunner();
         try {
-            Connection connection = DruildTest.getDruidConnection();
+            Connection connection = DruidTest.getDruidConnection();
             String sql = "select id,name,email,birth from my_jdbc.customers";
             BeanListHandler<Customer> handler = new BeanListHandler<>(Customer.class);
             List<Customer> customers = runner.query(connection, sql, handler);
@@ -50,7 +50,7 @@ public class DBUtilsTest {
     @Test
     public void updateTest() {
         QueryRunner queryRunner = new QueryRunner();
-        Connection connection = DruildTest.getDruidConnection();
+        Connection connection = DruidTest.getDruidConnection();
         String sql = "update  my_jdbc.user set address = ? where id = ?";
         int update = queryRunner.update(connection, sql, "上海", 4);
         System.out.println(update);
