@@ -1,0 +1,34 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="case:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/case_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="case/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="case" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/lib/web2/javax.servlet.jsp.jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/web2/jstl-impl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/commons-dbutils-1.7.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/commons-logging-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/commons-pool2-2.11.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/druid-1.2.8.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/mchange-commons-java-0.2.11.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javaweb/mysql-connector-java-8.0.26.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/datastructure/apiguardian-api-1.1.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/datastructure/hamcrest-core-1.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/datastructure/junit-4.13.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/datastructure/junit-jupiter-5.7.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/datastructure/junit-jupiter-api-5.7.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/datastructure/junit-jupiter-engine-5.7.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/datastructure/junit-jupiter-params-5.7.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/datastructure/junit-platform-commons-1.7.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/datastructure/junit-platform-engine-1.7.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/datastructure/opentest4j-1.2.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/se/lombok-1.18.20.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
