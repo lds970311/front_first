@@ -8,9 +8,24 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>this is index jsp</title>
 </head>
 <body>
-<h1>Hello Tomcat123</h1>
+<h1>Hello Tomcat123123123</h1>
+<%--定义成员变量--%>
+<%!
+    int i = 10;
+    String msg = "my msg";
+%>
+<div>
+    <p>
+        <%= i %>
+    </p>
+    <p>
+        <%= msg %>
+    </p>
+</div>
+
+
 </body>
 </html>
