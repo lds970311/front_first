@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.users {
+    width: 600px;
+    min-height: 260px;
+    border: 1px solid #ccc;
+    margin: 50px auto;
+}
+
+.container .table-head {
+    background-color: #a1e87e;
+}
