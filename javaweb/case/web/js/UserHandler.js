@@ -4,3 +4,7 @@ function handleDelete(id) {
         window.location.href = `/case/delUser?id=${id}`
     }
 }
+
+function handleUserUpdate(id) {
+    window.location.href = `/case/queryUser?id=${id}`
+}

@@ -102,7 +102,7 @@
                 <td>${user.qq}</td>
                 <td>${user.email}</td>
                 <td>
-                    <a class="btn btn-default btn-sm" href="views/update.jsp">修改</a>
+                    <span class="btn btn-default btn-sm" onclick="handleUserUpdate(${user.id})">修改</span>
                     &nbsp;
                     <span
                             class="btn btn-default btn-sm"

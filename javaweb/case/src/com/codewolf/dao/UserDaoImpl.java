@@ -9,6 +9,7 @@ import com.codewolf.domain.User;
 import com.codewolf.utils.MySQLUtils;
 import lombok.SneakyThrows;
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import java.sql.Connection;
@@ -63,5 +64,26 @@ public class UserDaoImpl implements UserDao {
         QueryRunner runner = new QueryRunner();
         String sql = "delete from mydb.user where id = ?";
         runner.update(connection, sql, no);
+    }
+
+    @SneakyThrows
+    @Override
+    public User findUserById(String id) {
+        Integer No = Integer.valueOf(id);
+        QueryRunner runner = new QueryRunner();
+        BeanHandler<User> handler = new BeanHandler<>(User.class);
+        String sql = "select * from mydb.user where id = ?";
+        return runner.query(connection, sql, handler, No);
+    }
+
+    @SneakyThrows
+    @Override
+    public void updateUser(User user) {
+        Integer id = user.getId();
+        QueryRunner runner = new QueryRunner();
+        String sql = "update mydb.user set name = ? and age = ? and gender = ? and address = ? and qq = ?" +
+                "and email = ? where id = ?";
+        runner.update(connection, sql, user.getName(), user.getAge(), user.getGender(), user.getAddress(),
+                user.getQq(), user.getEmail(), id);
     }
 }
