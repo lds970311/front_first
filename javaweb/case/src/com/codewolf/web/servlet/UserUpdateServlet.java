@@ -20,8 +20,19 @@ import java.io.IOException;
 public class UserUpdateServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //设置编码
+        req.setCharacterEncoding("utf-8");
+
         UserService userService = new UserServiceImpl();
-        User user = new User();
+        //获取参数
+        Integer id = Integer.valueOf(req.getParameter("id"));
+        String name = req.getParameter("name");
+        Integer age = Integer.valueOf(req.getParameter("age"));
+        String gender = req.getParameter("sex");
+        String address = req.getParameter("address");
+        String qq = req.getParameter("qq");
+        String email = req.getParameter("email");
+        User user = new User(id, name, gender, address, qq, email, age);
         userService.updateUser(user);
         req.getRequestDispatcher("/userListServlet").forward(req, resp);
     }

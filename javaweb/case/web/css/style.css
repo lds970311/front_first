@@ -13,3 +13,7 @@
 .container .table-head {
     background-color: #a1e87e;
 }
+
+.container-md h3 {
+    color: cadetblue;
+}

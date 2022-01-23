@@ -8,6 +8,7 @@ package com.codewolf.dao;
 import com.codewolf.domain.User;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 用户操作的DAO
@@ -22,4 +23,8 @@ public interface UserDao {
     User findUserById(String id);
 
     void updateUser(User user);
+
+    Long findTotalCount(Map<String, String[]> condition);
+
+    List<User> findUserByPage(int start, int rowCount, Map<String, String[]> condition);
 }

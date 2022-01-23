@@ -14,4 +14,12 @@
         <servlet-name>first_servlet</servlet-name>
         <url-pattern>/first</url-pattern>
     </servlet-mapping>
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.evan.web.filters.FirstFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>
