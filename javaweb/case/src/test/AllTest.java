@@ -9,6 +9,8 @@ import com.codewolf.dao.UserDaoImpl;
 import com.codewolf.domain.User;
 import com.codewolf.utils.MySQLUtils;
 import lombok.SneakyThrows;
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 import org.junit.jupiter.api.Test;
 
 import java.sql.Connection;
@@ -32,5 +34,15 @@ public class AllTest {
         UserDaoImpl userDao = new UserDaoImpl();
         List<User> all = userDao.findAll();
         all.forEach(System.out::println);
+    }
+
+    @Test
+    public void pageTest() throws Exception {
+        Connection connection = MySQLUtils.getConnection();
+        QueryRunner runner = new QueryRunner();
+        String sql = "select count(*) from mydb.user";
+        ScalarHandler<Long> handler = new ScalarHandler<>();
+        long query = runner.query(connection, sql, handler);
+        System.out.println(query);
     }
 }

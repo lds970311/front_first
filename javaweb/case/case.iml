@@ -6,7 +6,6 @@
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
-        <sourceRoots />
       </configuration>
     </facet>
   </component>
@@ -89,7 +88,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="jsp-api" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -184,6 +182,24 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../../lib/se/lombok-1.18.20.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../lib/javaweb/jsp-api.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../lib/javaweb/servlet-api.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

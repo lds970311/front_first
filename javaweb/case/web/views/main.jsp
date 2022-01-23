@@ -20,7 +20,8 @@
 <body>
 <div align="center">
     <a
-            href="${pageContext.request.contextPath}/userListServlet" style="text-decoration:none;font-size:33px">查询所有用户信息
+            href="${pageContext.request.contextPath}/findByPage?currentPage=1&rows=5"
+            style="text-decoration:none;font-size:33px">查询所有用户信息
     </a>
     <svg class="bi bi-arrow-down-short" fill="currentColor" height="16" viewBox="0 0 16 16" width="16"
          xmlns="http://www.w3.org/2000/svg">

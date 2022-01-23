@@ -11,10 +11,11 @@ import lombok.SneakyThrows;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.List;
+import java.util.*;
 
 public class UserDaoImpl implements UserDao {
     private static Connection connection = null;
@@ -81,9 +82,72 @@ public class UserDaoImpl implements UserDao {
     public void updateUser(User user) {
         Integer id = user.getId();
         QueryRunner runner = new QueryRunner();
-        String sql = "update mydb.user set name = ? and age = ? and gender = ? and address = ? and qq = ?" +
-                "and email = ? where id = ?";
+        String sql = "update mydb.user set name = ? , age = ? , gender = ?, address = ?, qq = ?," +
+                " email = ? where id = ?";
         runner.update(connection, sql, user.getName(), user.getAge(), user.getGender(), user.getAddress(),
                 user.getQq(), user.getEmail(), id);
+    }
+
+    @SneakyThrows
+    @Override
+    public Long findTotalCount(Map<String, String[]> condition) {
+        //1.定义模板初始化sql
+        String sql = "select count(*) from mydb.user where 1 = 1 ";
+        StringBuilder sb = new StringBuilder(sql);
+        List<Object> params = new ArrayList<>();
+        //2.遍历map
+        Set<String> keySet = condition.keySet();
+        for (String key : keySet) {
+            //排除分页条件参数
+            if ("currentPage".equals(key) || "rows".equals(key)) {
+                continue;
+            }
+
+            //获取value
+            String value = condition.get(key)[0];
+            //判断value是否有值
+            if (value != null && !"".equals(value)) {
+                //有值
+                sb.append(" and ").append(key).append(" like ? ");
+                params.add("%" + value + "%");//？条件的值
+            }
+        }
+        QueryRunner runner = new QueryRunner();
+
+        ScalarHandler<Long> handler = new ScalarHandler<>();
+        return runner.query(connection, sb.toString(), handler, params.toArray());
+    }
+
+    @SneakyThrows
+    @Override
+    public List<User> findUserByPage(int start, int rowCount, Map<String, String[]> condition) {
+        //1.定义模板初始化sql
+        String sql = "select * from mydb.user where 1 = 1 ";
+        StringBuilder sb = new StringBuilder(sql);
+        List<Object> params = new ArrayList<>();
+        //2.遍历map
+        Set<String> keySet = condition.keySet();
+        for (String key : keySet) {
+            //排除分页条件参数
+            if ("currentPage".equals(key) || "rows".equals(key)) {
+                continue;
+            }
+
+            //获取value
+            String value = condition.get(key)[0];
+            //判断value是否有值
+            if (value != null && !"".equals(value)) {
+                //有值
+                sb.append(" and ").append(key).append(" like ? ");
+                params.add("%" + value + "%");//？条件的值
+            }
+        }
+        sb.append(" limit ?,? ");
+        //添加分页查询参数值
+        params.add(start);
+        params.add(rowCount);
+        QueryRunner queryRunner = new QueryRunner();
+        BeanListHandler<User> handler = new BeanListHandler<>(User.class);
+        return queryRunner.query(connection, sb.toString(), handler, params.toArray());
     }
 }
