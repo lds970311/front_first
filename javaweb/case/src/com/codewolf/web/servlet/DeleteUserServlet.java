@@ -22,6 +22,6 @@ public class DeleteUserServlet extends HttpServlet {
         UserService userService = new UserServiceImpl();
         String id = req.getParameter("id");
         userService.deleteById(id);
-        req.getRequestDispatcher("/userListServlet").forward(req, resp);
+        req.getRequestDispatcher("/findByPage?currentPage=" + 1 + "&rows=5&name=&address=&email=").forward(req, resp);
     }
 }

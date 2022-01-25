@@ -10,6 +10,8 @@
       <module fileurl="file://$PROJECT_DIR$/javaweb/javaweb.iml" filepath="$PROJECT_DIR$/javaweb/javaweb.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/javaweb/jdbc/jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/jsoup/jsoup.iml" filepath="$PROJECT_DIR$/javaweb/jsoup/jsoup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaweb/redis/redis.iml" filepath="$PROJECT_DIR$/javaweb/redis/redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaweb/redis_ajax/redis_ajax.iml" filepath="$PROJECT_DIR$/javaweb/redis_ajax/redis_ajax.iml" />
     </modules>
   </component>
 </project>

@@ -1,4 +1,4 @@
-function handleDelete(id) {
+function handleDelete(id, page) {
     console.log(id)
     if (confirm("Are you sure you want to delete?")) {
         window.location.href = `/case/delUser?id=${id}`
