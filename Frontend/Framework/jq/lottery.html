@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>抽奖</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" user-scalable="no">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<!-- 小像框 -->
+<div style="border-style:dotted;width:160px;height:100px">
+    <img id="img1ID" src="imgs/man00.jpg" style="width:160px;height:100px" alt=""/>
+</div>
+
+<!-- 大像框 -->
+<div
+        style="border-style:double;width:800px;height:500px;position:absolute;left:500px;top:10px">
+    <img id="img2ID" src="imgs/man00.jpg" width="800px" height="500px" alt=""/>
+</div>
+
+<!-- 开始按钮 -->
+<input
+        id="startID"
+        type="button"
+        value="点击开始"
+        style="width:150px;height:150px;font-size:22px">
+
+<!-- 停止按钮 -->
+<input
+        id="stopID"
+        type="button"
+        value="点击停止"
+        style="width:150px;height:150px;font-size:22px">
+
+</body>
+<script>
+    $(function () {
+        const imgs = ["imgs/man00.jpg",
+            "imgs/man01.jpg",
+            "imgs/man02.jpg",
+            "imgs/man03.jpg",
+            "imgs/man04.jpg",
+            "imgs/man05.jpg",
+            "imgs/man06.jpg",
+        ];
+
+        let timer = null;
+        let currentImg = "";
+        let index = 0;
+        $("#startID").click(function () {
+            $(this).attr("disabled", true);
+            $("#stopID").attr("disabled", false)
+            timer = setInterval(() => {
+                index++;
+                index %= imgs.length;
+                currentImg = imgs[index];
+                $("#img1ID").prop('src', currentImg)
+            }, 1000)
+        })
+
+        $("#stopID").click(function () {
+            $(this).attr("disabled", true);
+            $("#startID").attr("disabled", false);
+            clearInterval(timer)
+            $("#img2ID").prop('src', currentImg)
+        })
+    })
+</script>
+</html>
