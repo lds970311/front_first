@@ -3,5 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/java_base/src/com/codewolf/java/io/exec/csb_gbk.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/javaweb/first_web_proj/src/resources/sensitiveWords.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaweb/mvn_web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaweb/mvn_web/src/main/resources" charset="UTF-8" />
   </component>
 </project>
