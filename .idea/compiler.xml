@@ -8,11 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mvn_web" />
-        <module name="first_maven" />
+        <module name="jedis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="first_maven" target="11" />
+      <module name="jedis" target="11" />
       <module name="mvn_web" target="11" />
     </bytecodeTargetLevel>
   </component>
