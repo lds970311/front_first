@@ -6,6 +6,8 @@
         <list>
           <option value="org.apache.tomcat:tomcat-servlet-api" />
           <option value="org.apache.tomcat:tomcat-jsp-api" />
+          <option value="junit:junit" />
+          <option value="redis.clients:jedis" />
         </list>
       </option>
     </inspection_tool>

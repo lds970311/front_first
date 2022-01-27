@@ -50,6 +50,7 @@
     <build>
         <plugins>
             <!--具体的插件配置-->
+
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
@@ -61,7 +62,7 @@
             </plugin>
         </plugins>
         <finalName>mvn_web</finalName>
-        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+        <pluginManagement>
         </pluginManagement>
     </build>
 </project>

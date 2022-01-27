@@ -7,7 +7,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/javaweb/mvn_web/pom.xml" />
-        <option value="$PROJECT_DIR$/javaweb/first_maven/pom.xml" />
+        <option value="$PROJECT_DIR$/javaweb/jedis/pom.xml" />
       </list>
     </option>
   </component>
