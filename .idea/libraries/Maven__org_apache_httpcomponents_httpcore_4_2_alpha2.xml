@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.apache.httpcomponents:httpcore:4.2-alpha2">
     <CLASSES>
-      <root url="jar://H:/Java/repository/org/apache/httpcomponents/httpcore/4.2-alpha2/httpcore-4.2-alpha2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Java/repository/org/apache/httpcomponents/httpcore/4.2-alpha2/httpcore-4.2-alpha2.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://H:/Java/repository/org/apache/httpcomponents/httpcore/4.2-alpha2/httpcore-4.2-alpha2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Java/repository/org/apache/httpcomponents/httpcore/4.2-alpha2/httpcore-4.2-alpha2-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://H:/Java/repository/org/apache/httpcomponents/httpcore/4.2-alpha2/httpcore-4.2-alpha2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Java/repository/org/apache/httpcomponents/httpcore/4.2-alpha2/httpcore-4.2-alpha2-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -27,14 +27,16 @@ public class parseToJava {
         ObjectMapper mapper = new ObjectMapper();
         //转换
         String s = mapper.writeValueAsString(person); //json写入到文件
-        mapper.writeValue(new File("F:\\Java\\front_first\\java_base\\logs\\json_result.txt"), person);
+        //mapper.writeValue(new File("F:\\Java\\front_first\\java_base\\logs\\json_result.txt"), person);
+        mapper.writeValue(new File("H:\\Programs\\front_first\\java_base\\logs\\json_result.txt"), person);
         System.out.println(s); //{"name":"zs","age":21,"gender":"男"}
     }
 
     @Test
     @SneakyThrows
     public void java2json() {
-        BufferedReader reader = new BufferedReader(new FileReader("F:\\Java\\front_first\\java_base\\logs\\json_result.txt"));
+        //BufferedReader reader = new BufferedReader(new FileReader("F:\\Java\\front_first\\java_base\\logs\\json_result.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("H:\\Programs\\front_first\\java_base\\logs\\json_result.txt"));
         String line = reader.readLine();
         ObjectMapper mapper = new ObjectMapper();
         Person person = mapper.readValue(line, Person.class);
