@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.apache.tomcat:tomcat-el-api:9.0.56">
     <CLASSES>
-      <root url="jar://H:/Java/repository/org/apache/tomcat/tomcat-el-api/9.0.56/tomcat-el-api-9.0.56.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Java/repository/org/apache/tomcat/tomcat-el-api/9.0.56/tomcat-el-api-9.0.56.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://H:/Java/repository/org/apache/tomcat/tomcat-el-api/9.0.56/tomcat-el-api-9.0.56-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Java/repository/org/apache/tomcat/tomcat-el-api/9.0.56/tomcat-el-api-9.0.56-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://H:/Java/repository/org/apache/tomcat/tomcat-el-api/9.0.56/tomcat-el-api-9.0.56-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Java/repository/org/apache/tomcat/tomcat-el-api/9.0.56/tomcat-el-api-9.0.56-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

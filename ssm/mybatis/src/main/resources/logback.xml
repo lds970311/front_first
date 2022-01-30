@@ -4,12 +4,12 @@
     <!-- File是输出的方向通向文件的 -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!--日志输出路径-->
-        <file>F:\Java\front_first\ssm\mybatis\log\info.log</file>
+        <file>H:\Programs\front_first\ssm\mybatis\log\info.log</file>
         <!--指定日志文件拆分和压缩规则-->
         <rollingPolicy
                 class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <!--通过指定压缩文件名称，来确定分割文件方式-->
-            <fileNamePattern>F:\Java\front_first\ssm\mybatis\log\log-%d{yy-MM-dd}.log%i.zip
+            <fileNamePattern>H:\Programs\front_first\ssm\mybatis\log\log-%d{yy-MM-dd}.log%i.zip
             </fileNamePattern>
             <!--文件拆分大小,查过1mb开始拆分-->
             <maxFileSize>10MB</maxFileSize>
@@ -33,7 +33,7 @@
 
     <!--html消息格式配置-->
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>F:\Java\front_first\ssm\mybatis\log\log.html</file>
+        <file>H:\Programs\front_first\ssm\mybatis\log\log.html</file>
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
             <layout class="ch.qos.logback.classic.html.HTMLLayout">
                 <pattern>%p%d%msg%M%F{32}%L</pattern>
@@ -49,6 +49,7 @@
     -->
     <root level="INFO">
         <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
         <appender-ref ref="FILE"/>
     </root>
 </configuration>

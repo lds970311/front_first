@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$" libraries="{vue.runtime.global}" />
-    <file url="file://$PROJECT_DIR$/javaweb/first_web_proj" libraries="{bootstrap, layui}" />
+    <file url="file://$PROJECT_DIR$/javaweb/case" libraries="{bootstrap, jquery}" />
   </component>
 </project>
