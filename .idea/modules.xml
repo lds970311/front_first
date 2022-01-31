@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/javaweb/jedis/jedis.iml" filepath="$PROJECT_DIR$/javaweb/jedis/jedis.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/jsoup/jsoup.iml" filepath="$PROJECT_DIR$/javaweb/jsoup/jsoup.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/mvn_web/mvn_web.iml" filepath="$PROJECT_DIR$/javaweb/mvn_web/mvn_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm/my_spring/my_spring.iml" filepath="$PROJECT_DIR$/ssm/my_spring/my_spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/ssm/mybatis/mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/ssm.iml" filepath="$PROJECT_DIR$/ssm/ssm.iml" />
     </modules>

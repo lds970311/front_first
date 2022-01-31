@@ -42,8 +42,52 @@ public class MapperTest {
     public void mapperTest() {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
-        Employee employee = mapper.getEmployeeById(1);
+        Employee employee = mapper.getEmployeeById(3);
         logger.info(employee.toString());
+        sqlSession.close();
+    }
+
+    @Test
+    public void insertTest() {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
+        boolean joel = mapper.addEmployee(new Employee(3, "louis", "0", "louis@111.com"));
+        if (joel) {
+            logger.info("insert success");
+        } else {
+            logger.warn("insert failed");
+        }
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    @Test
+    public void updateTest() {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
+        Integer updateEmployee = mapper.updateEmployee(new Employee(1, "sara", "1", "sara@111.com"));
+        if (updateEmployee > 0) {
+            logger.info("update success");
+        } else {
+            logger.warn("update failed");
+        }
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    @Test
+    public void deleteTest() {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
+        Integer integer = mapper.deleteEmployee(3);
+        if (integer > 0) {
+            logger.info("delete success!");
+        } else {
+            logger.warn("delete failed!");
+        }
+        logger.info("delete success!");
+        sqlSession.commit();
         sqlSession.close();
     }
 }

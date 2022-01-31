@@ -7,6 +7,9 @@
     <settings>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
+    <typeAliases>
+        <typeAlias type="com.evan.domain.Employee" alias="emp"/>
+    </typeAliases>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -17,7 +20,18 @@
                 <property name="password" value="${password}"/>
             </dataSource>
         </environment>
+
+        <environment id="laptop">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.208.146:3306/mybatis"/>
+                <property name="username" value="root"/>
+                <property name="password" value="19970311"/>
+            </dataSource>
+        </environment>
     </environments>
+    <!--123-->
     <mappers>
         <mapper resource="conf/EmployeeMapper.xml"/>
     </mappers>
