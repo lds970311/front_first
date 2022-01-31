@@ -12,9 +12,28 @@ resultType：返回值类型
 
 public Employee getEmpById(Integer id);
  -->
-    <select id="getEmployeeById" resultType="com.evan.domain.Employee">
+    <select id="getEmployeeById" resultType="emp">
         select id, last_name, gender, email
         from mybatis.tbl_employee
         where id = #{id}
     </select>
+
+    <insert id="addEmployee" parameterType="emp" useGeneratedKeys="true" keyProperty="id">
+        insert into mybatis.tbl_employee (last_name, gender, email)
+        values (#{lastName}, #{gender}, #{email})
+    </insert>
+
+    <update id="updateEmployee" parameterType="emp">
+        update mybatis.tbl_employee
+        set last_name = #{lastName},
+            gender=#{gender},
+            email=#{email}
+        where id = ${id}
+    </update>
+
+    <delete id="deleteEmployee">
+        delete
+        from mybatis.tbl_employee
+        where id = #{id}
+    </delete>
 </mapper>
