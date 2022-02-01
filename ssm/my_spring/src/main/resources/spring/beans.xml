@@ -2,5 +2,64 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
     <bean id="user" class="com.evan.spring5.User"/>
+    <bean id="order" class="com.evan.domain.Order">
+        <property name="id" value="1"/>
+        <property name="orderName" value="锅巴"/>
+    </bean>
+    <!--Student类-->
+    <bean id="student" class="com.evan.domain.Student">
+        <constructor-arg name="age" value="30"/>
+        <constructor-arg name="name" value="Lucy"/>
+    </bean>
+
+    <!--service注入dao-->
+    <bean id="userService" class="com.evan.service.UserService">
+        <!--注入dao-->
+        <property name="userDao" ref="userDao"/>
+    </bean>
+    <bean id="userDao" class="com.evan.dao.UserDaoImpl"/>
+
+    <!--注入内部bean-->
+    <bean id="emp" class="com.evan.beans.Employee">
+        <property name="ename" value="sam"/>
+        <property name="gender" value="男"/>
+        <!--内部bean-->
+        <property name="dept">
+            <bean id="dept" class="com.evan.beans.Department">
+                <property name="dname" value="研发部"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="bookstore" class="com.evan.beans.BookStore" scope="prototype">
+        <property name="names">
+            <array>
+                <value>西游记</value>
+                <value>金瓶梅</value>
+            </array>
+        </property>
+        <property name="authors">
+            <list>
+                <value>吴承恩</value>
+                <value>兰陵笑笑生</value>
+            </list>
+        </property>
+        <property name="categories">
+            <map>
+                <entry key="id" value="1"/>
+                <entry key="name" value="神魔小说"/>
+            </map>
+        </property>
+        <property name="set">
+
+            <set>
+                <value>a</value>
+                <value>b</value>
+                <value>a</value>
+            </set>
+        </property>
+    </bean>
 </beans>
