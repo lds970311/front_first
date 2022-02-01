@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd"
+>
+    <bean id="lifespan" class="com.evan.lifespan.LifeSpan" init-method="initMethod" destroy-method="destroyMethod">
+        <property name="name" value="aaa"/>
+    </bean>
+
+    <!--配置后置处理器-->
+    <bean id="EasyPost" class="com.evan.lifespan.MyPostBean"/>
+
+    <!--配置druid-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://192.168.1.118:3306/mybatis"/>
+        <property name="username" value="root"/>
+        <property name="password" value="19970311"/>
+    </bean>
+</beans>
