@@ -18,10 +18,11 @@
     <bean id="EasyPost" class="com.evan.lifespan.MyPostBean"/>
 
     <!--配置druid-->
+    <context:property-placeholder location="classpath:druid.properties"/>
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://192.168.1.118:3306/mybatis"/>
-        <property name="username" value="root"/>
-        <property name="password" value="19970311"/>
+        <property name="driverClassName" value="${driverClassName}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
     </bean>
 </beans>
