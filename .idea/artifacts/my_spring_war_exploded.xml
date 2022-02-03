@@ -41,6 +41,9 @@
           <element id="library" level="project" name="Maven: org.aspectj:com.springsource.org.aspectj.weaver:1.6.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aspects:5.2.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-orm:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.2.9.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">
