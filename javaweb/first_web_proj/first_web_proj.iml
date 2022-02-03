@@ -163,7 +163,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="layui" level="application" />
     <orderEntry type="library" name="commons-beanutils-1.8.0" level="project" />
     <orderEntry type="module-library">
       <library>
