@@ -27,7 +27,7 @@ public class MyUserAdvance {
 
     //环绕通知
     @Around(value = "execution(* com.evan.aop.aspectj.MyUser.delete(..))")
-    public void around(ProceedingJoinPoint proceedingJoinPoint) {
+    public Object around(ProceedingJoinPoint proceedingJoinPoint) {
         System.out.println("before surround...");
         try {
             proceedingJoinPoint.proceed();
@@ -35,6 +35,7 @@ public class MyUserAdvance {
             e.printStackTrace();
         }
         System.out.println("after surround...");
+        return new Object();
     }
 
     //后置通知（返回通知）

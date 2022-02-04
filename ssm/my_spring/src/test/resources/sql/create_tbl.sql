@@ -1,4 +1,5 @@
 show databases;
+create database jdbctemplate;
 
 use jdbctemplate;
 
