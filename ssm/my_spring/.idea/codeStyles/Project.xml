@@ -1,5 +1,6 @@
 <component name="ProjectCodeStyleConfiguration">
   <code_scheme name="Project" version="173">
+    <option name="ENABLE_SECOND_REFORMAT" value="true" />
     <DBN-PSQL>
       <case-options enabled="true">
         <option name="KEYWORD_CASE" value="lower" />
@@ -24,25 +25,16 @@
         <option name="ITERATION_ELEMENTS_WRAPPING" value="chop_down_if_not_single" />
       </formatting-settings>
     </DBN-SQL>
-    <HTMLCodeStyleSettings>
-      <option name="HTML_UNIFORM_INDENT" value="true" />
-    </HTMLCodeStyleSettings>
+    <JavaCodeStyleSettings>
+      <option name="JD_DO_NOT_WRAP_ONE_LINE_COMMENTS" value="true" />
+    </JavaCodeStyleSettings>
     <JetCodeStyleSettings>
       <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
     </JetCodeStyleSettings>
-    <ScalaCodeStyleSettings>
-      <option name="MULTILINE_STRING_CLOSING_QUOTES_ON_NEW_LINE" value="true" />
-    </ScalaCodeStyleSettings>
     <codeStyleSettings language="HTML">
       <option name="LINE_COMMENT_AT_FIRST_COLUMN" value="false" />
       <option name="BLOCK_COMMENT_AT_FIRST_COLUMN" value="false" />
-      <indentOptions>
-        <option name="KEEP_INDENTS_ON_EMPTY_LINES" value="true" />
-      </indentOptions>
-    </codeStyleSettings>
-    <codeStyleSettings language="JAVA">
-      <option name="LINE_COMMENT_AT_FIRST_COLUMN" value="false" />
-      <option name="BLOCK_COMMENT_AT_FIRST_COLUMN" value="false" />
+      <option name="WRAP_ON_TYPING" value="1" />
     </codeStyleSettings>
     <codeStyleSettings language="XML">
       <option name="LINE_COMMENT_AT_FIRST_COLUMN" value="false" />
