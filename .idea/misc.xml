@@ -4,6 +4,7 @@
     <file type="web" url="file://$PROJECT_DIR$/javaweb/mvn_web" />
     <file type="web" url="file://$PROJECT_DIR$/ssm/my_spring" />
     <file type="web" url="file://$PROJECT_DIR$/ssm/mybatis" />
+    <file type="web" url="file://$PROJECT_DIR$/ssm/spring_mvc" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -12,6 +13,7 @@
         <option value="$PROJECT_DIR$/javaweb/jedis/pom.xml" />
         <option value="$PROJECT_DIR$/ssm/mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/ssm/my_spring/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm/spring_mvc/pom.xml" />
       </list>
     </option>
   </component>

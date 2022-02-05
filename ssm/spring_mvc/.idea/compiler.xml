@@ -8,19 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring_mvc" />
-        <module name="mvn_web" />
-        <module name="jedis" />
-        <module name="my_spring" />
-        <module name="mybatis" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="first_maven" target="11" />
-      <module name="jedis" target="11" />
-      <module name="mvn_web" target="11" />
-      <module name="my_spring" target="11" />
-      <module name="mybatis" target="11" />
-      <module name="spring_mvc" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>
