@@ -10,39 +10,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d78f6ab-1666-4e8b-9e26-b970aba97d33" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/../../.idea/artifacts/spring_mvc_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../.idea/artifacts/spring_mvc_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_mvc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_mvc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mvc/controller/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/springMVC.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/target.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/target.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/artifacts/my_spring_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/artifacts/my_spring_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_springframework_spring_aop_5_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_springframework_spring_beans_5_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_springframework_spring_context_5_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_springframework_spring_core_5_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_springframework_spring_expression_5_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_springframework_spring_jcl_5_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_springframework_spring_web_5_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mvc/controller/ScopeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/druid.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/scope.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/artifacts/spring_mvc_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/artifacts/spring_mvc_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/libraries/Maven__net_sourceforge_cglib_com_springsource_net_sf_cglib_2_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_aopalliance_com_springsource_org_aopalliance_1_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_aspectj_com_springsource_org_aspectj_weaver_1_6_4_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_spring/my_spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_spring/my_spring.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_spring/src/main/java/com/evan/spring5/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_spring/src/main/java/com/evan/transaction/dao/AccountDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_spring/src/main/java/com/evan/transaction/dao/AccountDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_spring/src/main/java/com/evan/transaction/service/AccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_spring/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_spring/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_mvc.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_mvc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/springMVC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springMVC.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +54,10 @@
         <option value="Jsp File" />
         <option value="XML文件" />
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="Class" />
+        <option value="thymeleaf template" />
       </list>
     </option>
   </component>
@@ -104,6 +98,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -119,7 +114,7 @@
     <selection>jr</selection>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.56" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.56" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="springMVC" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="springMVC" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
@@ -253,6 +248,12 @@
       <updated>1643984506148</updated>
       <workItem from="1643984508043" duration="350000" />
       <workItem from="1643986106411" duration="10873000" />
+      <workItem from="1644143937386" duration="3602000" />
+      <workItem from="1644156005036" duration="18000" />
+      <workItem from="1644156211132" duration="4000" />
+      <workItem from="1644158179406" duration="56000" />
+      <workItem from="1644158312189" duration="74000" />
+      <workItem from="1644158629297" duration="311000" />
     </task>
     <servers />
   </component>

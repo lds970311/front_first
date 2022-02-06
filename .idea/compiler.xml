@@ -20,7 +20,7 @@
       <module name="mvn_web" target="11" />
       <module name="my_spring" target="11" />
       <module name="mybatis" target="11" />
-      <module name="spring_mvc" target="1.7" />
+      <module name="spring_mvc" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
