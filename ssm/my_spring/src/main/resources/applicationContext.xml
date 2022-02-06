@@ -19,7 +19,7 @@
     <!--开启注解扫描-->
     <context:component-scan base-package="com.evan.aop"/>
     <context:component-scan base-package="com.evan.jdbcTemplate"/>
-    <context:component-scan base-package="com.evan.transaction"/>
+    <!--<context:component-scan base-package="com.evan.transaction"/>-->
 
     <!--开启aspectj生成代理对象-->
     <aop:aspectj-autoproxy/>
