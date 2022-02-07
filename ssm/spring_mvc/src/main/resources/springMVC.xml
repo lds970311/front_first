@@ -39,6 +39,8 @@
     -->
     <mvc:annotation-driven/>
     <mvc:view-controller path="/" view-name="index"/>
+    <mvc:view-controller path="/toAdd" view-name="employee_add"/>
+
 
     <!--配置druid-->
     <context:property-placeholder location="classpath:druid.properties"/>
@@ -53,5 +55,6 @@
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="dataSource"/>
     </bean>
+
 
 </beans>
