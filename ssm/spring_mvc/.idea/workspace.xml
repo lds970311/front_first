@@ -10,39 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d78f6ab-1666-4e8b-9e26-b970aba97d33" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/../../.idea/artifacts/spring_mvc_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../.idea/artifacts/spring_mvc_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_mvc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_mvc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mvc/controller/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/springMVC.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/target.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/target.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/artifacts/my_spring_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/artifacts/my_spring_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/libraries/Maven__net_sourceforge_cglib_com_springsource_net_sf_cglib_2_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_aopalliance_com_springsource_org_aopalliance_1_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/libraries/Maven__org_aspectj_com_springsource_org_aspectj_weaver_1_6_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_spring/my_spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_spring/my_spring.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_spring/src/main/java/com/evan/spring5/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_spring/src/main/java/com/evan/transaction/dao/AccountDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_spring/src/main/java/com/evan/transaction/dao/AccountDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_spring/src/main/java/com/evan/transaction/service/AccountService.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mvc/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mvc/dao/EmpDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mvc/dao/EmpDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mvc/domain/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mvc/service/EmpService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mvc/service/EmpServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/employee_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/employee_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/employee_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/evan/DbTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/evan/EmpServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_spring/src/test/java/com/evan/transaction/TransactionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../my_spring/src/test/java/com/evan/transaction/TransactionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/springMVC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springMVC.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/target.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/target.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/target.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/target.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +49,10 @@
         <option value="Jsp File" />
         <option value="XML文件" />
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="Class" />
+        <option value="thymeleaf template" />
       </list>
     </option>
   </component>
@@ -101,25 +90,113 @@
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/static/js/jquery.js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.last.edited" value="全局库" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2076566" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
-  <component name="RunManager">
-    <configuration name="Tomcat 9.0.56" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.56" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\Programs\front_first\ssm\spring_mvc\src\main\webapp\static" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.EmpServiceTest.addEmployee">
+    <configuration name="EmpServiceTest.addEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring_mvc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evan" />
+      <option name="MAIN_CLASS_NAME" value="com.evan.EmpServiceTest" />
+      <option name="METHOD_NAME" value="addEmployee" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmpServiceTest.deleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring_mvc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evan" />
+      <option name="MAIN_CLASS_NAME" value="com.evan.EmpServiceTest" />
+      <option name="METHOD_NAME" value="deleteById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmpServiceTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring_mvc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evan" />
+      <option name="MAIN_CLASS_NAME" value="com.evan.EmpServiceTest" />
+      <option name="METHOD_NAME" value="getAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmpServiceTest.getOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring_mvc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evan" />
+      <option name="MAIN_CLASS_NAME" value="com.evan.EmpServiceTest" />
+      <option name="METHOD_NAME" value="getOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmpServiceTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring_mvc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evan" />
+      <option name="MAIN_CLASS_NAME" value="com.evan.EmpServiceTest" />
+      <option name="METHOD_NAME" value="update" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="springMVC" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="springMVC" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
@@ -242,6 +319,15 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.EmpServiceTest.addEmployee" />
+        <item itemvalue="JUnit.EmpServiceTest.update" />
+        <item itemvalue="JUnit.EmpServiceTest.deleteById" />
+        <item itemvalue="JUnit.EmpServiceTest.getOne" />
+        <item itemvalue="JUnit.EmpServiceTest.getAll" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -253,10 +339,30 @@
       <updated>1643984506148</updated>
       <workItem from="1643984508043" duration="350000" />
       <workItem from="1643986106411" duration="10873000" />
+      <workItem from="1644143937386" duration="3602000" />
+      <workItem from="1644156005036" duration="18000" />
+      <workItem from="1644156211132" duration="4000" />
+      <workItem from="1644158179406" duration="56000" />
+      <workItem from="1644158312189" duration="74000" />
+      <workItem from="1644158629297" duration="14373000" />
     </task>
+    <task id="LOCAL-00001" summary="1. 配置数据库连接池&#10;2. springMVC域对象存储数据">
+      <created>1644159072100</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1644159072100</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="1. 配置数据库连接池&#10;2. springMVC域对象存储数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 配置数据库连接池&#10;2. springMVC域对象存储数据" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
