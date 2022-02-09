@@ -1,17 +1,17 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="spring_mvc:war exploded">
-    <output-path>$PROJECT_DIR$/ssm/spring_mvc/target/spring_mvc</output-path>
+  <artifact type="exploded-war" name="mvc_annotation:war exploded">
+    <output-path>$PROJECT_DIR$/ssm/mvc_annotation/target/spring_mvc</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
-        <module>spring_mvc</module>
+        <module>mvc_annotation</module>
         <packaging>war</packaging>
       </options>
     </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="spring_mvc" />
+          <element id="module-output" name="mvc_annotation" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.glassfish.web:javax.servlet.jsp.jstl:1.2.5" />
@@ -52,9 +52,9 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/ssm/spring_mvc/target/spring_mvc/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/ssm/mvc_annotation/target/spring_mvc/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="spring_mvc/web/Web" />
+      <element id="javaee-facet-resources" facet="mvc_annotation/web/Web" />
     </root>
   </artifact>
 </component>
