@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>$Title$</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" th:src="@{/static/js/jquery.js}"></script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script th:src="@{/static/js/jquery.js}" type="text/javascript"></script>
+    <style>
+        .delete {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-<table border="1" cellpadding="0" cellspacing="0" style="text-align: center;" id="dataTable">
+<table border="1" cellpadding="0" cellspacing="0" id="dataTable" style="text-align: center;">
     <tr>
         <th colspan="5">Employee Info</th>
     </tr>
@@ -25,17 +30,29 @@
         <td th:text="${employee.email}"></td>
         <td th:text="${employee.gender}"></td>
         <td>
-            <a id="delete" th:href="@{'/employee/'+${employee.id}}">delete</a>
+            <span class="delete" th:href="${employee.id}">delete</span>
             <a th:href="@{'/employee/'+${employee.id}}">update</a>
         </td>
     </tr>
 </table>
-<script type="text/javascript" th:src="@{/static/js/jquery.js}"></script>
+<script th:src="@{/static/js/jquery.js}" type="text/javascript"></script>
 <script>
     $(function () {
-        $("#delete").click(function (e) {
-            console.log(e.target)
-            e.preventDefault();
+        $(".delete").click(function (e) {
+            const path = document.location.href;
+            const id = $(this).attr("href")
+            const str = path + "/" + id;
+            console.log(str)
+            $.ajax({
+                url: str,
+                method: "delete",
+                success: function (res) {
+                    console.log(res)
+                },
+                error: function (err) {
+                    console.log(err)
+                }
+            })
         })
     })
 </script>

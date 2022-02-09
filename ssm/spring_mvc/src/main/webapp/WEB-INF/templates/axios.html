@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <title>ajax测试</title>
+    <style>
+        .info {
+            width: 300px;
+            min-height: 100px;
+            border: 1px solid chartreuse;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">获取数据</button>
+<div class="info"></div>
+<script th:src="@{/static/js/jquery.js}" type="text/javascript"></script>
+<script>
+    $("#btn").click(function () {
+        $.ajax({
+            url: "http://localhost:9090/spring_mvc/http/emp",
+            method: "get",
+            success: function (data) {
+                console.log(data)
+                $(".info").html(`
+                    <span>${data.email}</span>
+                    <span>${data.gender}</span>
+                    <span>${data.id}</span>
+                    <span>${data.lastName}</span>
+                    `
+                )
+            },
+            error: function (error) {
+                console.log(error)
+            }
+        })
+    })
+</script>
+</body>
+</html>
