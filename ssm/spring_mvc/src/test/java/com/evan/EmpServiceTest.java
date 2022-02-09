@@ -50,10 +50,13 @@ public class EmpServiceTest {
 
     @Test
     public void addEmployee() {
-        empService.addEmployee(new Employee(6, "H-ee-ff", "ee-ff@133.com", 0));
-        empService.addEmployee(new Employee(6, "E-ee-ff", "fe-ff@133.com", 1));
-        empService.addEmployee(new Employee(6, "E-ee-ff", "He-ff@133.com", 1));
-        empService.addEmployee(new Employee(6, "F-ee-ff", "Le-ff@133.com", 1));
-        empService.addEmployee(new Employee(6, "G-ee-ff", "Me-ff@163.com", 0));
+        for (int i = 0; i < 5; i++) {
+            empService.addEmployee(new Employee(6, "H-ee-ff", "ee-ff@133.com", 0));
+            empService.addEmployee(new Employee(6, "E-ee-ff", "fe-ff@133.com", 1));
+            empService.addEmployee(new Employee(6, "E-ee-ff", "He-ff@133.com", 1));
+            empService.addEmployee(new Employee(6, "F-ee-ff", "Le-ff@133.com", 1));
+            empService.addEmployee(new Employee(6, "G-ee-ff", "Me-ff@163.com", 0));
+        }
     }
+
 }

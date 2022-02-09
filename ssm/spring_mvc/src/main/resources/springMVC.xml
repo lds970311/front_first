@@ -23,7 +23,6 @@
 
                         <!-- 视图前缀 -->
                         <property name="prefix" value="/WEB-INF/templates/"/>
-
                         <!-- 视图后缀 -->
                         <property name="suffix" value=".html"/>
                         <property name="templateMode" value="HTML5"/>
@@ -40,6 +39,8 @@
     <mvc:annotation-driven/>
     <mvc:view-controller path="/" view-name="index"/>
     <mvc:view-controller path="/toAdd" view-name="employee_add"/>
+    <mvc:view-controller path="/ajax" view-name="axios"/>
+    <mvc:view-controller path="/file" view-name="download"/>
 
 
     <!--配置druid-->
@@ -55,6 +56,18 @@
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="dataSource"/>
     </bean>
+    <!--开放对静态资源的访问-->
+    <mvc:default-servlet-handler/>
 
+    <!--必须通过文件解析器的解析才能将文件转换为MultipartFile对象-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 
+    <!--配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/"/>
+            <ref bean="firstInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
