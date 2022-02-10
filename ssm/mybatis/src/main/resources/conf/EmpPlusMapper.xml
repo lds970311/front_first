@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.evan.dao.EmpPlusMapper">
+
+    <resultMap id="MyDifEmp" type="com.evan.domain.EmployeePlus">
+        <id column="id" property="id"/>
+        <result column="last_name" property="lastName"/>
+        <result column="gender" property="gender"/>
+        <result column="email" property="email"/>
+        <!--<result column="did" property="department.id"/>-->
+        <!--<result column="dept_name" property="department.deptName"/>-->
+        <association property="department" javaType="com.evan.domain.Department">
+            <id column="did" property="id"/>
+            <id column="dept_name" property="deptName"/>
+        </association>
+    </resultMap>
+    <select id="getEmployeeById" resultMap="MyDifEmp">
+        select e.id, last_name, gender, email, d.id as did, d.dept_name
+        from mybatis.tbl_employee e
+                 inner join mybatis.tbl_dept d on e.dept_id = d.id
+        where e.id = #{id}
+    </select>
+    <select id="getDepartmentById" resultType="com.evan.domain.Department">
+        select id, dept_name
+        from mybatis.tbl_dept
+        where id = #{id};
+    </select>
+
+    <resultMap id="ByStep" type="com.evan.domain.EmployeePlus">
+        <id column="id" property="id"/>
+        <result column="email" property="email"/>
+        <result column="gender" property="gender"/>
+        <result column="last_name" property="lastName"/>
+
+        <!-- association定义关联对象的封装规则
+            select:表明当前属性是调用select指定的方法查出的结果
+            column:指定将哪一列的值传给这个方法
+            流程：使用select指定的方法（传入column指定的这列参数的值）查出对象，并封装给property指定的属性
+         -->
+        <association property="department"
+                     select="com.evan.dao.EmpPlusMapper.getDepartmentById"
+                     column="id">
+        </association>
+    </resultMap>
+    <select id="getEmployeeByStep" resultMap="ByStep">
+        select *
+        from mybatis.tbl_employee
+        where id = #{id}
+    </select>
+</mapper>

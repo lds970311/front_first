@@ -4,7 +4,8 @@
     <!-- File是输出的方向通向文件的 -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!--日志输出路径-->
-        <file>H:\Programs\front_first\ssm\mybatis\log\info.log</file>
+        <!--<file>H:\Programs\front_first\ssm\mybatis\log\info.log</file>-->
+        <file>F:\Java\front_first\ssm\mybatis\log\info.log</file>
         <!--指定日志文件拆分和压缩规则-->
         <rollingPolicy
                 class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
@@ -33,7 +34,8 @@
 
     <!--html消息格式配置-->
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>H:\Programs\front_first\ssm\mybatis\log\log.html</file>
+        <!--<file>H:\Programs\front_first\ssm\mybatis\log\log.html</file>-->
+        <file>F:\Java\front_first\ssm\mybatis\log\log.html</file>
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
             <layout class="ch.qos.logback.classic.html.HTMLLayout">
                 <pattern>%p%d%msg%M%F{32}%L</pattern>

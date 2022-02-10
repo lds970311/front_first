@@ -32,7 +32,7 @@ public class MybatisHelloWord {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         //2.sqlSession能直接执行已经映射的sql语句
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        Employee employee = sqlSession.selectOne("com.evan.mybatis.EmployeeMapper.selectEmployee", 1);
+        Employee employee = sqlSession.selectOne("com.evan.dao.EmpMapper.getEmployeeById", 1);
         logger.info(employee.toString());
         sqlSession.close();
     }
