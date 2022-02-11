@@ -8,6 +8,9 @@
         <setting name="mapUnderscoreToCamelCase" value="true"/>
         <setting name="lazyLoadingEnabled" value="true"/>
         <setting name="aggressiveLazyLoading" value="true"/>
+        <!--开启二级缓存-->
+        <setting name="localCacheScope" value="STATEMENT"/>
+        <setting name="cacheEnabled" value="true"/>
     </settings>
     <typeAliases>
         <typeAlias type="com.evan.domain.Employee" alias="emp"/>
@@ -41,6 +44,7 @@
     <mappers>
         <mapper resource="conf/EmployeeMapper.xml"/>
         <mapper resource="conf/EmpPlusMapper.xml"/>
+        <mapper resource="conf/EmpDynamicMapper.xml"/>
         <!--批量注册-->
         <package name="conf"/>
     </mappers>

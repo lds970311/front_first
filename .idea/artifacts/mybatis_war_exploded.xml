@@ -28,6 +28,7 @@
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.2.3" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.2.3" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.26" />
+          <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache:2.10.6" />
         </element>
       </element>
       <element id="directory" name="META-INF">
