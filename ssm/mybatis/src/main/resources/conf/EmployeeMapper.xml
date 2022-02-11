@@ -12,7 +12,12 @@ resultType：返回值类型
 
 public Employee getEmpById(Integer id);
  -->
-    <select id="getEmployeeById" resultType="emp">
+    <!--开启二级缓存-->
+    <!--<cache eviction="LRU" flushInterval="60000" readOnly="false" size="1024"/>-->
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache">
+
+    </cache>
+    <select id="getEmployeeById" resultType="emp" useCache="true">
         select id, last_name, gender, email
         from mybatis.tbl_employee
         where id = #{id}

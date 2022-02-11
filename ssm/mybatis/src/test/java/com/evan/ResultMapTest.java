@@ -6,6 +6,7 @@
 package com.evan;
 
 import com.evan.dao.EmpPlusMapper;
+import com.evan.domain.DepartmentPlus;
 import com.evan.domain.EmployeePlus;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -17,6 +18,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 public class ResultMapTest {
     public static SqlSessionFactory sqlSessionFactory;
@@ -50,5 +52,33 @@ public class ResultMapTest {
         logger.warn(employeeByStep.toString());
         System.out.println(employeeByStep);
         //System.out.println(employeeById.getDepartment());
+    }
+
+    @Test
+    public void testCollection() {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        EmpPlusMapper mapper = sqlSession.getMapper(EmpPlusMapper.class);
+        DepartmentPlus departmentAndEmpById = mapper.getDepartmentAndEmpById(3);
+        logger.warn(departmentAndEmpById.toString());
+        List<EmployeePlus> employeeList = departmentAndEmpById.getEmployeeList();
+        employeeList.forEach(System.out::println);
+        /*
+            Employee(id=3, lastName=lucy, gender=1, email=lucy@qq.com)
+            Employee(id=4, lastName=jase, gender=1, email= jase@123.com)
+         */
+    }
+
+    @Test
+    public void testStepCollection() {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        EmpPlusMapper mapper = sqlSession.getMapper(EmpPlusMapper.class);
+        DepartmentPlus departmentAndEmpByIdByStep = mapper.getDepartmentAndEmpByIdByStep(3);
+        logger.warn(departmentAndEmpByIdByStep.toString());
+        List<EmployeePlus> employeeList = departmentAndEmpByIdByStep.getEmployeeList();
+        employeeList.forEach(System.out::println);
+        /*
+            Employee(id=3, lastName=lucy, gender=1, email=lucy@qq.com)
+            Employee(id=4, lastName=jase, gender=1, email= jase@123.com)
+         */
     }
 }
