@@ -2,10 +2,9 @@ package com.evan.mybatis.dao;
 
 import com.evan.mybatis.beans.Employee;
 import com.evan.mybatis.beans.EmployeeExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-
-import org.apache.ibatis.annotations.Param;
 
 public interface EmployeeMapper {
     /**
@@ -95,4 +94,6 @@ public interface EmployeeMapper {
      * @mbg.generated Sat Feb 12 11:59:21 CST 2022
      */
     int updateByPrimaryKey(Employee record);
+
+    List<Employee> getAllEmployees();
 }
