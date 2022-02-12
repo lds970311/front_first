@@ -15,6 +15,8 @@
       <module fileurl="file://$PROJECT_DIR$/javaweb/mvn_web/mvn_web.iml" filepath="$PROJECT_DIR$/javaweb/mvn_web/mvn_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/my_spring/my_spring.iml" filepath="$PROJECT_DIR$/ssm/my_spring/my_spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/ssm/mybatis/mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm/mybatis_generator/mybatis_generator.iml" filepath="$PROJECT_DIR$/ssm/mybatis_generator/mybatis_generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm/mybatis_ssm/mybatis_ssm.iml" filepath="$PROJECT_DIR$/ssm/mybatis_ssm/mybatis_ssm.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/spring_mvc/spring_mvc.iml" filepath="$PROJECT_DIR$/ssm/spring_mvc/spring_mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/ssm.iml" filepath="$PROJECT_DIR$/ssm/ssm.iml" />
     </modules>

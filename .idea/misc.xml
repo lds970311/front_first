@@ -5,6 +5,8 @@
     <file type="web" url="file://$PROJECT_DIR$/ssm/mvc_annotation" />
     <file type="web" url="file://$PROJECT_DIR$/ssm/my_spring" />
     <file type="web" url="file://$PROJECT_DIR$/ssm/mybatis" />
+    <file type="web" url="file://$PROJECT_DIR$/ssm/mybatis_generator" />
+    <file type="web" url="file://$PROJECT_DIR$/ssm/mybatis_ssm" />
     <file type="web" url="file://$PROJECT_DIR$/ssm/spring_mvc" />
   </component>
   <component name="MavenProjectsManager">
@@ -16,6 +18,8 @@
         <option value="$PROJECT_DIR$/ssm/my_spring/pom.xml" />
         <option value="$PROJECT_DIR$/ssm/spring_mvc/pom.xml" />
         <option value="$PROJECT_DIR$/ssm/mvc_annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm/mybatis_ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm/mybatis_generator/pom.xml" />
       </list>
     </option>
   </component>
