@@ -1,0 +1,36 @@
+2022-02-12 11:25:23.194 [main] DEBUG o.m.generator.logging.LogFactory - Logging initialized using 'org.mybatis.generator.logging.slf4j.Slf4jLoggingLogFactory@78aea4b9' adapter.
+2022-02-12 11:25:23.199 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Retrieving column information for table "tbl_dept"
+2022-02-12 11:25:23.253 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "id", data type 4, in table "mybatis..tbl_dept"
+2022-02-12 11:25:23.254 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "dept_name", data type 12, in table "mybatis..tbl_dept"
+2022-02-12 11:25:23.263 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Retrieving column information for table "tbl_employee"
+2022-02-12 11:25:23.270 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "id", data type 4, in table "mybatis..tbl_employee"
+2022-02-12 11:25:23.270 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "last_name", data type 12, in table "mybatis..tbl_employee"
+2022-02-12 11:25:23.270 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "gender", data type 1, in table "mybatis..tbl_employee"
+2022-02-12 11:25:23.271 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "email", data type 12, in table "mybatis..tbl_employee"
+2022-02-12 11:25:23.271 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "dept_id", data type 4, in table "mybatis..tbl_employee"
+2022-02-12 11:39:41.869 [main] DEBUG o.m.generator.logging.LogFactory - Logging initialized using 'org.mybatis.generator.logging.slf4j.Slf4jLoggingLogFactory@78aea4b9' adapter.
+2022-02-12 11:39:41.872 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Retrieving column information for table "tbl_dept"
+2022-02-12 11:39:41.910 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "id", data type 4, in table "mybatis..tbl_dept"
+2022-02-12 11:39:41.910 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "dept_name", data type 12, in table "mybatis..tbl_dept"
+2022-02-12 11:39:41.918 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Retrieving column information for table "tbl_employee"
+2022-02-12 11:39:41.923 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "id", data type 4, in table "mybatis..tbl_employee"
+2022-02-12 11:39:41.923 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "last_name", data type 12, in table "mybatis..tbl_employee"
+2022-02-12 11:39:41.923 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "gender", data type 1, in table "mybatis..tbl_employee"
+2022-02-12 11:39:41.923 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "email", data type 12, in table "mybatis..tbl_employee"
+2022-02-12 11:39:41.923 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "dept_id", data type 4, in table "mybatis..tbl_employee"
+2022-02-12 11:59:21.892 [main] DEBUG o.m.generator.logging.LogFactory - Logging initialized using 'org.mybatis.generator.logging.slf4j.Slf4jLoggingLogFactory@78aea4b9' adapter.
+2022-02-12 11:59:21.895 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Retrieving column information for table "tbl_dept"
+2022-02-12 11:59:21.939 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "id", data type 4, in table "mybatis..tbl_dept"
+2022-02-12 11:59:21.939 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "dept_name", data type 12, in table "mybatis..tbl_dept"
+2022-02-12 11:59:21.949 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Retrieving column information for table "tbl_employee"
+2022-02-12 11:59:21.954 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "id", data type 4, in table "mybatis..tbl_employee"
+2022-02-12 11:59:21.954 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "last_name", data type 12, in table "mybatis..tbl_employee"
+2022-02-12 11:59:21.954 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "gender", data type 1, in table "mybatis..tbl_employee"
+2022-02-12 11:59:21.954 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "email", data type 12, in table "mybatis..tbl_employee"
+2022-02-12 11:59:21.954 [main] DEBUG o.m.g.i.db.DatabaseIntrospector - Found column "dept_id", data type 4, in table "mybatis..tbl_employee"
+2022-02-12 12:07:45.206 [main] DEBUG c.e.m.d.E.selectByPrimaryKey - ==>  Preparing: select id, last_name, gender, email, dept_id from mybatis.tbl_employee where id = ? 
+2022-02-12 12:07:45.236 [main] DEBUG c.e.m.d.E.selectByPrimaryKey - ==> Parameters: 1(Integer)
+2022-02-12 12:07:45.266 [main] DEBUG c.e.m.d.E.selectByPrimaryKey - <==      Total: 1
+2022-02-12 12:08:33.571 [main] DEBUG c.e.m.d.E.selectByPrimaryKey - ==>  Preparing: select id, last_name, gender, email, dept_id from mybatis.tbl_employee where id = ? 
+2022-02-12 12:08:33.600 [main] DEBUG c.e.m.d.E.selectByPrimaryKey - ==> Parameters: 1(Integer)
+2022-02-12 12:08:33.628 [main] DEBUG c.e.m.d.E.selectByPrimaryKey - <==      Total: 1

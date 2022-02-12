@@ -1,0 +1,1 @@
+2022-02-12 00:16:06.485 [main] DEBUG o.s.w.c.s.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'DispatcherServlet-servlet', started on Fri Feb 11 23:56:07 CST 2022, parent: Root WebApplicationContext
