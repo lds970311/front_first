@@ -148,9 +148,9 @@
           This element was generated on Sat Feb 12 11:59:21 CST 2022.
         -->
         insert into mybatis.tbl_employee (id, last_name, gender,
-        email, dept_id)
+        email, dept_id,status)
         values (#{id,jdbcType=INTEGER}, #{lastName,jdbcType=VARCHAR}, #{gender,jdbcType=CHAR},
-        #{email,jdbcType=VARCHAR}, #{deptId,jdbcType=INTEGER})
+        #{email,jdbcType=VARCHAR}, #{deptId,jdbcType=INTEGER},#{empStatus})
     </insert>
     <insert id="insertSelective" parameterType="com.evan.mybatis.beans.Employee">
         <!--
@@ -204,6 +204,10 @@
         <if test="_parameter != null">
             <include refid="Example_Where_Clause"/>
         </if>
+    </select>
+    <select id="getAllEmployees" resultType="com.evan.mybatis.beans.Employee">
+        select *
+        from mybatis.tbl_employee
     </select>
     <update id="updateByExampleSelective" parameterType="map">
         <!--
