@@ -29,6 +29,8 @@
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.2.3" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.2.3" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.26" />
+          <element id="library" level="project" name="Maven: com.github.pagehelper:pagehelper:5.2.0" />
+          <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:3.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
