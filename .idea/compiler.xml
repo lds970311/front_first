@@ -13,11 +13,13 @@
         <module name="mybatis_generator" />
         <module name="mybatis" />
         <module name="spring_mvc" />
+        <module name="boot_first" />
         <module name="mybatis_ssm" />
         <module name="my_spring" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="boot_first" target="11" />
       <module name="first_maven" target="11" />
       <module name="jedis" target="11" />
       <module name="mvc_annotation" target="11" />
@@ -28,5 +30,10 @@
       <module name="mybatis_ssm" target="11" />
       <module name="spring_mvc" target="11" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="boot_first" options="-parameters" />
+    </option>
   </component>
 </project>

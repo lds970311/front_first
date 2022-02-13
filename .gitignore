@@ -4,3 +4,4 @@ datastrcuture/result
 java_base/logs
 java_base/testfiles
 java_base/src/com/codewolf/java/io/exec/*.txt
+*.log
