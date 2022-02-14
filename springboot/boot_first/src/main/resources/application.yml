@@ -7,9 +7,20 @@ spring:
   banner:
     image:
       location: logo/wolf.png
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.208.147:3306/my_jdbc
+      username: root
+      password: 19970311
 
 datasource:
   driver: com.mysql.cj.jdbc.Driver
-  url: jdbc:mysql://192.168.208.147/springboot_db
+  url: jdbc:mysql://192.168.208.147:3306/my_jdbc?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
   username: root
   password: 19970311
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+
