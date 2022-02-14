@@ -1,0 +1,21 @@
+server:
+  port: 8990
+  servlet:
+    context-path: /boot_mp
+
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.208.147:3306/my_jdbc
+      username: root
+      password: 19970311
+
+
+logging:
+  config: classpath:log/logback.xml
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml

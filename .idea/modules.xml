@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/springboot/boot_first/boot_first.iml" filepath="$PROJECT_DIR$/springboot/boot_first/boot_first.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/boot_mp/boot_mp.iml" filepath="$PROJECT_DIR$/springboot/boot_mp/boot_mp.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/case/case.iml" filepath="$PROJECT_DIR$/javaweb/case/case.iml" />
       <module fileurl="file://$PROJECT_DIR$/datastrcuture/datastrcuture.iml" filepath="$PROJECT_DIR$/datastrcuture/datastrcuture.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/first_web_proj/first_web_proj.iml" filepath="$PROJECT_DIR$/javaweb/first_web_proj/first_web_proj.iml" />
