@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace:名称空间;指定为接口的全类名-->
+<mapper namespace="com.evan.dao.UserMapper">
+
+    <select id="findByName" resultType="user">
+        select *
+        from my_jdbc.user
+        where name = #{name}
+    </select>
+</mapper>

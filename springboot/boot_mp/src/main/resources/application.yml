@@ -15,7 +15,11 @@ spring:
 
 logging:
   config: classpath:log/logback.xml
+  level:
+    root: warn
+    com.evan.dao: trace
 
-
-mybatis:
-  mapper-locations: classpath:mapper/*Mapper.xml
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  config-location: classpath:mybatisplus.config.xml
+  
