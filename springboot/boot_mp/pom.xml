@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>boot_mp</name>
     <description>boot_mp</description>
+
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -20,13 +21,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -43,11 +37,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.2.0</version>
-        </dependency>
         <!--mybatis-plus-->
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -59,6 +48,12 @@
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>1.2.6</version>
         </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter-test</artifactId>
+            <version>3.5.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>
