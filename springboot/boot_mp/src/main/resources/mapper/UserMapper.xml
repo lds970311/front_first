@@ -5,10 +5,14 @@
 
 <!--namespace:名称空间;指定为接口的全类名-->
 <mapper namespace="com.evan.dao.UserMapper">
+    <delete id="deleteAll">
+        delete
+        from mybatis_plus.user;
+    </delete>
 
     <select id="findByName" resultType="user">
         select *
-        from my_jdbc.user
+        from mybatis_plus.user
         where name = #{name}
     </select>
 </mapper>

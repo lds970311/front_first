@@ -37,7 +37,7 @@ public class ActiveRecordTest {
      */
     @Test
     public void addUser() {
-        User user = new User(null, "刘德华", 60, "ldh", "HongKong", "443312");
+        User user = new User(null, "刘德华", 60, "ldh", "HongKong", "443312", 0);
         boolean insert = user.insert();
         if (insert) {
             System.out.println("插入成功");
