@@ -6,11 +6,11 @@
 
     <select id="getUserById" resultType="com.evan.domain.User">
         select *
-        from my_jdbc.user
+        from mybatis_plus.user
         where id = #{id}
     </select>
     <select id="getAllUsers" resultType="com.evan.domain.User">
         select *
-        from my_jdbc.user;
+        from mybatis_plus.user;
     </select>
 </mapper>

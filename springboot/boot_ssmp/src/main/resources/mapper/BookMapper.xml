@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.evan.boot_ssmp.mapper.BookMapper">
+
+    <resultMap id="BaseResultMap" type="com.evan.boot_ssmp.domain.Book">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="author" column="author" jdbcType="VARCHAR"/>
+        <result property="price" column="price" jdbcType="DECIMAL"/>
+        <result property="sales" column="sales" jdbcType="INTEGER"/>
+        <result property="stock" column="stock" jdbcType="INTEGER"/>
+        <result property="imgPath" column="img_path" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,title,author,
+        price,sales,stock,
+        img_path
+    </sql>
+</mapper>

@@ -5,11 +5,15 @@
 
 package com.evan.dao;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.evan.domain.User;
+import com.evan.mapper.MyBaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
-public interface UserMapper extends BaseMapper<User> {
-    User findByName(String name);
+public interface UserMapper extends MyBaseMapper<User> {
+    List<User> findByName(String name);
+
+    int deleteAll();
 }

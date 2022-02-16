@@ -33,7 +33,7 @@ public class MapperCRUDTest {
 
     @Test
     public void insert() {
-        int insert = userMapper.insert(new User(null, "jinx", 23, "111222", "上海", "233"));
+        int insert = userMapper.insert(new User(null, "jinx", 23, "111222", "上海", "233", 0));
         if (insert != 0) {
             System.out.println("insert success!");
         }
@@ -86,7 +86,27 @@ public class MapperCRUDTest {
 
     @Test
     public void findByNameTest() {
-        User user = this.userMapper.findByName("汪峰");
-        System.out.println(user);
+        List<User> user = this.userMapper.findByName("汪峰");
+        user.forEach(System.out::println);
+    }
+
+    @Test
+    public void deleteAll() {
+        int i = this.userMapper.deleteAll(); //Prohibition of full table deletion
+        System.out.println(i);
+    }
+
+    @Test
+    public void findByAgeTest() {
+        QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();
+        userQueryWrapper.eq("age", 21);
+        List<User> users = this.userMapper.findByAge(userQueryWrapper);
+        users.forEach(System.out::println);
+    }
+
+    @Test
+    public void logicDeleteTest() {
+        int i = this.userMapper.deleteBatchIds(Arrays.asList(8, 9, 10));
+        System.out.println(i);
     }
 }

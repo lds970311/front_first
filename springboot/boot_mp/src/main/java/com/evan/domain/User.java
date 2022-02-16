@@ -7,6 +7,7 @@ package com.evan.domain;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.AllArgsConstructor;
@@ -27,5 +28,7 @@ public class User extends Model<User> {
     private String password;
     private String address;
     private String phone;
+    @TableLogic
+    private Integer deleted;
 }
 
