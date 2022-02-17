@@ -1,22 +1,20 @@
 import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import VueJsx from '@vitejs/plugin-vue-jsx'
-import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
-import {ElementPlusResolver} from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [vue(),
-        VueJsx(),
-        AutoImport({
-            resolvers: [ElementPlusResolver()],
-        }),
-        Components({
-            resolvers: [ElementPlusResolver()],
-        }),],
+        VueJsx()],
     server: {
         port: 12888,
-        host: true
-    }
+        host: true,
+        proxy: {
+            '/api': {
+                target: 'http://192.168.125.5:8901/boot_ssmp',
+                changeOrigin: true,
+                rewrite: (path) => path.replace(/^\/api/, '')
+            },
+        }
+    },
 })

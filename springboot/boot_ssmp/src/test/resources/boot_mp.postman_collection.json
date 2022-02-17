@@ -1,0 +1,191 @@
+{
+  "info": {
+    "_postman_id": "d0278b96-b966-42c8-9894-6aa9fc6e8d0c",
+    "name": "boot_mp",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "/books",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"id\": 2,\r\n        \"title\": \"边城\",\r\n        \"author\": \"沈从文\",\r\n        \"price\": 123.0,\r\n        \"sales\": 140,\r\n        \"stock\": 200,\r\n        \"imgPath\": \"static/uploads/biancheng.jpg\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{ssmp}}/books",
+          "host": [
+            "{{ssmp}}"
+          ],
+          "path": [
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "{{ssmp}}/books/{id}",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{ssmp}}/books/3",
+          "host": [
+            "{{ssmp}}"
+          ],
+          "path": [
+            "books",
+            "3"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "3",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "{{ssmp}}/books",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 39,\r\n    \"title\": \"Spring技术内幕\",\r\n    \"author\": \"Sprring\",\r\n    \"price\": 79.5,\r\n    \"sales\": 132,\r\n    \"stock\": 310,\r\n    \"imgPath\": \"static/uploads/spring.jpg\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{ssmp}}/books",
+          "host": [
+            "{{ssmp}}"
+          ],
+          "path": [
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "{{ssmp}}/books",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"id\": 2,\r\n        \"title\": \"边城\",\r\n        \"author\": \"沈从文\",\r\n        \"price\": 123.0,\r\n        \"sales\": 145,\r\n        \"stock\": 121,\r\n        \"imgPath\": \"static/uploads/biancheng.jpg\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{ssmp}}/books",
+          "host": [
+            "{{ssmp}}"
+          ],
+          "path": [
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "{{ssmp}}/books/batchDelete",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{ssmp}}/books/batchDelete?ids=1&ids=2",
+          "host": [
+            "{{ssmp}}"
+          ],
+          "path": [
+            "books",
+            "batchDelete"
+          ],
+          "query": [
+            {
+              "key": "ids",
+              "value": "1"
+            },
+            {
+              "key": "ids",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "{{ssmp}}/books/byPage",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{ssmp}}/books/byPage?pageSize=5&pageNum=2",
+          "host": [
+            "{{ssmp}}"
+          ],
+          "path": [
+            "books",
+            "byPage"
+          ],
+          "query": [
+            {
+              "key": "pageSize",
+              "value": "5",
+              "description": "每页个数"
+            },
+            {
+              "key": "pageNum",
+              "value": "2",
+              "description": "当前页"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "{{ssmp}}/books/39",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{ssmp}}/books/39",
+          "host": [
+            "{{ssmp}}"
+          ],
+          "path": [
+            "books",
+            "39"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
