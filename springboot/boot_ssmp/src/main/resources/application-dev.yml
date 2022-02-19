@@ -1,0 +1,9 @@
+server:
+  servlet:
+    context-path: /boot_ssmp
+  port: 8901
+
+spring:
+  devtools:
+    restart:
+      exclude: static/**,public/**,config/application.yml

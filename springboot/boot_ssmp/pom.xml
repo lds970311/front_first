@@ -22,7 +22,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -49,6 +53,23 @@
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>1.2.6</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!--数据校验-->
+        <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -67,5 +88,29 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>dev_env</id>
+            <properties>
+                <profile.active>dev</profile.active>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>pro_env</id>
+            <properties>
+                <profile.active>pro</profile.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>test_env</id>
+            <properties>
+                <profile.active>test</profile.active>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>

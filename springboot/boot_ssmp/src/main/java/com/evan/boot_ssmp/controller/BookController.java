@@ -71,6 +71,9 @@ public class BookController {
 
     @GetMapping("byPage")
     public Result getByPage(@RequestParam Integer pageSize, Integer pageNum, String title, String author, Double price) {
+        System.out.println("test host deploy");
+        System.out.println("test host deploy");
+        System.out.println("test host deploy");
         Result result = new Result();
         System.out.println("pageSize= " + pageSize + " pageNum= " + pageNum);
         IPage<Book> page = this.bookService.getByPage(pageNum, pageSize, title, author, price);
