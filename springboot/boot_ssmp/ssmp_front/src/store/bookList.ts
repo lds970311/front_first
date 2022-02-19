@@ -80,6 +80,16 @@ export const useUserStore = defineStore({
                 console.log(e)
             }
         }
+    },
+    // 开启数据缓存
+    persist: {
+        enabled: true,
+        strategies: [
+            {
+                key: 'books',
+                storage: localStorage,
+            }
+        ]
     }
 })
 

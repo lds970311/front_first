@@ -1,25 +1,13 @@
-server:
-  servlet:
-    context-path: /boot_ssmp
-  port: 8901
-
 spring:
-  datasource:
-    druid:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://192.168.208.148:3306/mybatis_plus
-      username: root
-      password: 19970311
+  profiles:
+    active: dev
+    include: DB,log,mp,info
 
+infos:
+  ip-address:192.168.208.149
+  port:28888
+  timeout:60
+  datasize:10
 
-logging:
-  config: classpath:logback.xml
-  level:
-    root: info
-    com.evan.boot_ssmp: trace
-
-mybatis-plus:
-  mapper-locations: classpath:mapper/*.xml
-  config-location: classpath:mybatisplus.config.xml
 #  configuration:
 #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

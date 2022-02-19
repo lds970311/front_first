@@ -5,26 +5,37 @@
 
 package com.evan.boot_ssmp;
 
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.evan.boot_ssmp.domain.Book;
 import com.evan.boot_ssmp.mapper.BookMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Rollback;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 @SpringBootTest
+@Transactional
+@Rollback(value = false)
 public class BookTest {
 
     @Resource
     private BookMapper bookMapper;
 
     @Test
-    public void testGetBook() {
-        Book book = bookMapper.selectById(1);
-        System.out.println("根据id获取的:" + book);
-        List<Book> books = bookMapper.selectList(null);
-        System.out.println("-----all books:------");
-        books.forEach(System.out::println);
+    void testSaveBook() {
+        Book book = new Book(null, "倚天屠龙记", "禁用", 32.0, 50, 50, "yttlj.jpj");
+        int insert = bookMapper.insert(book);
+        System.out.println(insert);
+    }
+
+    @Test
+    void testUpdate() {
+        Book book = new Book(null, "倚天屠龙记", "禁用", 32.0, 50, 50, "yttlj.jpj");
+        UpdateWrapper<Book> bookUpdateWrapper = new UpdateWrapper<>();
+        bookUpdateWrapper.eq("id", 62)
+                .set("author", "金庸");
+        this.bookMapper.update(book, bookUpdateWrapper);
     }
 }

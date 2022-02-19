@@ -1,0 +1,8 @@
+logging:
+  config: classpath:logback.xml
+  level:
+    root: info
+    com.evan.boot_ssmp: trace
+
+
+    

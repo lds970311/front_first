@@ -24,3 +24,5 @@ datasource:
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
 
+test:
+  info: "123"

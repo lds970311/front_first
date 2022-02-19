@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.208.148:3306/mybatis_plus
+      username: root
+      password: 19970311
