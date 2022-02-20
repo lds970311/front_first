@@ -6,20 +6,26 @@
 package com.evan.boot_ssmp.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.evan.boot_ssmp.annotations.NotIncludeSwagger;
 import com.evan.boot_ssmp.controller.utils.Result;
 import com.evan.boot_ssmp.domain.Book;
 import com.evan.boot_ssmp.service.BookService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/books")
+@Api(tags = {"books"}, description = "book控制器")
 public class BookController {
     @Autowired
     private BookService bookService;
 
     @GetMapping
+    @NotIncludeSwagger
     public Result listAll() {
         Result result = new Result();
         result.setCode(HttpStatus.OK);
@@ -28,7 +34,10 @@ public class BookController {
     }
 
     @GetMapping("{id}")
-    public Result getOne(@PathVariable Integer id) {
+    @ApiOperation(value = "根据id获取图书", notes = "传入int类型的id")
+    public Result getOne(@PathVariable
+                         @ApiParam(name = "id", value = "id", required = true)
+                                 Integer id) {
         Result result = new Result();
         Book byId = bookService.getById(id);
         result.setData(byId);
@@ -37,6 +46,7 @@ public class BookController {
     }
 
     @PostMapping
+    @ApiOperation(value = "添加图书", notes = "以json的形式描述")
     public Result addBook(@RequestBody Book book) {
         Result result = new Result();
         result.setCode(HttpStatus.OK);
@@ -70,7 +80,11 @@ public class BookController {
     }
 
     @GetMapping("byPage")
-    public Result getByPage(@RequestParam Integer pageSize, Integer pageNum, String title, String author, Double price) {
+    public Result getByPage(@RequestParam Integer pageSize,
+                            @RequestParam Integer pageNum,
+                            String title,
+                            String author,
+                            Double price) {
         System.out.println("test host deploy");
         System.out.println("test host deploy");
         System.out.println("test host deploy");
