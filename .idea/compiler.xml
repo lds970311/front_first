@@ -13,6 +13,7 @@
         <module name="mybatis_generator" />
         <module name="mybatis" />
         <module name="spring_mvc" />
+        <module name="boot_webflux" />
         <module name="boot_first" />
         <module name="boot_ssmp" />
         <module name="mybatis_ssm" />
@@ -24,6 +25,7 @@
       <module name="boot_first" target="11" />
       <module name="boot_mp" target="11" />
       <module name="boot_ssmp" target="11" />
+      <module name="boot_webflux" target="11" />
       <module name="first_maven" target="11" />
       <module name="jedis" target="11" />
       <module name="mvc_annotation" target="11" />
@@ -40,6 +42,7 @@
       <module name="boot_first" options="-parameters" />
       <module name="boot_mp" options="-parameters" />
       <module name="boot_ssmp" options="-parameters" />
+      <module name="boot_webflux" options="-parameters" />
     </option>
   </component>
 </project>

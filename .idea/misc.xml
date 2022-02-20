@@ -23,6 +23,7 @@
         <option value="$PROJECT_DIR$/springboot/boot_first/pom.xml" />
         <option value="$PROJECT_DIR$/springboot/boot_mp/pom.xml" />
         <option value="$PROJECT_DIR$/springboot/boot_ssmp/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot/boot_webflux/pom.xml" />
       </list>
     </option>
   </component>
