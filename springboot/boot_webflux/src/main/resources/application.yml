@@ -1,0 +1,4 @@
+server:
+  port: 5780
+  servlet:
+    context-path: /boot_webflux
