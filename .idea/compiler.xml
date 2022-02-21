@@ -9,16 +9,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mvc_annotation" />
         <module name="mvn_web" />
-        <module name="jedis" />
+        <module name="design_pattern" />
         <module name="mybatis_generator" />
         <module name="mybatis" />
+        <module name="boot_first" />
+        <module name="boot_mp" />
+        <module name="jedis" />
         <module name="spring_mvc" />
         <module name="boot_webflux" />
-        <module name="boot_first" />
         <module name="boot_ssmp" />
         <module name="mybatis_ssm" />
         <module name="my_spring" />
-        <module name="boot_mp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +27,7 @@
       <module name="boot_mp" target="11" />
       <module name="boot_ssmp" target="11" />
       <module name="boot_webflux" target="11" />
+      <module name="design_pattern" target="11" />
       <module name="first_maven" target="11" />
       <module name="jedis" target="11" />
       <module name="mvc_annotation" target="11" />
