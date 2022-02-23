@@ -8,8 +8,6 @@ package com.evanlee.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.http.server.reactive.ServerHttpResponse;
-import org.springframework.web.reactive.function.BodyInserter;
 
 @Data
 @NoArgsConstructor

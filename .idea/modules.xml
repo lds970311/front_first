@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/springboot/boot_first/boot_first.iml" filepath="$PROJECT_DIR$/springboot/boot_first/boot_first.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/boot_mongodb/boot_mongodb.iml" filepath="$PROJECT_DIR$/springboot/boot_mongodb/boot_mongodb.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot/boot_mp/boot_mp.iml" filepath="$PROJECT_DIR$/springboot/boot_mp/boot_mp.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot/boot_ssmp/boot_ssmp.iml" filepath="$PROJECT_DIR$/springboot/boot_ssmp/boot_ssmp.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot/boot_webflux/boot_webflux.iml" filepath="$PROJECT_DIR$/springboot/boot_webflux/boot_webflux.iml" />

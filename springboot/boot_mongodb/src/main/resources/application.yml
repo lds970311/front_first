@@ -1,0 +1,12 @@
+server:
+  port: 18080
+  servlet:
+    context-path: /boot_mongodb
+
+
+spring:
+  data:
+    mongodb:
+      host: 192.168.208.149
+      database: articledb
+      port: 27017
