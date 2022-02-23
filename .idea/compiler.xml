@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mvc_annotation" />
+        <module name="boot_mongodb" />
         <module name="mvn_web" />
         <module name="design_pattern" />
         <module name="mybatis_generator" />
@@ -24,6 +25,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="boot_first" target="11" />
+      <module name="boot_mongodb" target="11" />
       <module name="boot_mp" target="11" />
       <module name="boot_ssmp" target="11" />
       <module name="boot_webflux" target="11" />
@@ -42,6 +44,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="boot_first" options="-parameters" />
+      <module name="boot_mongodb" options="-parameters" />
       <module name="boot_mp" options="-parameters" />
       <module name="boot_ssmp" options="-parameters" />
       <module name="boot_webflux" options="-parameters" />
