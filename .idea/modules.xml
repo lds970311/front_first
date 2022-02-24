@@ -18,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/javaweb/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/javaweb/jdbc/jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/jedis/jedis.iml" filepath="$PROJECT_DIR$/javaweb/jedis/jedis.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/jsoup/jsoup.iml" filepath="$PROJECT_DIR$/javaweb/jsoup/jsoup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micrioservice/micrioservice.iml" filepath="$PROJECT_DIR$/micrioservice/micrioservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/mvc_annotation/mvc_annotation.iml" filepath="$PROJECT_DIR$/ssm/mvc_annotation/mvc_annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/mvn_web/mvn_web.iml" filepath="$PROJECT_DIR$/javaweb/mvn_web/mvn_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/my_spring/my_spring.iml" filepath="$PROJECT_DIR$/ssm/my_spring/my_spring.iml" />

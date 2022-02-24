@@ -52,4 +52,10 @@ public class CommentServiceTest {
         Page<Comment> commentByPage = commentService.findCommentByPage("3", 1, 2);
         commentByPage.getContent().forEach(System.out::println);
     }
+
+    @Test
+    void addLikeNumTest() {
+        long l = commentService.updateCommentLikeNum("5");
+        System.out.println(l);
+    }
 }

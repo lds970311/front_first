@@ -3,7 +3,7 @@
 // FILENAME : LazySingleton.java
 // STATEMENT: 
 
-package com.evanlee.principle.openClose.singletonmode;
+package com.evanlee.constructor.singletonmode;
 
 //懒汉式实现单例模式
 public class LazySingleton {
