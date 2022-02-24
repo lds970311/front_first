@@ -5,8 +5,8 @@
 
 package com.evanlee.constructor;
 
-import com.evanlee.principle.openClose.singletonmode.HungrySingleton;
-import com.evanlee.principle.openClose.singletonmode.LazySingleton;
+import com.evanlee.constructor.singletonmode.HungrySingleton;
+import com.evanlee.constructor.singletonmode.LazySingleton;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;

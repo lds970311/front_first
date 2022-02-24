@@ -13,5 +13,12 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CommentDao extends MongoRepository<Comment, String> {
+    /**
+     * 根据父评论获取子评论, 并分页显示
+     *
+     * @param parentid
+     * @param pageable
+     * @return
+     */
     Page<Comment> findByParentid(String parentid, Pageable pageable);
 }

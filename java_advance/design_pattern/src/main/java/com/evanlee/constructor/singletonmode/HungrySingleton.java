@@ -3,7 +3,7 @@
 // FILENAME : HungrySingleton.java
 // STATEMENT: 
 
-package com.evanlee.principle.openClose.singletonmode;
+package com.evanlee.constructor.singletonmode;
 
 //饿汉式
 public class HungrySingleton {

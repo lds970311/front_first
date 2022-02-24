@@ -7,6 +7,7 @@ server:
 spring:
   data:
     mongodb:
-      host: 192.168.208.149
-      database: articledb
-      port: 27017
+      uri: mongodb://192.168.208.149:27017,192.168.208.149:27018,192.168.208.149:27019/articledb?connect=replicaSet&slaveOk=true&replicaSet=myrs
+#      host: 192.168.208.149
+#      database: articledb
+#      port: 27017
