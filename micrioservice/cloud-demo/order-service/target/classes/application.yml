@@ -1,0 +1,37 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://192.168.208.148:3306/cloud_order?useSSL=false
+      username: root
+      password: 19970311
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: orderservice
+
+
+mybatis:
+  type-aliases-package: cn.itcast.user.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+logging:
+  level:
+    cn.itcast: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8082/eureka
+
+
+#饥饿加载
+ribbon:
+  eager-load:
+    enabled: true
+    clients: userservice

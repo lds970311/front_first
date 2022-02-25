@@ -26,7 +26,14 @@
         <option value="$PROJECT_DIR$/springboot/boot_webflux/pom.xml" />
         <option value="$PROJECT_DIR$/java_advance/design_pattern/pom.xml" />
         <option value="$PROJECT_DIR$/springboot/boot_mongodb/pom.xml" />
+        <option value="$PROJECT_DIR$/micrioservice/cloud-demo/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/micrioservice/cloud-demo/order-service/pom.xml" />
+        <option value="$PROJECT_DIR$/micrioservice/cloud-demo/user-service/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
