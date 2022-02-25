@@ -29,6 +29,7 @@
       <module name="boot_mp" target="11" />
       <module name="boot_ssmp" target="11" />
       <module name="boot_webflux" target="11" />
+      <module name="cloud-demo" target="11" />
       <module name="design_pattern" target="11" />
       <module name="first_maven" target="11" />
       <module name="jedis" target="11" />
