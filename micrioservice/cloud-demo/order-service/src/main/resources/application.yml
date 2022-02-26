@@ -10,6 +10,11 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: orderservice
+  cloud:
+    nacos:
+      server-addr: 192.168.125.9:8848
+#      discovery:
+#        cluster-name: HangZhou
 
 
 mybatis:
@@ -24,10 +29,10 @@ logging:
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:8082/eureka
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:8082/eureka
 
 
 #饥饿加载
@@ -35,3 +40,7 @@ ribbon:
   eager-load:
     enabled: true
     clients: userservice
+
+#userservice:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule # 负载均衡规则
