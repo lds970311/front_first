@@ -8,8 +8,6 @@ spring:
       username: root
       password: 19970311
       driver-class-name: com.mysql.cj.jdbc.Driver
-  application:
-    name: userservice
 
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
@@ -23,7 +21,9 @@ logging:
     dateformat: MM-dd HH:mm:ss:SSS
 
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:8082/eureka
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:8082/eureka
+
+#饥饿加载
