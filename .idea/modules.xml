@@ -26,9 +26,11 @@
       <module fileurl="file://$PROJECT_DIR$/ssm/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/ssm/mybatis/mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/mybatis_generator/mybatis_generator.iml" filepath="$PROJECT_DIR$/ssm/mybatis_generator/mybatis_generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/mybatis_ssm/mybatis_ssm.iml" filepath="$PROJECT_DIR$/ssm/mybatis_ssm/mybatis_ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/programs/programs.iml" filepath="$PROJECT_DIR$/programs/programs.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/spring_mvc/spring_mvc.iml" filepath="$PROJECT_DIR$/ssm/spring_mvc/spring_mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/ssm.iml" filepath="$PROJECT_DIR$/ssm/ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/programs/yun_note/yun_note.iml" filepath="$PROJECT_DIR$/programs/yun_note/yun_note.iml" />
     </modules>
   </component>
 </project>

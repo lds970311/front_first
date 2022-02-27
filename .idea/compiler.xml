@@ -15,6 +15,7 @@
         <module name="mybatis" />
         <module name="boot_first" />
         <module name="boot_mp" />
+        <module name="yun_note" />
         <module name="jedis" />
         <module name="spring_mvc" />
         <module name="boot_webflux" />
@@ -40,6 +41,7 @@
       <module name="mybatis_generator" target="11" />
       <module name="mybatis_ssm" target="11" />
       <module name="spring_mvc" target="11" />
+      <module name="yun_note" target="1.7" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

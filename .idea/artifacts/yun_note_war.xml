@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="yun_note:war">
+    <output-path>$PROJECT_DIR$/programs/yun_note/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>yun_note</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="yun_note.war">
+      <element id="artifact" artifact-name="yun_note:war exploded" />
+    </root>
+  </artifact>
+</component>
