@@ -29,6 +29,8 @@
         <div id="tabcon">
             <div class="box show">
                 <form action="userLogin" method="post" id="login-form">
+                    <%--隐藏域,用于区分不同功能,表示用户行为--%>
+                    <input type="hidden" name="actionName" value="login">
                     <label for="UserName">
                         <input type="text" name="userName" class="user yahei16" id="UserName" value=""/>
                         <br/>

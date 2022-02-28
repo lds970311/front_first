@@ -24,5 +24,8 @@ function checkLogin() {
     if (uPattern.test(userName) && pPattern.test(password)) {
         $("#Msg").text("")
         console.log("start login")
+        $("#login-form").submit()
+    } else {
+        $("#Msg").text("用户名或密码格式不正确!!!")
     }
 }

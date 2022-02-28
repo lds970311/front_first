@@ -41,7 +41,7 @@
       <module name="mybatis_generator" target="11" />
       <module name="mybatis_ssm" target="11" />
       <module name="spring_mvc" target="11" />
-      <module name="yun_note" target="1.7" />
+      <module name="yun_note" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
