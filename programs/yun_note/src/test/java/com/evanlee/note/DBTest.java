@@ -5,6 +5,7 @@
 
 package com.evanlee.note;
 
+import com.evan.note.pojo.User;
 import com.evan.note.utils.JDBCUtils;
 import org.junit.jupiter.api.Test;
 
@@ -16,5 +17,12 @@ public class DBTest {
         Connection connection = JDBCUtils.getConnection();
         System.out.println(connection);
         JDBCUtils.closeResource(null, null, connection);
+    }
+
+    @Test
+    void testQueryOne() {
+        String sql = "select * from yun_note.tb_user";
+        User user = JDBCUtils.queryOne(User.class, sql);
+        System.out.println(user);
     }
 }

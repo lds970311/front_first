@@ -117,6 +117,12 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--连接池-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.8</version>
+        </dependency>
     </dependencies>
 
     <build>

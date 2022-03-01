@@ -5,14 +5,17 @@
 
 package com.evan.note.utils;
 
+import com.alibaba.druid.pool.DruidDataSourceFactory;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Field;
 import java.sql.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.Properties;
 
@@ -26,21 +29,15 @@ public class JDBCUtils {
         InputStream inputStream = JDBCUtils.class.getClassLoader().getResourceAsStream("db.properties");
         try {
             properties.load(inputStream);
-            String driverClassName = properties.getProperty("DriverClassName");
-            //加载驱动
-            Class.forName(driverClassName);
-        } catch (IOException | ClassNotFoundException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     @SneakyThrows
     public static Connection getConnection() {
-        String url = properties.getProperty("url");
-        String username = properties.getProperty("username");
-        String password = properties.getProperty("password");
-        log.info("在{}时，获取数据库连接", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
-        return DriverManager.getConnection(url, username, password);
+        DataSource ds = DruidDataSourceFactory.createDataSource(properties);
+        return ds.getConnection();
     }
 
     /**
@@ -75,5 +72,106 @@ public class JDBCUtils {
                         e.printStackTrace();
                     }
                 });
+    }
+
+    /**
+     * 通用jdbc查询
+     *
+     * @param cls  运行时类
+     * @param sql  sql语句
+     * @param args 占位符
+     * @param <T>
+     * @return List
+     */
+    public static <T> List<T> queryAll(Class<T> cls, String sql, Object... args) throws SQLException {
+        Connection connection = getConnection();
+        List<T> list = null;
+        if (connection == null) {
+            log.error("mysql连接失败");
+            return null;
+        }
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement(sql);
+            for (int i = 0; i < args.length; i++) {
+                stmt.setObject(i + 1, args[i]);
+            }
+            ResultSet resultSet = stmt.executeQuery();
+            ResultSetMetaData metaData = resultSet.getMetaData();
+            int columnCount = metaData.getColumnCount();
+            list = new ArrayList<>();
+            while (resultSet.next()) {
+                T t = cls.getDeclaredConstructor().newInstance();
+                for (int i = 0; i < columnCount; i++) {
+                    String label = metaData.getColumnLabel(i + 1);
+                    Object value = resultSet.getObject(i + 1);
+                    //反射获取字段
+                    Field field = cls.getDeclaredField(label);
+                    field.setAccessible(true);
+                    field.set(t, value);
+                }
+                list.add(t);
+            }
+            return list;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            connection.close();
+            if (stmt != null) {
+                stmt.close();
+            }
+        }
+        return null;
+    }
+
+    @SneakyThrows
+    public static <T> T queryOne(Class<T> cls, String sql, Object... args) {
+        Connection connection = getConnection();
+        T instance = null;
+        if (connection == null) {
+            log.error("mysql连接失败");
+            return null;
+        }
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        for (int i = 0; i < args.length; i++) {
+            preparedStatement.setObject(i + 1, args[i]);
+        }
+        ResultSet resultSet = preparedStatement.executeQuery();
+        //获取元数据
+        ResultSetMetaData metaData = resultSet.getMetaData();
+        int columnCount = metaData.getColumnCount();
+        if (resultSet.next()) {
+            instance = cls.getDeclaredConstructor().newInstance();
+            for (int i = 0; i < columnCount; i++) {
+                String columnLabel = metaData.getColumnLabel(i + 1);
+                Field field = cls.getDeclaredField(columnLabel);
+                Object value = resultSet.getObject(i + 1);
+                field.setAccessible(true);
+                field.set(instance, value);
+            }
+        }
+        return instance;
+    }
+
+    public static int update(String sql, Object... args) {
+        Connection connection = getConnection();
+        if (connection == null) {
+            log.error("mysql连接失败");
+            return 0;
+        }
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement(sql);
+            for (int i = 0; i < args.length; i++) {
+                stmt.setObject(i + 1, args[i]);
+            }
+            return stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            closeResource(null, stmt, connection);
+        }
+        return 0;
     }
 }
