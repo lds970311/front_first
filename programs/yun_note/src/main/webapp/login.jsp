@@ -5,7 +5,7 @@
   Time: 22:27
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
     <title>用户登录</title>
@@ -28,24 +28,26 @@
         <div class="loginbar">用户登录</div>
         <div id="tabcon">
             <div class="box show">
-                <form action="userLogin" method="post" id="login-form">
+                <form action="UserServlet" method="post" id="login-form">
                     <%--隐藏域,用于区分不同功能,表示用户行为--%>
                     <input type="hidden" name="actionName" value="login">
                     <label for="UserName">
-                        <input type="text" name="userName" class="user yahei16" id="UserName" value=""/>
+                        <input type="text" name="userName" class="user yahei16" id="UserName"
+                               value="${resultInfo.result.uname}"/>
                         <br/>
                         <br/>
                     </label>
                     <label for="UserPwd">
-                        <input type="password" name="password" class="pwd yahei16" id="UserPwd" value=""/>
+                        <input type="password" name="password" class="pwd yahei16" id="UserPwd"
+                               value="${resultInfo.result.upwd}"/>
                         <br/>
                         <br/>
                     </label>
                     <label>
-                        <input name="" type="checkbox" value="" class="inputcheckbox"/>
+                        <input name="isChecked" type="checkbox" value="" class="inputcheckbox"/>
                     </label>
                     <label>记住我</label>&nbsp; &nbsp;
-                    <span id="Msg"></span>
+                    <span id="Msg">${resultInfo.message}</span>
                     <br/><br/>
                     <input type="button" class="log jc yahei16" value="登 录" onclick="checkLogin()"/>&nbsp; &nbsp; &nbsp;
                     <input type="reset" value="取 消" class="reg jc yahei18"/>
