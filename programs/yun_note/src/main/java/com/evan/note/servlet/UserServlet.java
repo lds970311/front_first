@@ -24,9 +24,39 @@ public class UserServlet extends HttpServlet {
             case "login":
                 this.userLogin(req, resp);
                 break;
+            case "logout":
+                this.userLogOut(req, resp);
+                break;
+            case "userCenter":
+                //进入个人中心
+                this.userCenter(req, resp);
+                break;
             default:
                 log.warn("request not found!");
         }
+    }
+
+    /**
+     * 进入个人中心
+     * 1. 设置首页动态包含的页面值
+     * 2. 请求转发跳转到index.jsp
+     *
+     * @param req
+     * @param resp
+     */
+    private void userCenter(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setAttribute("changePage", "personal_center.jsp");
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
+    }
+
+    private void userLogOut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        //清除cookie和session
+        HttpSession session = req.getSession();
+        session.invalidate();
+        Cookie cookie = new Cookie("user", null);
+        cookie.setMaxAge(0);
+        resp.addCookie(cookie);
+        resp.sendRedirect("login.jsp");
     }
 
     /**
@@ -64,18 +94,8 @@ public class UserServlet extends HttpServlet {
                 cookie.setMaxAge(0);
             }
             resp.addCookie(cookie);
-            resp.sendRedirect("index.jsp");
+            resp.sendRedirect("IndexServlet");
         }
     }
 
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
 }

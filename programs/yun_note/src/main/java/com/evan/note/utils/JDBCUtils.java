@@ -174,4 +174,28 @@ public class JDBCUtils {
         }
         return 0;
     }
+
+    public static Object findSingleValue(String sql, Object... args) throws SQLException {
+        Connection connection = getConnection();
+        ResultSet result = null;
+        Object value = null;
+        if (connection == null) {
+            log.error("mysql连接失败");
+            return null;
+        }
+        PreparedStatement statement = null;
+        try {
+            statement = connection.prepareStatement(sql);
+            for (int i = 0; i < args.length; i++) {
+                statement.setObject(i + 1, args[i]);
+            }
+            result = statement.executeQuery();
+            if (result.next()) {
+                value = result.getObject(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return value;
+    }
 }
