@@ -15,4 +15,14 @@ public interface UserDao {
      * @return
      */
     User getUserByName(String name);
+
+    User queryUserByNickName(String nickName, Integer userId);
+
+    /**
+     * 更新用户信息
+     *
+     * @param user
+     * @return
+     */
+    int updateUser(User user);
 }

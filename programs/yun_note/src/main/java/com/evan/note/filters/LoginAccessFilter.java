@@ -65,7 +65,7 @@ public class LoginAccessFilter implements Filter {
                     String userName = split[0];
                     String password = split[1];
                     try {
-                        req.getRequestDispatcher("UserServlet?actionName=login&userName=" + userName + "&password=" + password)
+                        req.getRequestDispatcher("UserServlet?actionName=login&userName=" + userName + "&password=" + password + "&isChecked=")
                                 .forward(req, resp);
                     } catch (ServletException | IOException e) {
                         e.printStackTrace();

@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>类别管理</title>
@@ -21,47 +22,30 @@
 
         </div>
         <div>
-            <table class="table table-hover table-striped ">
-                <tbody>
-                <tr>
-                    <th>编号</th>
-                    <th>类型</th>
-                    <th>操作</th>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>技术</td>
-                    <td>
-                        <button class="btn btn-primary" type="button">修改</button>&nbsp;
-                        <button class="btn btn-danger del" type="button">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>笔记</td>
-                    <td>
-                        <button class="btn btn-primary" type="button">修改</button>&nbsp;
-                        <button class="btn btn-danger del" type="button">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>语录</td>
-                    <td>
-                        <button class="btn btn-primary" type="button">修改</button>&nbsp;
-                        <button class="btn btn-danger del" type="button">删除</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>test</td>
-                    <td>
-                        <button class="btn btn-primary" type="button">修改</button>&nbsp;
-                        <button class="btn btn-danger del" type="button">删除</button>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+            <c:if test="${empty typeList}">
+                <h3>暂未查询到类型数据!</h3>
+            </c:if>
+            <c:if test="${not empty typeList}">
+                <table class="table table-hover table-striped ">
+                    <tbody>
+                    <tr>
+                        <th>编号</th>
+                        <th>类型</th>
+                        <th>操作</th>
+                    </tr>
+                    <c:forEach items="${typeList}" var="item" varStatus="vs">
+                        <tr>
+                            <td>${vs.index+1}</td>
+                            <td>${item.typeName}</td>
+                            <td>
+                                <button class="btn btn-primary" type="button">修改</button>&nbsp;
+                                <button class="btn btn-danger del" type="button">删除</button>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </c:if>
         </div>
     </div>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -90,7 +74,14 @@
             </div>
         </div>
     </div>
-
 </div>
+<script type="text/javascript">
+    $(function () {
+        $.ajax({
+            type: 'get',
+            url: "NoteTypeServlet?actionName=list"
+        })
+    })
+</script>
 </body>
 </html>

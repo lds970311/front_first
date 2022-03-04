@@ -14,13 +14,6 @@ import java.sql.Connection;
 
 public class DBTest {
     @Test
-    void connectionTest() {
-        Connection connection = JDBCUtils.getConnection();
-        System.out.println(connection);
-        JDBCUtils.closeResource(null, null, connection);
-    }
-
-    @Test
     void testQueryOne() {
         String sql = "select * from yun_note.tb_user";
         User user = JDBCUtils.queryOne(User.class, sql);
