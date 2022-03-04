@@ -35,7 +35,7 @@ public class JDBCUtils {
     }
 
     @SneakyThrows
-    public static Connection getConnection() {
+    private static Connection getConnection() {
         DataSource ds = DruidDataSourceFactory.createDataSource(properties);
         return ds.getConnection();
     }
@@ -47,7 +47,7 @@ public class JDBCUtils {
      * @param statement
      * @param connection
      */
-    public static void closeResource(ResultSet resultSet, PreparedStatement statement, Connection connection) {
+    private static void closeResource(ResultSet resultSet, PreparedStatement statement, Connection connection) {
         Optional.ofNullable(resultSet)
                 .ifPresent(resultSet1 -> {
                     try {
@@ -85,6 +85,7 @@ public class JDBCUtils {
      */
     public static <T> List<T> queryAll(Class<T> cls, String sql, Object... args) throws SQLException {
         Connection connection = getConnection();
+        ResultSet resultSet = null;
         List<T> list = null;
         if (connection == null) {
             log.error("mysql连接失败");
@@ -96,7 +97,8 @@ public class JDBCUtils {
             for (int i = 0; i < args.length; i++) {
                 stmt.setObject(i + 1, args[i]);
             }
-            ResultSet resultSet = stmt.executeQuery();
+            log.info("sql = {}", sql);
+            resultSet = stmt.executeQuery();
             ResultSetMetaData metaData = resultSet.getMetaData();
             int columnCount = metaData.getColumnCount();
             list = new ArrayList<>();
@@ -117,10 +119,7 @@ public class JDBCUtils {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            connection.close();
-            if (stmt != null) {
-                stmt.close();
-            }
+            closeResource(resultSet, stmt, connection);
         }
         return null;
     }
@@ -137,6 +136,7 @@ public class JDBCUtils {
         for (int i = 0; i < args.length; i++) {
             preparedStatement.setObject(i + 1, args[i]);
         }
+        log.info("sql = {}", sql);
         ResultSet resultSet = preparedStatement.executeQuery();
         //获取元数据
         ResultSetMetaData metaData = resultSet.getMetaData();
@@ -151,6 +151,7 @@ public class JDBCUtils {
                 field.set(instance, value);
             }
         }
+        closeResource(resultSet, preparedStatement, connection);
         return instance;
     }
 
@@ -166,6 +167,7 @@ public class JDBCUtils {
             for (int i = 0; i < args.length; i++) {
                 stmt.setObject(i + 1, args[i]);
             }
+            log.info("sql = {}", sql);
             return stmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -189,12 +191,42 @@ public class JDBCUtils {
             for (int i = 0; i < args.length; i++) {
                 statement.setObject(i + 1, args[i]);
             }
+            log.info("sql = {}", sql);
             result = statement.executeQuery();
             if (result.next()) {
                 value = result.getObject(1);
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            closeResource(result, statement, connection);
+        }
+        return value;
+    }
+
+    public static int getRowCount(String sql, Object... args) {
+        Connection connection = getConnection();
+        ResultSet result = null;
+        int value = 0;
+        if (connection == null) {
+            log.error("mysql连接失败");
+            return 0;
+        }
+        PreparedStatement statement = null;
+        try {
+            statement = connection.prepareStatement(sql);
+            for (int i = 0; i < args.length; i++) {
+                statement.setObject(i + 1, args[i]);
+            }
+            log.info("sql = {}", sql);
+            result = statement.executeQuery();
+            if (result.next()) {
+                value = result.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            closeResource(result, statement, connection);
         }
         return value;
     }

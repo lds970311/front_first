@@ -5,7 +5,7 @@
 
 package com.evanlee.note;
 
-import com.evan.note.dao.iml.UserDaoImpl;
+import com.evan.note.dao.impl.UserDaoImpl;
 import com.evan.note.pojo.User;
 import org.junit.jupiter.api.Test;
 

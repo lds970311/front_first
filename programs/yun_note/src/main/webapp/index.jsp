@@ -43,7 +43,7 @@
                 <li <c:if test="${changePage == 'list.jsp'}">
                     class="active"
                 </c:if> id="menu">
-                    <a href="main"><i class="glyphicon glyphicon-cloud"></i>&nbsp;主&nbsp;&nbsp;页</a>
+                    <a href="UserServlet?actionName=list"><i class="glyphicon glyphicon-cloud"></i>&nbsp;主&nbsp;&nbsp;页</a>
                 </li>
                 <li>
                     <a href="note"><i class="glyphicon glyphicon-pencil"></i>&nbsp;发表云记</a>
@@ -51,7 +51,7 @@
                 <li <c:if test="${changePage == 'type.jsp'}">
                     class="active"
                 </c:if>>
-                    <a href="type"><i class="glyphicon glyphicon-list"></i>&nbsp;类别管理</a>
+                    <a href="NoteTypeServlet?actionName=list"><i class="glyphicon glyphicon-list"></i>&nbsp;类别管理</a>
                 </li>
                 <li <c:if test="${changePage == 'personal_center.jsp'}">
                         class="active"

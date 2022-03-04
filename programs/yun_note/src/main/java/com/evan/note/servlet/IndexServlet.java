@@ -12,7 +12,7 @@ public class IndexServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //设置首页动态包含的页面
-        request.setAttribute("changePage", "type.jsp");
+        request.setAttribute("changePage", "list.jsp");
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 }
