@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
@@ -45,8 +46,10 @@
                 </c:if> id="menu">
                     <a href="UserServlet?actionName=list"><i class="glyphicon glyphicon-cloud"></i>&nbsp;主&nbsp;&nbsp;页</a>
                 </li>
-                <li>
-                    <a href="note"><i class="glyphicon glyphicon-pencil"></i>&nbsp;发表云记</a>
+                <li <c:if test="${fn:contains(changePage,'note')}">
+                    class="active"
+                </c:if>>
+                    <a href="NoteServlet?actionName=view"><i class="glyphicon glyphicon-pencil"></i>&nbsp;发表云记</a>
                 </li>
                 <li <c:if test="${changePage == 'type.jsp'}">
                     class="active"
@@ -118,20 +121,12 @@
                 </div>
 
                 <div>
-                    <ul class="nav nav-pills nav-stacked">
-
-                        <li><a href="main?act=searchType&amp;val=5&amp;valStr=test">test <span
-                                class="badge">0</span></a></li>
+                    <ul class="nav nav-pills nav-stacked" id="typeUl">
 
                         <li>
-                            <a href="main?act=searchType&amp;val=3&amp;valStr=%E5%B0%9A%E5%AD%A6%E5%A0%82%E7%AC%94%E8%AE%B0">笔记
-                                <span class="badge">12</span></a></li>
-
-                        <li><a href="main?act=searchType&amp;val=2&amp;valStr=%E6%8A%80%E6%9C%AF">技术 <span
-                                class="badge">5</span></a></li>
-
-                        <li><a href="main?act=searchType&amp;val=4&amp;valStr=%E8%80%81%E8%A3%B4%E8%AF%AD%E5%BD%95">语录
-                            <span class="badge">9</span></a></li>
+                            <a href="main?act=searchType&amp;val=5&amp;valStr=test">test <span class="badge">0</span>
+                            </a>
+                        </li>
 
                     </ul>
                 </div>
