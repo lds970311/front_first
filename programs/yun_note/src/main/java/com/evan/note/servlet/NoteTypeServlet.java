@@ -1,5 +1,6 @@
 package com.evan.note.servlet;
 
+import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson.JSON;
 import com.evan.note.pojo.NoteType;
 import com.evan.note.pojo.User;
@@ -19,6 +20,7 @@ import java.util.List;
 
 @WebServlet(name = "NoteTypeServlet", value = "/NoteTypeServlet")
 @Slf4j
+@SuppressWarnings("all")
 public class NoteTypeServlet extends HttpServlet {
     private final NoteTypeService noteTypeService = new NoteTypeServiceImpl();
 
@@ -33,15 +35,59 @@ public class NoteTypeServlet extends HttpServlet {
                 this.deleteType(req, resp);
                 break;
             case "addOrUpdate":
-                this.updateType(req, resp);
+                this.addOrUpdate(req, resp);
                 break;
             default:
                 log.error("请求路径错误!");
         }
     }
 
-    private void updateType(HttpServletRequest req, HttpServletResponse resp) {
+    private void addOrUpdate(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String typeId = req.getParameter("typeId");
+        String typeName = req.getParameter("typeName");
+        User user = (User) req.getSession().getAttribute("user");
+        resp.setContentType("application/json;charset=UTF-8");
+        if (StrUtil.isBlank(typeId)) {
+            //添加操作
+            this.addType(req, resp, typeName, user);
+        } else {
+            //修改操作
+            this.updateType(req, resp, typeName, typeId, user);
+        }
+    }
 
+    /**
+     * 添加类型
+     *
+     * @param req
+     * @param resp
+     * @param typeName
+     * @param user
+     */
+    private void addType(HttpServletRequest req, HttpServletResponse resp, String typeName, User user) throws IOException {
+        ResultInfo<NoteType> resultInfo = noteTypeService.addType(typeName, user.getUserId());
+        //转换成json响应给前端
+        String toJSONString = JSON.toJSONString(resultInfo);
+        PrintWriter writer = resp.getWriter();
+        writer.write(toJSONString);
+        writer.close();
+    }
+
+    /**
+     * 更新类型
+     *
+     * @param req
+     * @param resp
+     * @param typeName
+     * @param typeId
+     * @param user
+     */
+    private void updateType(HttpServletRequest req, HttpServletResponse resp, String typeName, String typeId, User user) throws IOException {
+        ResultInfo<NoteType> resultInfo = noteTypeService.updateType(typeName, typeId, user.getUserId());
+        String json = JSON.toJSONString(resultInfo);
+        PrintWriter writer = resp.getWriter();
+        writer.write(json);
+        writer.close();
     }
 
     private void deleteType(HttpServletRequest req, HttpServletResponse resp) throws IOException {

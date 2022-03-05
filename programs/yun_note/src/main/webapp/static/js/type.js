@@ -1,3 +1,8 @@
+function isEmpty(str) {
+    return str == null || str.trim() === "";
+}
+
+
 // ===========================删除=======================
 /**
  *    "删除"按钮绑定点击事件（传递参数：类型ID）
@@ -20,6 +25,7 @@
 
 function deleteType(typeId) {
     // 弹出提示框询问用户是否确认删除
+    console.log(typeId)
     swal({
         title: "",  // 标题
         text: "<h3>您确认要删除该记录吗？</h3>", // 内容
@@ -28,11 +34,11 @@ function deleteType(typeId) {
         confirmButtonColor: "orange", // 确认按钮的颜色
         confirmButtonText: "确定", // 确认按钮的文本
         cancelButtonText: "取消" // 取消按钮的文本
-    }).then(function () {
+    }).then(() => {
         // 如果是，发送ajax请求后台（类型ID）
         $.ajax({
             type: "post",
-            url: "typeServlet",
+            url: "NoteTypeServlet",
             data: {
                 actionName: "delete",
                 typeId: typeId
@@ -41,12 +47,12 @@ function deleteType(typeId) {
                 // 判断是否删除成功
                 if (result.code == 1) {
                     // 提示成功
-                    swal("", "<h2>删除成功！</h2>", "success");
+                    swal("", "<h3>删除成功！</h3>", "success");
                     // 执行成功的DOM操作
                     deleteDom(typeId);
                 } else {
                     // 提示用户失败   swal("标题","内容","图标")
-                    swal("", "<h3>" + result.msg + "</h3>", "error");
+                    swal("", "<h3>" + result.message + "</h3>", "error");
                 }
             }
         });
@@ -57,30 +63,16 @@ function deleteType(typeId) {
 /**
  * 删除的DOM操作
  1、移除指定tr记录
- 给table元素设置id属性值、给每个tr添加id属性值  （id="tr_类型ID"）
- 判断是否有多条类型记录
- 1、通过id属性值，得到表格对象
- 2、得到表格对象的子元素tr的数量
- 3、判断tr的数量是否等于2
- 如果等于2，表示只有一条类型集合，删除整个表格，并设置提示内容
- 如果大于2，表示有多条类型记录，删除指定tr对象
-
- 2、删除左侧类型分组的导航栏列表项
- 1、给li设置id属性值   （id="li_类型ID"）
- 2、通过id选择器获取指定li元素，并移除
  * @param typeId
  */
 function deleteDom(typeId) {
-    /* 1、移除指定tr记录  */
-    // 1.1 、通过id属性值，得到表格对象   1.2、得到表格对象的子元素tr的数量
-    // var myTable = $("#myTable");
-    var trLength = $("#myTable tr").length; // 表格的子元素tr的数量
+    let trLength = $("#myTable tr").length; // 表格的子元素tr的数量
     // 判断tr的数量是否等于2
     if (trLength == 2) {
         // 如果等于2，表示只有一条类型集合，删除整个表格，并设置提示内容
         $("#myTable").remove();
         // 设置提示信息
-        $("#myDiv").html("<h2>暂未查询到类型记录！</h2>");
+        $("#myDiv").html("<h2 style='text-align: center'>暂未查询到类型记录！</h2>");
     } else {
         // 如果大于2，表示有多条类型记录，删除指定tr对象
         $("#tr_" + typeId).remove();
@@ -110,15 +102,16 @@ function openUpdateDialog(typeId) {
 
     // 2、将当前要修改的tr记录的id和名称，设置到模态框的隐藏域和文本框中
     // 2.1 通过ID属性值，得到要修改的tr记录
-    var tr = $("#tr_" + typeId);
+    const tr = $("#tr_" + typeId);
     // 2.2 得到tr的具体单元格的值
-    var typeName = tr.children().eq(1).text();
+    const typeName = tr.children().eq(1).text();
     // 2.3 将类型名称赋值给模态框中的文本框、将类型ID赋值给模态框中的隐藏域
     $("#typename").val(typeName);
     $("#typeId").val(typeId);
 
     // 3、打开模态框
     $("#myModal").modal("show");
+    $("#msg").html("")
 
 }
 
@@ -130,7 +123,7 @@ function openUpdateDialog(typeId) {
  3、打开模态框
 
  */
-$("#addBtn").click(function () {
+function addType() {
     // 1、修改模态框的标题
     $("#myModalLabel").html("新增类型");
 
@@ -140,7 +133,8 @@ $("#addBtn").click(function () {
 
     // 3、打开模态框
     $("#myModal").modal("show");
-});
+    $("#msg").html("")
+}
 
 
 /**
@@ -164,50 +158,53 @@ $("#addBtn").click(function () {
  给左侧类型名添加span标签，并设置id属性值，修改该span元素的文本值
 
  */
-$("#btn_submit").click(function () {
+
+
+function saveTypeInfo() {
     // 1、获取参数（文本框：类型名称、隐藏域：类型ID）
-    var typeId = $("#typeId").val();
-    var typeName = $("#typename").val();
+    let typeId = $("#typeId").val();
+    let typeName = $("#typename").val();
 
     // 2、判断参数是否为空（类型名称）
     if (isEmpty(typeName)) {
         // 如果为空，提示信息，并return
-        $("#msg").html("类型名称不能为空！");
+        $("#msg").html("类型名称不能为空!!")
         return;
     }
 
     // 3、发送ajax请求后台，添加或修改类型记录，回调函数返回resultInfo对象
     $.ajax({
         type: "post",
-        url: "typeServlet",
+        url: "NoteTypeServlet",
         data: {
             actionName: "addOrUpdate",
-            typeId: typeId,
-            typeName: typeName
+            typeId,
+            typeName
         },
         success: function (result) {
             console.log(result);
+            console.log(result.code)
+            console.log(result.code == 1)
             // 如果code=1，表示更新成功，执行Dom操作
-            if (result.code == 1) {
+            if (result.code == '1') {
                 // 关闭模态框
                 $("#myModal").modal("hide");
                 // 判断typeId是否为空
                 if (isEmpty(typeId)) {
-                    var key = result.result; // 后台添加记录成功后返回的主键
+                    let key = result.result; // 后台添加记录成功后返回的主键
                     // 如果为空，执行添加的DOM操作
-                    addDom(key, typeName);
+                    addDom(key.typeId, typeName);
                 } else {
                     // 如果不为空，执行修改的DOM操作
                     updateDom(typeId, typeName);
                 }
 
             } else {
-                $("#msg").html(result.msg);
+                $("#msg").html(result.message);
             }
         }
     });
-
-});
+}
 
 /**
  * 修改类型的DOM操作
@@ -247,14 +244,15 @@ function updateDom(typeId, typeName) {
  * @param typeName
  */
 function addDom(typeId, typeName) {
+    let len = $("#myTable tr").length
     /* 1、添加tr记录  */
     // 拼接tr元素
-    var tr = '<tr id="tr_' + typeId + '"><td>' + typeId + '</td><td>' + typeName + '</td>';
+    let tr = '<tr id="tr_' + typeId + '"><td>' + len + '</td><td>' + typeName + '</td>';
     tr += '<td><button class="btn btn-primary" type="button" onclick="openUpdateDialog(' + typeId + ')">修改</button>&nbsp;';
     tr += '<button class="btn btn-danger del" type="button" onclick="deleteType(' + typeId + ')">删除</button></td></tr>';
 
     // a、通过表格的id属性获取表格元素对象
-    var myTable = $("#myTable");
+    let myTable = $("#myTable");
     // b、判断表格对象的length是否大于0 （大于0 ，则表示表格存在；否则表格不存在）
     if (myTable.length > 0) {
         // c、如果表格存在，则拼接tr记录，将tr对象追加到table对象中
@@ -271,7 +269,7 @@ function addDom(typeId, typeName) {
 
     /* 2、左侧类型分组导航栏的列表项 */
     // 拼接li元素
-    var li = '<li id="li_' + typeId + '"><a href=""><span id="sp_' + typeId + '">' + typeName + ' </span><span class="badge">0</span></a></li>';
+    let li = '<li id="li_' + typeId + '"><a href=""><span id="sp_' + typeId + '">' + typeName + ' </span><span class="badge">0</span></a></li>';
     // 追加到ul元素中
     $("#typeUl").append(li);
 }

@@ -10,6 +10,7 @@ import com.evan.note.vo.ResultInfo;
 
 import java.util.List;
 
+@SuppressWarnings("all")
 public interface NoteTypeService {
     /**
      * 查询类型列表
@@ -20,4 +21,23 @@ public interface NoteTypeService {
     List<NoteType> findTypeList(Integer id);
 
     ResultInfo<NoteType> deleteType(String typeId);
+
+    /**
+     * 添加类型数据
+     *
+     * @param typeName
+     * @param userId
+     * @return
+     */
+    ResultInfo<NoteType> addType(String typeName, Integer userId);
+
+    /**
+     * 更新类型信息
+     *
+     * @param typeName
+     * @param typeId
+     * @param userId
+     * @return
+     */
+    ResultInfo<NoteType> updateType(String typeName, String typeId, Integer userId);
 }
