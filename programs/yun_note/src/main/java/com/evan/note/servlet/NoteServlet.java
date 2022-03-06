@@ -7,6 +7,7 @@ import com.evan.note.pojo.User;
 import com.evan.note.service.NoteService;
 import com.evan.note.service.impl.NoteServiceImpl;
 import com.evan.note.service.impl.NoteTypeServiceImpl;
+import com.evan.note.utils.Page;
 import com.evan.note.vo.ResultInfo;
 import lombok.extern.slf4j.Slf4j;
 
@@ -49,8 +50,22 @@ public class NoteServlet extends HttpServlet {
         }
     }
 
-    private void listNote(HttpServletRequest req, HttpServletResponse resp) {
-
+    /**
+     * 云记列表
+     *
+     * @param req
+     * @param resp
+     */
+    private void listNote(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String pageNo = req.getParameter("pageNo");
+        Integer pageSize = Integer.valueOf(req.getParameter("pageSize"));
+        String title = req.getParameter("title");
+        //获取user
+        User user = (User) req.getSession().getAttribute("user");
+        Page<Note> page = noteService.findNoteListByPage(pageNo, pageSize, user.getUserId(), title);
+        req.setAttribute("page", page);
+        req.setAttribute("changePage", "list.jsp");
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
     }
 
     private void getNoteDetail(HttpServletRequest req, HttpServletResponse resp) {
@@ -88,7 +103,7 @@ public class NoteServlet extends HttpServlet {
         String content = req.getParameter("content");
         ResultInfo<Note> resultInfo = noteService.addNote(typeId, title, content);
         if (resultInfo.getCode() == 1) {
-            resp.sendRedirect("index.jsp");
+            req.getRequestDispatcher("IndexServlet").forward(req, resp);
         } else {
             req.setAttribute("resultInfo", resultInfo);
             req.getRequestDispatcher("NoteServlet?actionName=view").forward(req, resp);

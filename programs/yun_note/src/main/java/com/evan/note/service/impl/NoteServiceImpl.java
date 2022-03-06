@@ -10,8 +10,15 @@ import com.evan.note.dao.NoteDao;
 import com.evan.note.dao.impl.NoteDaoImpl;
 import com.evan.note.pojo.Note;
 import com.evan.note.service.NoteService;
+import com.evan.note.utils.Page;
+import com.evan.note.vo.NoteTypeVo;
+import com.evan.note.vo.NoteVo;
 import com.evan.note.vo.ResultInfo;
 
+import java.util.Date;
+import java.util.List;
+
+@SuppressWarnings("all")
 public class NoteServiceImpl implements NoteService {
     private final NoteDao noteDao = new NoteDaoImpl();
 
@@ -41,6 +48,7 @@ public class NoteServiceImpl implements NoteService {
         note.setTypeId(Integer.parseInt(typeId));
         note.setTitle(title);
         note.setContent(content);
+        note.setPubTime(new Date());
 
         //添加云记记录
         int row = noteDao.addNote(note);
@@ -56,5 +64,38 @@ public class NoteServiceImpl implements NoteService {
         resultInfo.setCode(1);
         resultInfo.setMessage("添加云记成功!!");
         return resultInfo;
+    }
+
+    @Override
+    public Page<Note> findNoteListByPage(String pageNo, Integer pageSize, Integer userId, String title) {
+        Integer defaultNo = 1;
+        Integer defaultSize = 5;
+        if (!StrUtil.isBlank(pageNo)) {
+            defaultNo = Integer.parseInt(pageNo);
+        }
+        if (pageSize != null) {
+            defaultSize = pageSize;
+        }
+        //查询记录总数
+        int count = noteDao.getNoteCountByUserId(userId, title);
+        if (count < 1) {
+            return null;
+        }
+        Page<Note> notePage = new Page<Note>(defaultNo, defaultSize, count);
+        //得到分页开始下标
+        int startIndex = (defaultNo - 1) * defaultSize;
+        List<Note> noteList = noteDao.findNoteListByPage(userId, startIndex, pageSize, title);
+        notePage.setDataList(noteList);
+        return notePage;
+    }
+
+    @Override
+    public List<NoteVo> findNoteCountByDate(Integer userId) {
+        return noteDao.findNoteCountByDate(userId);
+    }
+
+    @Override
+    public List<NoteTypeVo> findNoteCountByType(Integer userId) {
+        return noteDao.findNoteCountByType(userId);
     }
 }
