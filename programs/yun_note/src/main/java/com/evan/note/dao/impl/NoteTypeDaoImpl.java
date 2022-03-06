@@ -17,12 +17,7 @@ public class NoteTypeDaoImpl implements NoteTypeDao {
     @Override
     public List<NoteType> getTypeListByUserId(Integer id) {
         String sql = "select * from yun_note.tb_note_type where userId = ?";
-        try {
-            return JDBCUtils.queryAll(NoteType.class, sql, id);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+        return JDBCUtils.queryAll(NoteType.class, sql, id);
     }
 
 

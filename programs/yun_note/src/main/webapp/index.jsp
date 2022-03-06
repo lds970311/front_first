@@ -44,7 +44,7 @@
                 <li <c:if test="${changePage == 'list.jsp'}">
                     class="active"
                 </c:if> id="menu">
-                    <a href="UserServlet?actionName=list"><i class="glyphicon glyphicon-cloud"></i>&nbsp;主&nbsp;&nbsp;页</a>
+                    <a href="NoteServlet?actionName=list&pageNo=1&pageSize=5"><i class="glyphicon glyphicon-cloud"></i>&nbsp;主&nbsp;&nbsp;页</a>
                 </li>
                 <li <c:if test="${fn:contains(changePage,'note')}">
                     class="active"
@@ -64,10 +64,10 @@
                     <a href="report"><i class="glyphicon glyphicon-signal"></i>&nbsp;数据报表</a>
                 </li>
             </ul>
-            <form class="navbar-form navbar-right" role="search" action="main">
+            <form class="navbar-form navbar-right" role="search" action="IndexServlet">
                 <div class="form-group">
-                    <input type="hidden" name="act" value="searchKey">
-                    <input type="text" name="val" class="form-control" placeholder="搜索云记">
+                    <input type="hidden" name="actionName" value="searchTitle">
+                    <input type="text" name="title" class="form-control" placeholder="搜索云记" value="${title}">
                 </div>
                 <button type="submit" class="btn btn-default">查询</button>
             </form>
@@ -94,22 +94,15 @@
 					<span class="glyphicon glyphicon-calendar">
 					</span>&nbsp;云记日期
                 </div>
-
                 <div>
                     <ul class="nav nav-pills nav-stacked">
-
-                        <li>
-                            <a href="main?act=searchDate&amp;val=2016%E5%B9%B408%E6%9C%88&amp;valStr=2016%E5%B9%B408%E6%9C%88">2016年08月
-                                <span class="badge">24</span></a></li>
-
-                        <li>
-                            <a href="main?act=searchDate&amp;val=2016%E5%B9%B407%E6%9C%88&amp;valStr=2016%E5%B9%B407%E6%9C%88">2016年07月
-                                <span class="badge">1</span></a></li>
-
-                        <li>
-                            <a href="main?act=searchDate&amp;val=2016%E5%B9%B406%E6%9C%88&amp;valStr=2016%E5%B9%B406%E6%9C%88">2016年06月
-                                <span class="badge">1</span></a></li>
-
+                        <c:forEach items="${dateInfo}" var="item">
+                            <li>
+                                <a href="IndexServlet?actionName=searchDate&date=${item.groupName}">${item.groupName}
+                                    <span class="badge">${item.noteCount}</span>
+                                </a>
+                            </li>
+                        </c:forEach>
                     </ul>
                 </div>
 
@@ -119,15 +112,15 @@
 					<span class="glyphicon glyphicon-list-alt">
 					</span>&nbsp;云记类别
                 </div>
-
                 <div>
                     <ul class="nav nav-pills nav-stacked" id="typeUl">
-
-                        <li>
-                            <a href="main?act=searchType&amp;val=5&amp;valStr=test">test <span class="badge">0</span>
-                            </a>
-                        </li>
-
+                        <c:forEach items="${typeInfo}" var="item">
+                            <li>
+                                <a href="IndexServlet?actionName=searchType&type=${item.groupName}">${item.groupName}
+                                    <span class="badge">${item.noteCount}</span>
+                                </a>
+                            </li>
+                        </c:forEach>
                     </ul>
                 </div>
 

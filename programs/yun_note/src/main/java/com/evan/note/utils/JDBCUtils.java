@@ -10,7 +10,6 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.sql.DataSource;
-import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.sql.*;
@@ -20,8 +19,10 @@ import java.util.Optional;
 import java.util.Properties;
 
 @Slf4j
+@SuppressWarnings("all")
 public class JDBCUtils {
     private static final Properties properties;
+    private static Connection connection;
 
     static {
         properties = new Properties();
@@ -29,16 +30,14 @@ public class JDBCUtils {
         InputStream inputStream = JDBCUtils.class.getClassLoader().getResourceAsStream("db.properties");
         try {
             properties.load(inputStream);
-        } catch (IOException e) {
+            DataSource ds = DruidDataSourceFactory.createDataSource(properties);
+            connection = ds.getConnection();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @SneakyThrows
-    private static Connection getConnection() {
-        DataSource ds = DruidDataSourceFactory.createDataSource(properties);
-        return ds.getConnection();
-    }
 
     /**
      * 关闭资源
@@ -83,8 +82,7 @@ public class JDBCUtils {
      * @param <T>
      * @return List
      */
-    public static <T> List<T> queryAll(Class<T> cls, String sql, Object... args) throws SQLException {
-        Connection connection = getConnection();
+    public static <T> List<T> queryAll(Class<T> cls, String sql, Object... args) {
         ResultSet resultSet = null;
         List<T> list = null;
         if (connection == null) {
@@ -119,14 +117,13 @@ public class JDBCUtils {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            closeResource(resultSet, stmt, connection);
+            closeResource(resultSet, stmt, null);
         }
         return null;
     }
 
     @SneakyThrows
     public static <T> T queryOne(Class<T> cls, String sql, Object... args) {
-        Connection connection = getConnection();
         T instance = null;
         if (connection == null) {
             log.error("mysql连接失败");
@@ -151,12 +148,11 @@ public class JDBCUtils {
                 field.set(instance, value);
             }
         }
-        closeResource(resultSet, preparedStatement, connection);
+        closeResource(resultSet, preparedStatement, null);
         return instance;
     }
 
     public static int update(String sql, Object... args) {
-        Connection connection = getConnection();
         if (connection == null) {
             log.error("mysql连接失败");
             return 0;
@@ -172,13 +168,12 @@ public class JDBCUtils {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            closeResource(null, stmt, connection);
+            closeResource(null, stmt, null);
         }
         return 0;
     }
 
     public static Object findSingleValue(String sql, Object... args) throws SQLException {
-        Connection connection = getConnection();
         ResultSet result = null;
         Object value = null;
         if (connection == null) {
@@ -199,13 +194,12 @@ public class JDBCUtils {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            closeResource(result, statement, connection);
+            closeResource(result, statement, null);
         }
         return value;
     }
 
     public static int getRowCount(String sql, Object... args) {
-        Connection connection = getConnection();
         ResultSet result = null;
         int value = 0;
         if (connection == null) {
@@ -226,7 +220,7 @@ public class JDBCUtils {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            closeResource(result, statement, connection);
+            closeResource(result, statement, null);
         }
         return value;
     }
