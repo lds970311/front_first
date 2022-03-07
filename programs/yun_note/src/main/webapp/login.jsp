@@ -9,9 +9,9 @@
 <html>
 <head>
     <title>用户登录</title>
+    <script src="static/js/jquery-1.11.3.js"></script>
     <link href="static/css/login.css" rel="stylesheet" type="text/css"/>
     <script src="static/js/jquery-1.11.3.js" type=text/javascript></script>
-    <script src="static/js/config.js" type=text/javascript></script>
     <script src="static/js/login.js"></script>
 </head>
 <body>
@@ -47,6 +47,9 @@
                         <input name="isChecked" type="checkbox" value="" class="inputcheckbox"/>
                     </label>
                     <label>记住我</label>&nbsp; &nbsp;
+                    <a href="UserServlet?actionName=register"
+                       id="register"
+                       style="float: right; color: #00a0e9; cursor:pointer;margin-right: 30px">没有账户,注册!</a>
                     <span id="Msg">${resultInfo.message}</span>
                     <br/><br/>
                     <input type="button" class="log jc yahei16" value="登 录" onclick="checkLogin()"/>&nbsp; &nbsp; &nbsp;

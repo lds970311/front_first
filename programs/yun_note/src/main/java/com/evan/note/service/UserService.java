@@ -9,7 +9,7 @@ import com.evan.note.pojo.User;
 import com.evan.note.vo.ResultInfo;
 
 import javax.servlet.http.HttpServletRequest;
-
+@SuppressWarnings("all")
 public interface UserService {
     /**
      * 用户登录
@@ -23,4 +23,13 @@ public interface UserService {
     Integer checkNickName(String nickName, Integer userId);
 
     ResultInfo<User> saveUserInfo(HttpServletRequest req);
+
+    /**
+     * 注册用户
+     *
+     * @param userName
+     * @param password
+     * @return
+     */
+    ResultInfo<User> register(String userName, String password);
 }

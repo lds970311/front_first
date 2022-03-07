@@ -32,7 +32,7 @@ public class LoginAccessFilter implements Filter {
         if (path.contains("User")) {
             //得到用户行为
             String actionName = req.getParameter("actionName");
-            if ("login".equalsIgnoreCase(actionName)) {
+            if ("login".equalsIgnoreCase(actionName) || "register".equalsIgnoreCase(actionName) || "userRegister".equals(actionName)) {
                 chain.doFilter(req, resp);
                 return;
             }

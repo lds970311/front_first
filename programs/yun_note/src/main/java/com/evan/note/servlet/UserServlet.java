@@ -46,9 +46,39 @@ public class UserServlet extends HttpServlet {
             case "list":
                 this.list(req, resp);
                 break;
+            case "register":
+                this.register(req, resp);
+                break;
+            case "userRegister":
+                this.userRegister(req, resp);
+                break;
             default:
                 log.warn("request not found!");
         }
+    }
+
+    /**
+     * 用户注册
+     *
+     * @param req
+     * @param resp
+     */
+    private void userRegister(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+        String userName = req.getParameter("userName");
+        String password = req.getParameter("password");
+        ResultInfo<User> resultInfo = userService.register(userName, password);
+        if (resultInfo.getCode() == 1) {
+            //成功
+            resp.sendRedirect("login.jsp");
+        } else {
+            //注册失败,回显数据
+            req.setAttribute("result", resultInfo);
+            req.getRequestDispatcher("register.jsp").forward(req, resp);
+        }
+    }
+
+    private void register(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getRequestDispatcher("register.jsp").forward(req, resp);
     }
 
     private void list(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
