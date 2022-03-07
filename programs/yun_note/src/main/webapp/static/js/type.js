@@ -265,13 +265,6 @@ function addDom(typeId, typeName) {
 
         $("#myDiv").html(myTable);
     }
-
-
-    /* 2、左侧类型分组导航栏的列表项 */
-    // 拼接li元素
-    let li = '<li id="li_' + typeId + '"><a href=""><span id="sp_' + typeId + '">' + typeName + ' </span><span class="badge">0</span></a></li>';
-    // 追加到ul元素中
-    $("#typeUl").append(li);
 }
 
 

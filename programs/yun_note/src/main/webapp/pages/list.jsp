@@ -21,7 +21,7 @@
                 <ul>
                     <c:forEach items="${page.dataList}" var="data">
                         <li>『<fmt:formatDate value="${data.pubTime}" pattern="yyyy-MM-dd"/>』&nbsp;&nbsp;
-                            <a href="note?act=view&amp;noteId=27">${data.title}</a>
+                            <a href="NoteServlet?actionName=detail&noteId=${data.noteId}&typeId=${data.typeId}">${data.title}</a>
                         </li>
                     </c:forEach>
 
@@ -31,7 +31,7 @@
                 <ul class="pagination  center">
                     <c:if test="${page.pageNo > 1}">
                         <li>
-                            <a href="">
+                            <a href="NoteServlet?actionName=list&pageNo=${page.pageNo - 1}&pageSize=5&title=${title}&date=${date}&type=${type}">
                                 <span>«</span>
                             </a>
                         </li>
@@ -39,12 +39,12 @@
                         <%--导航页数--%>
                     <c:forEach begin="${page.startNavPage}" end="${page.endNavPage}" var="p">
                         <li <c:if test="${page.pageNo == p}">class="active"</c:if>>
-                            <a href="NoteServlet?actionName=list&pageNo=${p}&pageSize=5&title=${title}">${p}</a>
+                            <a href="NoteServlet?actionName=list&pageNo=${p}&pageSize=5&title=${title}&date=${date}&type=${type}">${p}</a>
                         </li>
                     </c:forEach>
                     <c:if test="${page.pageNo < page.totalPages}">
                         <li>
-                            <a href="">
+                            <a href="NoteServlet?actionName=list&pageNo=${page.pageNo + 1}&pageSize=5&title=${title}&date=${date}&type=${type}">
                                 <span>»</span>
                             </a>
                         </li>

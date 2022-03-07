@@ -60,8 +60,10 @@
                         class="active"
                 </c:if>>
                     <a href="UserServlet?actionName=userCenter"><i class="glyphicon glyphicon-user"></i>&nbsp;个人中心</a>
-                <li>
-                    <a href="report"><i class="glyphicon glyphicon-signal"></i>&nbsp;数据报表</a>
+                <li <c:if test="${fn:contains(changePage,'report')}">
+                    class="active"
+                </c:if>>
+                    <a href="ReportServlet?actionName=info"><i class="glyphicon glyphicon-signal"></i>&nbsp;数据报表</a>
                 </li>
             </ul>
             <form class="navbar-form navbar-right" role="search" action="IndexServlet">
@@ -115,8 +117,8 @@
                 <div>
                     <ul class="nav nav-pills nav-stacked" id="typeUl">
                         <c:forEach items="${typeInfo}" var="item">
-                            <li>
-                                <a href="IndexServlet?actionName=searchType&type=${item.groupName}">${item.groupName}
+                            <li id="li_${item.typeId}">
+                                <a href="IndexServlet?actionName=searchType&type=${item.typeId}">${item.groupName}
                                     <span class="badge">${item.noteCount}</span>
                                 </a>
                             </li>
