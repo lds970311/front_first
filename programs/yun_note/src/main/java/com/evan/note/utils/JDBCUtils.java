@@ -173,9 +173,9 @@ public class JDBCUtils {
         return 0;
     }
 
-    public static Object findSingleValue(String sql, Object... args) throws SQLException {
+    public static String findSingleValue(String sql, Object... args) {
         ResultSet result = null;
-        Object value = null;
+        String value = null;
         if (connection == null) {
             log.error("mysql连接失败");
             return null;
@@ -189,7 +189,7 @@ public class JDBCUtils {
             log.info("sql = {}", sql);
             result = statement.executeQuery();
             if (result.next()) {
-                value = result.getObject(1);
+                value = result.getString(1);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -223,5 +223,64 @@ public class JDBCUtils {
             closeResource(result, statement, null);
         }
         return value;
+    }
+
+    public static List<Integer> findIntegerList(String sql, Object... args) {
+        ResultSet resultSet = null;
+        List<Integer> list = null;
+        if (connection == null) {
+            log.error("mysql连接失败");
+            return null;
+        }
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement(sql);
+            for (int i = 0; i < args.length; i++) {
+                stmt.setObject(i + 1, args[i]);
+            }
+            log.info("sql = {}", sql);
+            resultSet = stmt.executeQuery();
+            list = new ArrayList<>();
+            while (resultSet.next()) {
+                int res = resultSet.getInt(1);
+                list.add(res);
+            }
+            return list;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            closeResource(resultSet, stmt, null);
+        }
+        return null;
+    }
+
+    public static List<String> findStringList(String sql, Object... args) {
+        ResultSet resultSet = null;
+        List<String> list = null;
+        if (connection == null) {
+            log.error("mysql连接失败");
+            return null;
+        }
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement(sql);
+            for (int i = 0; i < args.length; i++) {
+                stmt.setObject(i + 1, args[i]);
+            }
+            log.info("sql = {}", sql);
+            resultSet = stmt.executeQuery();
+            list = new ArrayList<>();
+            while (resultSet.next()) {
+                list.add(resultSet.getString(1));
+            }
+            return list;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            closeResource(resultSet, stmt, null);
+        }
+        return null;
     }
 }

@@ -39,3 +39,30 @@ from tb_note tn
 where tnt.userId = 1
 group by tnt.typeName
 order by noteCount desc;
+
+select *
+from tb_note
+where noteId = 1;
+
+
+select typeName
+from tb_note_type
+where typeId = 1;
+
+select distinct date_format(pubTime, '%Y年%m月')
+from tb_note tn
+         inner join tb_note_type tnt on tn.typeId = tnt.typeId
+where userId = 1
+order by date_format(pubTime, '%Y年%m月') asc;
+
+select count(1)
+from tb_note tn
+         inner join tb_note_type tnt on tn.typeId = tnt.typeId
+where userId = 1
+group by date_format(pubTime, '%Y年%m月')
+order by date_format(pubTime, '%Y年%m月');
+
+select lon, lat
+from tb_note
+         left join tb_note_type tnt on tnt.typeId = tb_note.typeId
+where userId = 2;

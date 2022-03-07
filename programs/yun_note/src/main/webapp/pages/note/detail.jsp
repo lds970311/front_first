@@ -15,23 +15,23 @@
 <body>
 <div class="col-md-9">
     <div class="data_list">
-        <div class="data_list_title">
+        <div class="data_list_title" style="overflow:hidden;">
             <span class="glyphicon glyphicon-eye-open"></span>&nbsp;查看云记
+            <div class="note_btn" style="display: inline-block; float: right; margin-top:0 ">
+                <button class="btn btn-primary" type="button" onclick="updateNote(${note.noteId})">修改</button>
+                <button class="btn btn-danger" type="button" onclick="deleteNote(${note.noteId})">删除</button>
+            </div>
         </div>
         <div>
             <div class="note_title">
                 <h2>${note.title}</h2>
             </div>
             <div class="note_info">
-                发布时间：『<fmt:formatDate value="${note.pubTime}" pattern="yyyy-MM-dd HH:mm"/> 』
-                &nbsp;&nbsp;云记类别：${note.typeName}
+                发布时间：『<fmt:formatDate value="${note.pubTime}" pattern="yyyy年MM月dd日  HH:mm"/> 』
+                &nbsp;&nbsp;云记类别：${typeName}
             </div>
             <div class="note_content">
                 <p>${note.content}</p>
-            </div>
-            <div class="note_btn">
-                <button class="btn btn-primary" type="button" onclick="updateNote(${note.noteId})">修改</button>
-                <button class="btn btn-danger" type="button" onclick="deleteNote(${note.noteId})">删除</button>
             </div>
         </div>
     </div>
@@ -52,19 +52,19 @@
             // 如果用户确认删除，则发送ajax请求
             $.ajax({
                 type: "post",
-                url: "note",
+                url: "NoteServlet",
                 data: {
                     actionName: "delete",
-                    noteId: noteId
+                    noteId
                 },
-                success: function (code) {
+                success: function (result) {
                     // 判断是否删除成功
-                    if (code == 1) {
+                    if (result.code == 1) {
                         // 跳转到首页
-                        window.location.href = "index";
+                        window.location.href = "IndexServlet";
                     } else {
                         // 提示失败
-                        swal("", "<h3>删除失败！</h3>", "error");
+                        swal("", `<h3>${result.message}</h3>`, "error");
                     }
                 }
             });
@@ -77,7 +77,7 @@
      * @param noteId
      */
     function updateNote(noteId) {
-        window.location.href = "note?actionName=view&noteId=" + noteId;
+        window.location.href = "NoteServlet?actionName=view&noteId=" + noteId;
     }
 
 </script>

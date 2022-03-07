@@ -25,7 +25,7 @@ public class NoteDaoImpl implements NoteDao {
     }
 
     @Override
-    public int getNoteCountByUserId(Integer userId, String title) {
+    public int getNoteCountByUserId(Integer userId, String title, String date, String type) {
         String sql = "select count(1) from tb_note n\n" +
                 "inner join tb_note_type tnt on n.typeId = tnt.typeId\n" +
                 "where tnt.userId = ?";
@@ -33,12 +33,19 @@ public class NoteDaoImpl implements NoteDao {
             //如果查询参数不为空,则拼接sql,设置所需要的参数
             sql += " and title like concat('%',?,'%')";
             return JDBCUtils.getRowCount(sql, userId, title);
+        } else if (!StrUtil.isEmpty(date)) {
+            sql += " and date_format(pubTime,'%Y年%m月') = ?";
+            return JDBCUtils.getRowCount(sql, userId, date);
+        } else if (!StrUtil.isBlank(type)) {
+            int typeId = Integer.parseInt(type);
+            sql += " and n.typeId = ?";
+            return JDBCUtils.getRowCount(sql, userId, typeId);
         }
         return JDBCUtils.getRowCount(sql, userId);
     }
 
     @Override
-    public List<Note> findNoteListByPage(int userId, Integer startIndex, Integer pageSize, String title) {
+    public List<Note> findNoteListByPage(int userId, Integer startIndex, Integer pageSize, String title, String date, String type) {
         String sql = "select n.noteId, n.title, n.content, n.typeId, n.pubTime, n.lon, n.lat\n" +
                 "from tb_note n\n" +
                 "         inner join tb_note_type tnt on n.typeId = tnt.typeId\n" +
@@ -46,6 +53,13 @@ public class NoteDaoImpl implements NoteDao {
         if (!StrUtil.isBlank(title)) {
             sql += " and title like concat('%',?,'%') limit ?,?";
             return JDBCUtils.queryAll(Note.class, sql, userId, title, startIndex, pageSize);
+        } else if (!StrUtil.isEmpty(date)) {
+            sql += " and date_format(pubTime,'%Y年%m月') = ? limit ?,?";
+            return JDBCUtils.queryAll(Note.class, sql, userId, date, startIndex, pageSize);
+        } else if (!StrUtil.isBlank(type)) {
+            int typeId = Integer.parseInt(type);
+            sql += " and n.typeId = ? limit ?,?";
+            return JDBCUtils.queryAll(Note.class, sql, userId, typeId, startIndex, pageSize);
         }
         sql += " limit ?,?";
         return JDBCUtils.queryAll(Note.class, sql, userId, startIndex, pageSize);
@@ -70,5 +84,29 @@ public class NoteDaoImpl implements NoteDao {
                 "group by tnt.typeName\n" +
                 "order by noteCount desc";
         return JDBCUtils.queryAll(NoteTypeVo.class, sql, userId);
+    }
+
+    @Override
+    public Note findNoteById(int parseInt) {
+        String sql = "select * from tb_note where noteId = ?";
+        return JDBCUtils.queryOne(Note.class, sql, parseInt);
+    }
+
+    @Override
+    public String findNoteTypeByTypeId(int typeId) {
+        String sql = "select typeName from tb_note_type where typeId = ?";
+        return JDBCUtils.findSingleValue(sql, typeId);
+    }
+
+    @Override
+    public int deleteNoteById(Integer noteId) {
+        String sql = "delete from tb_note where noteId = ?";
+        return JDBCUtils.update(sql, noteId);
+    }
+
+    @Override
+    public int updateNote(Note note) {
+        String sql = "update tb_note set title = ?,content = ?,typeId = ? where noteId = ?";
+        return JDBCUtils.update(sql, note.getTitle(), note.getContent(), note.getTypeId(), note.getNoteId());
     }
 }

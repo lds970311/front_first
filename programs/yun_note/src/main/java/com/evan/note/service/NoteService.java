@@ -22,9 +22,11 @@ public interface NoteService {
      * @param typeId
      * @param title
      * @param content
+     * @param lon
+     * @param lat
      * @return
      */
-    ResultInfo<Note> addNote(String typeId, String title, String content);
+    ResultInfo<Note> addNote(String typeId, String title, String content, String lon, String lat);
 
     /**
      * 分页查询云记
@@ -33,9 +35,11 @@ public interface NoteService {
      * @param pageSize
      * @param userId
      * @param title
+     * @param date
+     * @param type
      * @return
      */
-    Page<Note> findNoteListByPage(String pageNo, Integer pageSize, Integer userId, String title);
+    Page<Note> findNoteListByPage(String pageNo, Integer pageSize, Integer userId, String title, String date, String type);
 
     /**
      * 根据用户id查询云记日期信息
@@ -52,4 +56,39 @@ public interface NoteService {
      * @return
      */
     List<NoteTypeVo> findNoteCountByType(Integer userId);
+
+    /**
+     * 根据id查询对应云记
+     *
+     * @param parseInt
+     * @return
+     */
+    Note findNoteById(int parseInt);
+
+    /**
+     * 根基typeid查询类型名称
+     *
+     * @param typeId
+     * @return
+     */
+    String findNoteTypeByTypeId(int typeId);
+
+    /**
+     * 根据id删除日记
+     *
+     * @param parseInt
+     * @return
+     */
+    ResultInfo<Note> deleteNoteById(Integer noteId);
+
+    /**
+     * 更新日记
+     *
+     * @param noteId
+     * @param typeId
+     * @param title
+     * @param content
+     * @return
+     */
+    ResultInfo<Note> updateNote(Integer noteId, String typeId, String title, String content);
 }
