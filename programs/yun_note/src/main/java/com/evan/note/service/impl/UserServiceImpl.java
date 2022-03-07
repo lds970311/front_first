@@ -114,4 +114,45 @@ public class UserServiceImpl implements UserService {
         resultInfo.setMessage("更新失败!");
         return resultInfo;
     }
+
+    @Override
+    public ResultInfo<User> register(String userName, String password) {
+        ResultInfo<User> resultInfo = new ResultInfo<>();
+        if (StrUtil.isEmpty(userName)) {
+            resultInfo.setCode(0);
+            resultInfo.setMessage("用户名为空,不能注册!");
+            User user = new User();
+            user.setUname("");
+            user.setUpwd("");
+            resultInfo.setResult(user);
+            return resultInfo;
+        }
+
+        if (StrUtil.isBlank(password)) {
+            resultInfo.setCode(0);
+            resultInfo.setMessage("密码为空,不能注册!");
+            User user = new User();
+            user.setUname("");
+            user.setUpwd("");
+            resultInfo.setResult(user);
+            return resultInfo;
+        }
+
+        //注册用户
+        int row = userDao.registerUser(userName, DigestUtil.md5Hex(password));
+        if (row == 0) {
+            //注册失败
+            resultInfo.setCode(0);
+            resultInfo.setMessage("注册失败,请稍后重试!");
+            User user = new User();
+            user.setUname(userName);
+            user.setUpwd(password);
+            resultInfo.setResult(user);
+            return resultInfo;
+        }
+        //注册成功
+        resultInfo.setCode(1);
+        resultInfo.setMessage("注册成功");
+        return resultInfo;
+    }
 }

@@ -7,6 +7,7 @@ package com.evan.note.dao;
 
 import com.evan.note.pojo.User;
 
+@SuppressWarnings("all")
 public interface UserDao {
     /**
      * 通过用户名查询用户
@@ -25,4 +26,13 @@ public interface UserDao {
      * @return
      */
     int updateUser(User user);
+
+    /**
+     * 注册用户
+     *
+     * @param userName
+     * @param password
+     * @return
+     */
+    int registerUser(String userName, String password);
 }
