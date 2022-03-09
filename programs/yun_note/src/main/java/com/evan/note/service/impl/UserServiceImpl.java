@@ -17,6 +17,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.Part;
 import java.io.IOException;
+import java.util.Random;
+import java.util.UUID;
 
 public class UserServiceImpl implements UserService {
     private final UserDao userDao = new UserDaoImpl();
@@ -94,9 +96,11 @@ public class UserServiceImpl implements UserService {
             String str = head.substring(head.lastIndexOf("=") + 2, head.length() - 1);
             if (!StrUtil.isBlank(str)) {
                 //如果上传了头像,则更新头像
-                user.setHead(str);
-                String filePath = req.getServletContext().getRealPath("/static/images");
-                part.write(filePath + "/" + str);
+                String uId = UUID.randomUUID().toString();
+                String fName = uId + "_" + str;
+                user.setHead(fName);
+                String filePath = req.getServletContext().getRealPath("/static/avatar");
+                part.write(filePath + "/" + fName);
             }
             System.out.println(str);
         } catch (IOException | ServletException e) {
@@ -138,8 +142,12 @@ public class UserServiceImpl implements UserService {
             return resultInfo;
         }
 
+        String[] heads = {"404.png", "h2.png", "jay.png"};
+        Random random = new Random();
+        int randomIndex = random.nextInt(heads.length) - 1;
+        String avatar = heads[randomIndex];
         //注册用户
-        int row = userDao.registerUser(userName, DigestUtil.md5Hex(password));
+        int row = userDao.registerUser(userName, DigestUtil.md5Hex(password), avatar);
         if (row == 0) {
             //注册失败
             resultInfo.setCode(0);

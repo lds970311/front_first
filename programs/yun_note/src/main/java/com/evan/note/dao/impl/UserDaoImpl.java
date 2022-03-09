@@ -25,13 +25,13 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public int updateUser(User user) {
-        String sql = "update yun_note.tb_user set nick = ?,mood = ? where userId = ?";
-        return JDBCUtils.update(sql, user.getNick(), user.getMood(), user.getUserId());
+        String sql = "update yun_note.tb_user set nick = ?,mood = ? , head = ? where userId = ?";
+        return JDBCUtils.update(sql, user.getNick(), user.getMood(), user.getHead(), user.getUserId());
     }
 
     @Override
-    public int registerUser(String userName, String password) {
-        String sql = "insert into tb_user(uname,upwd) values(?,?)";
-        return JDBCUtils.update(sql, userName, password);
+    public int registerUser(String userName, String password, String avatar) {
+        String sql = "insert into tb_user(uname,upwd,head) values(?,?,?)";
+        return JDBCUtils.update(sql, userName, password, avatar);
     }
 }

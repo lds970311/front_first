@@ -32,7 +32,8 @@ public interface UserDao {
      *
      * @param userName
      * @param password
+     * @param avatar
      * @return
      */
-    int registerUser(String userName, String password);
+    int registerUser(String userName, String password, String avatar);
 }
