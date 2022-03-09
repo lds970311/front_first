@@ -57,6 +57,7 @@
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
     /**
      * 验证昵称的唯一性
