@@ -32,21 +32,12 @@ public class IndexServlet extends HttpServlet {
             switch (actionName) {
                 case "searchTitle":
                     title = request.getParameter("title");
-                    request.getSession().setAttribute("title", title);
-                    request.getSession().removeAttribute("date");
-                    request.getSession().removeAttribute("type");
                     break;
                 case "searchDate":
                     date = request.getParameter("date");
-                    request.getSession().setAttribute("date", date);
-                    request.getSession().removeAttribute("title");
-                    request.getSession().removeAttribute("type");
                     break;
                 case "searchType":
                     type = request.getParameter("type");
-                    request.getSession().setAttribute("type", type);
-                    request.getSession().removeAttribute("date");
-                    request.getSession().removeAttribute("title");
                     break;
                 default:
             }

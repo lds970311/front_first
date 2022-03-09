@@ -64,6 +64,10 @@ public class NoteServlet extends HttpServlet {
         String title = req.getParameter("title");
         String date = req.getParameter("date");
         String type = req.getParameter("type");
+        //下次请求保留这次的请求参数,防止分页参数丢失
+        req.setAttribute("title", title);
+        req.setAttribute("date", date);
+        req.setAttribute("type", type);
         //获取user
         User user = (User) req.getSession().getAttribute("user");
         Page<Note> page = noteService.findNoteListByPage(pageNo, pageSize, user.getUserId(), title, date, type);
