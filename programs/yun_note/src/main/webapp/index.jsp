@@ -86,7 +86,7 @@
                     <a href="UserServlet?actionName=logout">退出</a>
                 </div>
                 <div class="userimg">
-                    <img src="static/images/${user.head}" alt="退出">
+                    <img src="static/avatar/${user.head}" alt="退出">
                 </div>
                 <div class="nick">${user.nick}</div>
                 <div class="mood">${user.mood}</div>

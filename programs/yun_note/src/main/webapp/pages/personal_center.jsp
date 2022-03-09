@@ -18,8 +18,6 @@
         <div class="container-fluid">
             <div class="row" style="padding-top: 20px;">
                 <div class="col-md-8">
-
-
                     <form class="form-horizontal" method="post" action="UserServlet?actionName=saveUserInfo"
                           enctype="multipart/form-data">
                         <div class="form-group">
@@ -52,7 +50,7 @@
                 </div>
                 <div class="col-md-4">
                     <img style="width:260px;height:200px"
-                         src="${pageContext.request.contextPath}/static/images/${user.head}"
+                         src="${pageContext.request.contextPath}/static/avatar/${user.head}"
                          alt="呵呵">
                 </div>
             </div>

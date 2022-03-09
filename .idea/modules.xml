@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/micrioservice/cloud-demo/cloud-demo.iml" filepath="$PROJECT_DIR$/micrioservice/cloud-demo/cloud-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/datastrcuture/datastrcuture.iml" filepath="$PROJECT_DIR$/datastrcuture/datastrcuture.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_advance/design_pattern/design_pattern.iml" filepath="$PROJECT_DIR$/java_advance/design_pattern/design_pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micrioservice/cloud-demo/feign-api/feign-api.iml" filepath="$PROJECT_DIR$/micrioservice/cloud-demo/feign-api/feign-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/first_web_proj/first_web_proj.iml" filepath="$PROJECT_DIR$/javaweb/first_web_proj/first_web_proj.iml" />
       <module fileurl="file://$PROJECT_DIR$/front_first.iml" filepath="$PROJECT_DIR$/front_first.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_advance/java_advance.iml" filepath="$PROJECT_DIR$/java_advance/java_advance.iml" />

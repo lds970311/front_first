@@ -1,21 +1,8 @@
 server:
   port: 8080
 
-spring:
-  datasource:
-    druid:
-      url: jdbc:mysql://192.168.208.148:3306/cloud_order?useSSL=false
-      username: root
-      password: 19970311
-      driver-class-name: com.mysql.cj.jdbc.Driver
-  application:
-    name: orderservice
-  cloud:
-    nacos:
-      server-addr: 192.168.125.9:8848
 #      discovery:
 #        cluster-name: HangZhou
-
 
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
@@ -44,3 +31,4 @@ ribbon:
 #userservice:
 #  ribbon:
 #    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule # 负载均衡规则
+
