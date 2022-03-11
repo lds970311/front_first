@@ -9,11 +9,13 @@
       <module fileurl="file://$PROJECT_DIR$/springboot/boot_webflux/boot_webflux.iml" filepath="$PROJECT_DIR$/springboot/boot_webflux/boot_webflux.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/case/case.iml" filepath="$PROJECT_DIR$/javaweb/case/case.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/cloud-demo/cloud-demo.iml" filepath="$PROJECT_DIR$/micrioservice/cloud-demo/cloud-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micrioservice/rabbitmq-demo/consumer/consumer.iml" filepath="$PROJECT_DIR$/micrioservice/rabbitmq-demo/consumer/consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/datastrcuture/datastrcuture.iml" filepath="$PROJECT_DIR$/datastrcuture/datastrcuture.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_advance/design_pattern/design_pattern.iml" filepath="$PROJECT_DIR$/java_advance/design_pattern/design_pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/cloud-demo/feign-api/feign-api.iml" filepath="$PROJECT_DIR$/micrioservice/cloud-demo/feign-api/feign-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/first_web_proj/first_web_proj.iml" filepath="$PROJECT_DIR$/javaweb/first_web_proj/first_web_proj.iml" />
       <module fileurl="file://$PROJECT_DIR$/front_first.iml" filepath="$PROJECT_DIR$/front_first.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micrioservice/cloud-demo/gateway/gateway.iml" filepath="$PROJECT_DIR$/micrioservice/cloud-demo/gateway/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_advance/java_advance.iml" filepath="$PROJECT_DIR$/java_advance/java_advance.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_base/java_base.iml" filepath="$PROJECT_DIR$/java_base/java_base.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/javaweb.iml" filepath="$PROJECT_DIR$/javaweb/javaweb.iml" />
@@ -28,6 +30,8 @@
       <module fileurl="file://$PROJECT_DIR$/ssm/mybatis_generator/mybatis_generator.iml" filepath="$PROJECT_DIR$/ssm/mybatis_generator/mybatis_generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/mybatis_ssm/mybatis_ssm.iml" filepath="$PROJECT_DIR$/ssm/mybatis_ssm/mybatis_ssm.iml" />
       <module fileurl="file://$PROJECT_DIR$/programs/programs.iml" filepath="$PROJECT_DIR$/programs/programs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micrioservice/rabbitmq-demo/publisher/publisher.iml" filepath="$PROJECT_DIR$/micrioservice/rabbitmq-demo/publisher/publisher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micrioservice/rabbitmq-demo/rabbitmq-demo.iml" filepath="$PROJECT_DIR$/micrioservice/rabbitmq-demo/rabbitmq-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/spring_mvc/spring_mvc.iml" filepath="$PROJECT_DIR$/ssm/spring_mvc/spring_mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/ssm.iml" filepath="$PROJECT_DIR$/ssm/ssm.iml" />

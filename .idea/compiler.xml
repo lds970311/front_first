@@ -20,9 +20,12 @@
         <module name="jedis" />
         <module name="spring_mvc" />
         <module name="boot_webflux" />
+        <module name="publisher" />
         <module name="boot_ssmp" />
         <module name="mybatis_ssm" />
         <module name="my_spring" />
+        <module name="gateway" />
+        <module name="consumer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,9 +35,11 @@
       <module name="boot_ssmp" target="11" />
       <module name="boot_webflux" target="11" />
       <module name="cloud-demo" target="11" />
+      <module name="consumer" target="11" />
       <module name="design_pattern" target="11" />
       <module name="feign-api" target="11" />
       <module name="first_maven" target="11" />
+      <module name="gateway" target="11" />
       <module name="jedis" target="11" />
       <module name="mvc_annotation" target="11" />
       <module name="mvn_web" target="11" />
@@ -42,6 +47,8 @@
       <module name="mybatis" target="11" />
       <module name="mybatis_generator" target="11" />
       <module name="mybatis_ssm" target="11" />
+      <module name="publisher" target="11" />
+      <module name="rabbitmq-demo" target="11" />
       <module name="spring_mvc" target="11" />
       <module name="yun_note" target="11" />
     </bytecodeTargetLevel>
@@ -53,7 +60,10 @@
       <module name="boot_mp" options="-parameters" />
       <module name="boot_ssmp" options="-parameters" />
       <module name="boot_webflux" options="-parameters" />
+      <module name="consumer" options="-parameters" />
       <module name="feign-api" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="publisher" options="-parameters" />
     </option>
   </component>
 </project>
