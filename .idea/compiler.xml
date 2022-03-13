@@ -13,6 +13,7 @@
         <module name="design_pattern" />
         <module name="mybatis_generator" />
         <module name="mybatis" />
+        <module name="hotel-demo" />
         <module name="boot_first" />
         <module name="boot_mp" />
         <module name="feign-api" />
@@ -40,6 +41,7 @@
       <module name="feign-api" target="11" />
       <module name="first_maven" target="11" />
       <module name="gateway" target="11" />
+      <module name="hotel-demo" target="11" />
       <module name="jedis" target="11" />
       <module name="mvc_annotation" target="11" />
       <module name="mvn_web" target="11" />
@@ -63,6 +65,7 @@
       <module name="consumer" options="-parameters" />
       <module name="feign-api" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="hotel-demo" options="-parameters" />
       <module name="publisher" options="-parameters" />
     </option>
   </component>

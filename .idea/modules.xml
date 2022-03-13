@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/javaweb/first_web_proj/first_web_proj.iml" filepath="$PROJECT_DIR$/javaweb/first_web_proj/first_web_proj.iml" />
       <module fileurl="file://$PROJECT_DIR$/front_first.iml" filepath="$PROJECT_DIR$/front_first.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/cloud-demo/gateway/gateway.iml" filepath="$PROJECT_DIR$/micrioservice/cloud-demo/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micrioservice/hotel-demo/hotel-demo.iml" filepath="$PROJECT_DIR$/micrioservice/hotel-demo/hotel-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_advance/java_advance.iml" filepath="$PROJECT_DIR$/java_advance/java_advance.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_base/java_base.iml" filepath="$PROJECT_DIR$/java_base/java_base.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/javaweb.iml" filepath="$PROJECT_DIR$/javaweb/javaweb.iml" />
