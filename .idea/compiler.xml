@@ -17,6 +17,7 @@
         <module name="boot_first" />
         <module name="boot_mp" />
         <module name="feign-api" />
+        <module name="common" />
         <module name="yun_note" />
         <module name="jedis" />
         <module name="spring_mvc" />
@@ -36,11 +37,13 @@
       <module name="boot_ssmp" target="11" />
       <module name="boot_webflux" target="11" />
       <module name="cloud-demo" target="11" />
+      <module name="common" target="11" />
       <module name="consumer" target="11" />
       <module name="design_pattern" target="11" />
       <module name="feign-api" target="11" />
       <module name="first_maven" target="11" />
       <module name="gateway" target="11" />
+      <module name="health_parent" target="11" />
       <module name="hotel-demo" target="11" />
       <module name="jedis" target="11" />
       <module name="mvc_annotation" target="11" />

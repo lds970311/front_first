@@ -5,8 +5,8 @@
 
 package com.evanlee.behavior;
 
-import com.evanlee.state.Context;
-import com.evanlee.state.RunningState;
+import com.evanlee.behavior.state.Context;
+import com.evanlee.behavior.state.RunningState;
 import org.junit.jupiter.api.Test;
 
 //状态模式测试
