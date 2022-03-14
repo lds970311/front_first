@@ -31,6 +31,7 @@
         <option value="$PROJECT_DIR$/programs/yun_note/pom.xml" />
         <option value="$PROJECT_DIR$/micrioservice/rabbitmq-demo/pom.xml" />
         <option value="$PROJECT_DIR$/micrioservice/hotel-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/programs/health_parent/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

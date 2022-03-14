@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot/boot_webflux/boot_webflux.iml" filepath="$PROJECT_DIR$/springboot/boot_webflux/boot_webflux.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/case/case.iml" filepath="$PROJECT_DIR$/javaweb/case/case.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/cloud-demo/cloud-demo.iml" filepath="$PROJECT_DIR$/micrioservice/cloud-demo/cloud-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/programs/health_parent/common/common.iml" filepath="$PROJECT_DIR$/programs/health_parent/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/rabbitmq-demo/consumer/consumer.iml" filepath="$PROJECT_DIR$/micrioservice/rabbitmq-demo/consumer/consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/datastrcuture/datastrcuture.iml" filepath="$PROJECT_DIR$/datastrcuture/datastrcuture.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_advance/design_pattern/design_pattern.iml" filepath="$PROJECT_DIR$/java_advance/design_pattern/design_pattern.iml" />
@@ -16,6 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/javaweb/first_web_proj/first_web_proj.iml" filepath="$PROJECT_DIR$/javaweb/first_web_proj/first_web_proj.iml" />
       <module fileurl="file://$PROJECT_DIR$/front_first.iml" filepath="$PROJECT_DIR$/front_first.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/cloud-demo/gateway/gateway.iml" filepath="$PROJECT_DIR$/micrioservice/cloud-demo/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/programs/health_parent/health_parent.iml" filepath="$PROJECT_DIR$/programs/health_parent/health_parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/hotel-demo/hotel-demo.iml" filepath="$PROJECT_DIR$/micrioservice/hotel-demo/hotel-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_advance/java_advance.iml" filepath="$PROJECT_DIR$/java_advance/java_advance.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_base/java_base.iml" filepath="$PROJECT_DIR$/java_base/java_base.iml" />

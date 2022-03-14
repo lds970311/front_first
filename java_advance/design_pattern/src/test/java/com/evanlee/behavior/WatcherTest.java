@@ -5,9 +5,9 @@
 
 package com.evanlee.behavior;
 
-import com.evanlee.watcher.Subject;
-import com.evanlee.watcher.SubscriptionSubject;
-import com.evanlee.watcher.WeixinUser;
+import com.evanlee.behavior.watcher.Subject;
+import com.evanlee.behavior.watcher.SubscriptionSubject;
+import com.evanlee.behavior.watcher.WeixinUser;
 import org.junit.jupiter.api.Test;
 
 
