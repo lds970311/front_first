@@ -2,6 +2,8 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/javaweb/mvn_web" />
+    <file type="web" url="file://$PROJECT_DIR$/programs/health_parent/backend" />
+    <file type="web" url="file://$PROJECT_DIR$/programs/health_parent/service_provider" />
     <file type="web" url="file://$PROJECT_DIR$/programs/yun_note" />
     <file type="web" url="file://$PROJECT_DIR$/ssm/mvc_annotation" />
     <file type="web" url="file://$PROJECT_DIR$/ssm/my_spring" />
@@ -41,7 +43,7 @@
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="corretto-11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

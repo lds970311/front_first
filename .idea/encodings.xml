@@ -14,6 +14,10 @@
     <file url="file://$PROJECT_DIR$/micrioservice/rabbitmq-demo/publisher/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/micrioservice/rabbitmq-demo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/micrioservice/rabbitmq-demo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/programs/health_parent/backend/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/programs/health_parent/backend/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/programs/health_parent/service_provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/programs/health_parent/service_provider/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/programs/yun_note/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/programs/yun_note/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot/boot_first/src/main/java" charset="UTF-8" />

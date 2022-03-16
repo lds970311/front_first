@@ -9,12 +9,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mvc_annotation" />
         <module name="boot_mongodb" />
+        <module name="interfaces" />
         <module name="mvn_web" />
         <module name="design_pattern" />
         <module name="mybatis_generator" />
         <module name="mybatis" />
         <module name="hotel-demo" />
         <module name="boot_first" />
+        <module name="service_provider" />
         <module name="boot_mp" />
         <module name="feign-api" />
         <module name="common" />
@@ -23,6 +25,7 @@
         <module name="spring_mvc" />
         <module name="boot_webflux" />
         <module name="publisher" />
+        <module name="backend" />
         <module name="boot_ssmp" />
         <module name="mybatis_ssm" />
         <module name="my_spring" />
@@ -31,6 +34,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="backend" target="11" />
       <module name="boot_first" target="11" />
       <module name="boot_mongodb" target="11" />
       <module name="boot_mp" target="11" />
@@ -45,6 +49,7 @@
       <module name="gateway" target="11" />
       <module name="health_parent" target="11" />
       <module name="hotel-demo" target="11" />
+      <module name="interfaces" target="11" />
       <module name="jedis" target="11" />
       <module name="mvc_annotation" target="11" />
       <module name="mvn_web" target="11" />
@@ -54,6 +59,7 @@
       <module name="mybatis_ssm" target="11" />
       <module name="publisher" target="11" />
       <module name="rabbitmq-demo" target="11" />
+      <module name="service_provider" target="11" />
       <module name="spring_mvc" target="11" />
       <module name="yun_note" target="11" />
     </bytecodeTargetLevel>
