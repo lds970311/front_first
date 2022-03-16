@@ -79,6 +79,10 @@
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:5.5.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-taglibs:5.5.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-acl:5.5.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
+    <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.2.3" level="project" />
+    <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.2.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:tomcat-servlet-api:9.0.56" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:tomcat-jsp-api:9.0.56" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:tomcat-el-api:9.0.56" level="project" />
   </component>
 </module>
