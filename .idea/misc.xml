@@ -34,6 +34,7 @@
         <option value="$PROJECT_DIR$/micrioservice/rabbitmq-demo/pom.xml" />
         <option value="$PROJECT_DIR$/micrioservice/hotel-demo/pom.xml" />
         <option value="$PROJECT_DIR$/programs/health_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/micrioservice/zookeeper_stu/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
