@@ -8,29 +8,30 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mvc_annotation" />
-        <module name="boot_mongodb" />
-        <module name="interfaces" />
-        <module name="mvn_web" />
         <module name="design_pattern" />
         <module name="mybatis_generator" />
         <module name="mybatis" />
         <module name="hotel-demo" />
         <module name="boot_first" />
-        <module name="service_provider" />
         <module name="boot_mp" />
         <module name="feign-api" />
         <module name="common" />
+        <module name="spring_mvc" />
+        <module name="backend" />
+        <module name="my_spring" />
+        <module name="consumer" />
+        <module name="boot_mongodb" />
+        <module name="interfaces" />
+        <module name="mvn_web" />
+        <module name="service_provider" />
+        <module name="zookeeper_stu" />
         <module name="yun_note" />
         <module name="jedis" />
-        <module name="spring_mvc" />
         <module name="boot_webflux" />
         <module name="publisher" />
-        <module name="backend" />
         <module name="boot_ssmp" />
         <module name="mybatis_ssm" />
-        <module name="my_spring" />
         <module name="gateway" />
-        <module name="consumer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -62,6 +63,7 @@
       <module name="service_provider" target="11" />
       <module name="spring_mvc" target="11" />
       <module name="yun_note" target="11" />
+      <module name="zookeeper_stu" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

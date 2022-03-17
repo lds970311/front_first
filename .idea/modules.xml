@@ -43,6 +43,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/ssm.iml" filepath="$PROJECT_DIR$/ssm/ssm.iml" />
       <module fileurl="file://$PROJECT_DIR$/programs/yun_note/yun_note.iml" filepath="$PROJECT_DIR$/programs/yun_note/yun_note.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micrioservice/zookeeper_stu/zookeeper_stu.iml" filepath="$PROJECT_DIR$/micrioservice/zookeeper_stu/zookeeper_stu.iml" />
     </modules>
   </component>
 </project>
