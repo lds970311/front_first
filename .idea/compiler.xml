@@ -12,6 +12,7 @@
         <module name="mybatis_generator" />
         <module name="mybatis" />
         <module name="hotel-demo" />
+        <module name="concurrent" />
         <module name="boot_first" />
         <module name="boot_mp" />
         <module name="feign-api" />
@@ -43,6 +44,7 @@
       <module name="boot_webflux" target="11" />
       <module name="cloud-demo" target="11" />
       <module name="common" target="11" />
+      <module name="concurrent" target="11" />
       <module name="consumer" target="11" />
       <module name="design_pattern" target="11" />
       <module name="feign-api" target="11" />

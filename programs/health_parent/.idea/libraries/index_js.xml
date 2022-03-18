@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="index.js" type="javaScript">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/backend/src/main/webapp/plugins/elementui/index.js" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

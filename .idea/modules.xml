@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/javaweb/case/case.iml" filepath="$PROJECT_DIR$/javaweb/case/case.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/cloud-demo/cloud-demo.iml" filepath="$PROJECT_DIR$/micrioservice/cloud-demo/cloud-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/programs/health_parent/common/common.iml" filepath="$PROJECT_DIR$/programs/health_parent/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_advance/concurrent/concurrent.iml" filepath="$PROJECT_DIR$/java_advance/concurrent/concurrent.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/rabbitmq-demo/consumer/consumer.iml" filepath="$PROJECT_DIR$/micrioservice/rabbitmq-demo/consumer/consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/datastrcuture/datastrcuture.iml" filepath="$PROJECT_DIR$/datastrcuture/datastrcuture.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_advance/design_pattern/design_pattern.iml" filepath="$PROJECT_DIR$/java_advance/design_pattern/design_pattern.iml" />

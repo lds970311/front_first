@@ -19,7 +19,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <junit.version>4.13.2</junit.version>
-        <spring.version>5.2.19.RELEASE</spring.version>
+        <spring.version>5.0.5.RELEASE</spring.version>
         <pagehelper.version>5.2.1</pagehelper.version>
         <servlet-api.version>2.5</servlet-api.version>
         <dubbo.version>2.6.0</dubbo.version>
@@ -262,6 +262,17 @@
                 <artifactId>logback-core</artifactId>
                 <version>1.2.3</version>
             </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.22</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.jsqlparser</groupId>
+                <artifactId>jsqlparser</artifactId>
+                <version>3.1</version>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
@@ -279,6 +290,10 @@
             <artifactId>tomcat-jsp-api</artifactId>
             <version>9.0.56</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 </project>

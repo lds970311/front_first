@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="axios-0.18.0.js" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/backend/src/main/webapp/js/vue.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/backend/src/main/webapp/js/axios-0.18.0.js" />
+      <root url="file://$PROJECT_DIR$/backend/src/main/webapp/js/jquery.min.js" />
+      <root url="file://$PROJECT_DIR$/backend/src/main/webapp/js/vue.js" />
+      <root url="file://$PROJECT_DIR$/backend/src/main/webapp/plugins/elementui/index.js" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
