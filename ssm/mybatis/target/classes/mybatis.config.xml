@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="mybatis.properties"/>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="true"/>
+        <!--开启二级缓存-->
+        <setting name="localCacheScope" value="STATEMENT"/>
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+    <typeAliases>
+        <typeAlias type="com.evan.domain.Employee" alias="emp"/>
+    </typeAliases>
+
+    <typeHandlers>
+    </typeHandlers>
+
+    <environments default="laptop">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+
+        <environment id="laptop">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.208.146:3306/mybatis"/>
+                <property name="username" value="root"/>
+                <property name="password" value="19970311"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--123-->
+    <mappers>
+        <mapper resource="conf/EmployeeMapper.xml"/>
+        <mapper resource="conf/EmpPlusMapper.xml"/>
+        <mapper resource="conf/EmpDynamicMapper.xml"/>
+        <!--批量注册-->
+        <package name="conf"/>
+    </mappers>
+</configuration>

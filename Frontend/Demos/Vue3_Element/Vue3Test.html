@@ -6,13 +6,50 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" user-scalable="no">
     <!-- 导入样式 -->
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        .el-header, .el-footer {
+            background-color: #B3C0D1;
+            color: #333;
+            text-align: left;
+            line-height: 60px;
+        }
 
+        .el-aside {
+            background-color: #D3DCE6;
+            color: #333;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .el-main {
+            background-color: #E9EEF3;
+            color: #333;
+            text-align: center;
+            line-height: 590px;
+        }
+    </style>
 <body>
 <div id="app">
-    <el-button @click="visible = true">Button</el-button>
-    <el-dialog :visible.sync="visible" title="Hello world">
-        <p>Try Element</p>
-    </el-dialog>
+    <el-button @click="visible = true" type="waring">Button</el-button>
+
+    <el-container>
+        <el-header>
+            header部分
+        </el-header>
+        <el-container>
+            <el-aside width="200px">
+                aside部分
+            </el-aside>
+            <el-container>
+                <el-main>
+                    main部分
+                </el-main>
+                <el-footer>
+                    footer部分
+                </el-footer>
+            </el-container>
+        </el-container>
+    </el-container>
 </div>
 
 <!-- 导入 Vue 3 -->

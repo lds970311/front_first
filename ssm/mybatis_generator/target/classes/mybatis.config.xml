@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="mybatis.properties"/>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="true"/>
+        <!--开启二级缓存-->
+        <setting name="localCacheScope" value="STATEMENT"/>
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
+    <typeAliases>
+    </typeAliases>
+
+    <typeHandlers>
+        <typeHandler handler="com.evan.mybatis.typehandler.EmpStatusHandler"
+                     javaType="com.evan.mybatis.beans.EmpStatus"/>
+    </typeHandlers>
+
+    <!--配置插件-->
+    <plugins>
+        <!-- <plugin interceptor="com.evan.mybatis.plugins.FirstMybatisPlugin">
+             &lt;!&ndash;会被包装成properties,在setProperties()中传入&ndash;&gt;
+             <property name="username" value="root"/>
+             <property name="password" value="123456"/>
+         </plugin>
+         <plugin interceptor="com.evan.mybatis.plugins.SecondMybatisPlugin">
+             &lt;!&ndash;会被包装成properties,在setProperties()中传入&ndash;&gt;
+             <property name="username" value="root111"/>
+             <property name="password" value="654321"/>
+         </plugin>-->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"/>
+    </plugins>
+    <environments default="laptop">
+        <environment id="laptop">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.208.146:3306/mybatis"/>
+                <property name="username" value="root"/>
+                <property name="password" value="19970311"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--123-->
+    <mappers>
+        <mapper resource="mapper/DepartmentMapper.xml"/>
+        <mapper resource="mapper/EmployeeMapper.xml"/>
+    </mappers>
+
+</configuration>

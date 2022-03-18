@@ -10,6 +10,6 @@
     <orderEntry type="library" name="vue.runtime.global" level="application" />
     <orderEntry type="library" name="index" level="application" />
     <orderEntry type="library" name="http_unpkg.com_element-ui_lib_index.js" level="application" />
-    <orderEntry type="library" name="element-ui" level="project" />
+    <orderEntry type="library" name="element-ui" level="application" />
   </component>
 </module>

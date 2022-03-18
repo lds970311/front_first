@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cn.evanlee.dao.CheckItemDao">
+
+    <insert id="addCheckItem">
+        insert into health.t_checkitem (code, name, sex, age, price, type, remark, attention)
+        values (#{code}, #{name}, #{sex}, #{age}, #{price}, #{type}, #{remark}, #{attention})
+    </insert>
+    <delete id="deleteById">
+        delete
+        from health.t_checkitem
+        where id = #{parseInt}
+    </delete>
+
+    <select id="findByPage" resultType="cn.evanlee.pojo.CheckItem" parameterType="string">
+        select *
+        from health.t_checkitem
+        <if test="value != null and value.length > 0">
+            where code = #{value} or name = #{value}
+        </if>
+    </select>
+</mapper>
