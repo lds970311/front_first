@@ -47,8 +47,16 @@ public class CheckItemServiceImpl implements CheckItemService {
     @Override
     public Result<Object> deleteById(String id) {
         Result<Object> result = new Result<>();
+        //判断是否关联到检查组
+        long count = checkItemDao.findCountByCheckItemId(Integer.parseInt(id));
+        if (count > 0) {
+            result.setMessage("该检查项已关联检查组,不能删除");
+            result.setFlag(false);
+            return result;
+        }
         int row = checkItemDao.deleteById(Integer.parseInt(id));
         if (row > 0) {
+            //说明已经关联,不能删除
             result.setFlag(true);
             result.setMessage(MessageConstant.DELETE_CHECKGROUP_SUCCESS);
             return result;

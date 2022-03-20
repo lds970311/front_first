@@ -29,13 +29,13 @@
       <el-container>
         <el-aside width="200px">
           <el-menu>
-            <el-submenu v-for="menu in menuList" :index="menu.path">
+            <el-submenu v-for="menu in menuList" :index="menu.path" :key="menu.title">
               <template slot="title">
                 <i class="fa" :class="menu.icon"></i>
                 {{ menu.title }}
               </template>
               <template v-for="child in menu.children">
-                <el-menu-item :index="child.path">
+                <el-menu-item :index="child.path" :key="child.title">
                   <!--                  <a :href="child.linkUrl" target="right">{{ child.title }}</a>-->
                   <router-link :to="child.linkUrl" v-if="child.linkUrl !== undefined">{{ child.title }}</router-link>
                 </el-menu-item>

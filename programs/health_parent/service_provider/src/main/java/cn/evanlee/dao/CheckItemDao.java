@@ -35,4 +35,12 @@ public interface CheckItemDao {
      * @return
      */
     int deleteById(@Param("parseInt") int parseInt);
+
+    /**
+     * 根据检查项查询是否关联到检查组
+     *
+     * @param id
+     * @return
+     */
+    long findCountByCheckItemId(@Param("id") int id);
 }
