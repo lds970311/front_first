@@ -34,5 +34,17 @@
     </dependencies>
 
     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <configuration>
+                    <!-- 指定端口 -->
+                    <port>9080</port>
+                    <!-- 请求路径 -->
+                    <path>/service_provider</path>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>

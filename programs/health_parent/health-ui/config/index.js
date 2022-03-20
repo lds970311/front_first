@@ -33,7 +33,17 @@ module.exports = {
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
 
-    cssSourceMap: true
+    cssSourceMap: true,
+    proxy: {
+      '/api': {   // 用 /api 来代替下面 target 中的地址
+        target: `http://localhost:9082/backend`,    // 后台地址（不要忘了写前面的http）
+        ws: true,
+        changOrigin: true,//允许跨域
+        pathRewrite: {
+          '^/api': '/'
+        }
+      }
+    }
   },
 
   build: {

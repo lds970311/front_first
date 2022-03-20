@@ -297,7 +297,7 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {
-        axios.delete(`/checkItem/delete.do/${row.id}`).then(res => {
+        axios.delete(`/checkItem/delete.do/${row.id}}`).then(res => {
           if (res.data.flag) {
             this.$message({
               type: 'success',

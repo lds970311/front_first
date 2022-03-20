@@ -21,4 +21,9 @@
             where code = #{value} or name = #{value}
         </if>
     </select>
+    <select id="findCountByCheckItemId" resultType="java.lang.Long">
+        select count(1)
+        from health.t_checkgroup_checkitem
+        where checkitem_id = #{id}
+    </select>
 </mapper>
