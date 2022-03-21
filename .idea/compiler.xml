@@ -31,6 +31,7 @@
         <module name="boot_webflux" />
         <module name="publisher" />
         <module name="boot_ssmp" />
+        <module name="hotel-admin" />
         <module name="mybatis_ssm" />
         <module name="gateway" />
       </profile>
@@ -51,6 +52,7 @@
       <module name="first_maven" target="11" />
       <module name="gateway" target="11" />
       <module name="health_parent" target="11" />
+      <module name="hotel-admin" target="11" />
       <module name="hotel-demo" target="11" />
       <module name="interfaces" target="11" />
       <module name="jedis" target="11" />
@@ -78,6 +80,7 @@
       <module name="consumer" options="-parameters" />
       <module name="feign-api" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="hotel-admin" options="-parameters" />
       <module name="hotel-demo" options="-parameters" />
       <module name="publisher" options="-parameters" />
     </option>

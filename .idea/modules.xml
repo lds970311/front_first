@@ -21,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/front_first.iml" filepath="$PROJECT_DIR$/front_first.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/cloud-demo/gateway/gateway.iml" filepath="$PROJECT_DIR$/micrioservice/cloud-demo/gateway/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/programs/health_parent/health_parent.iml" filepath="$PROJECT_DIR$/programs/health_parent/health_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micrioservice/hotel-admin/hotel-admin.iml" filepath="$PROJECT_DIR$/micrioservice/hotel-admin/hotel-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/hotel-demo/hotel-demo.iml" filepath="$PROJECT_DIR$/micrioservice/hotel-demo/hotel-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/programs/health_parent/interfaces/interfaces.iml" filepath="$PROJECT_DIR$/programs/health_parent/interfaces/interfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_advance/java_advance.iml" filepath="$PROJECT_DIR$/java_advance/java_advance.iml" />

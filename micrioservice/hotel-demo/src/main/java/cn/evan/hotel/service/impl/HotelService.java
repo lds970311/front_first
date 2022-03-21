@@ -8,27 +8,39 @@ import cn.evan.hotel.pojo.RequestParams;
 import cn.evan.hotel.service.IHotelService;
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import lombok.SneakyThrows;
 import org.apache.commons.lang3.StringUtils;
+import org.elasticsearch.action.delete.DeleteRequest;
+import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.geo.GeoPoint;
 import org.elasticsearch.common.unit.DistanceUnit;
+import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
 import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
+import org.elasticsearch.search.aggregations.AggregationBuilders;
+import org.elasticsearch.search.aggregations.Aggregations;
+import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
 import org.elasticsearch.search.sort.SortBuilders;
 import org.elasticsearch.search.sort.SortOrder;
+import org.elasticsearch.search.suggest.Suggest;
+import org.elasticsearch.search.suggest.SuggestBuilder;
+import org.elasticsearch.search.suggest.SuggestBuilders;
+import org.elasticsearch.search.suggest.completion.CompletionSuggestion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -65,6 +77,122 @@ public class HotelService extends ServiceImpl<HotelMapper, Hotel> implements IHo
         } catch (IOException e) {
             throw new RuntimeException("搜索数据失败", e);
         }
+    }
+
+    @SneakyThrows
+    @Override
+    public Map<String, List<String>> filters(RequestParams requestParams) {
+        Map<String, List<String>> filterMap = new HashMap<>();
+        //准备request
+        SearchRequest searchRequest = new SearchRequest("hotel");
+        searchRequest.source().size(0);
+        //添加查询信息,限定聚合范围
+        this.buildBasicQuery(requestParams, searchRequest);
+        this.buildAggregation(searchRequest, filterMap);
+        return filterMap;
+    }
+
+    @SneakyThrows
+    @Override
+    /**
+     * 搜索栏自动补全
+     */
+    public List<String> getSuggestions(String key) {
+        SearchRequest searchRequest = new SearchRequest("hotel");
+        searchRequest.source()
+                .suggest(new SuggestBuilder().addSuggestion("suggestion",
+                        SuggestBuilders.completionSuggestion("suggestion")
+                                .prefix(key)
+                                .skipDuplicates(true)
+                                .size(10)));
+        SearchResponse response = restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT);
+        return this.handleSuggestions(response);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        try {
+            // 1.准备Request
+            DeleteRequest request = new DeleteRequest("hotel", id.toString());
+            // 2.发送请求
+            restHighLevelClient.delete(request, RequestOptions.DEFAULT);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public void insertById(Long id) {
+        try {
+            // 0.根据id查询酒店数据
+            Hotel hotel = getById(id);
+            // 转换为文档类型
+            HotelDoc hotelDoc = new HotelDoc(hotel);
+
+            // 1.准备Request对象
+            IndexRequest request = new IndexRequest("hotel").id(hotel.getId().toString());
+            // 2.准备Json文档
+            request.source(JSON.toJSONString(hotelDoc), XContentType.JSON);
+            // 3.发送请求
+            restHighLevelClient.index(request, RequestOptions.DEFAULT);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private List<String> handleSuggestions(SearchResponse response) {
+        List<String> suggestions = new ArrayList<>();
+        Suggest suggest = response.getSuggest();
+        //根据补全查询名称, 获取补全结果
+        CompletionSuggestion suggestion = suggest.getSuggestion("suggestion");
+        List<CompletionSuggestion.Entry.Option> options = suggestion.getOptions();
+        for (CompletionSuggestion.Entry.Option option : options) {
+            String string = option.getText().string();
+            suggestions.add(string);
+        }
+        return suggestions;
+    }
+
+    private void buildAggregation(SearchRequest searchRequest, Map<String, List<String>> filterMap) throws IOException {
+        searchRequest.source().aggregation(
+                AggregationBuilders.terms("brandAgg")
+                        .field("brand")
+                        .size(50)
+        );
+        List<String> brandAgg = this.handleResult(restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT), "brandAgg");
+        searchRequest.source().aggregation(
+                AggregationBuilders.terms("cityAgg")
+                        .field("city")
+                        .size(50)
+        );
+        List<String> cityAgg = this.handleResult(restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT), "cityAgg");
+        searchRequest.source().aggregation(
+                AggregationBuilders.terms("starAgg")
+                        .field("starName")
+                        .size(50)
+        );
+        List<String> starAgg = this.handleResult(restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT), "starAgg");
+        filterMap.put("品牌", brandAgg);
+        filterMap.put("城市", cityAgg);
+        filterMap.put("星级", starAgg);
+    }
+
+    private List<String> handleResult(SearchResponse searchResponse, String aggregationString) {
+        List<String> filterList = new ArrayList<>();
+        SearchHits searchHits = searchResponse.getHits();
+        long value = searchHits.getTotalHits().value;
+        System.out.println("total=" + value);
+        Aggregations aggregations = searchResponse.getAggregations();
+        //根据聚合名称获取聚合结果
+        Terms terms = aggregations.get(aggregationString);
+        //获取桶
+        List<? extends Terms.Bucket> buckets = terms.getBuckets();
+        for (Terms.Bucket bucket : buckets) {
+            //获取key
+            String key = bucket.getKeyAsString();
+            filterList.add(key);
+        }
+        return filterList;
     }
 
     private void buildBasicQuery(RequestParams params, SearchRequest request) {
