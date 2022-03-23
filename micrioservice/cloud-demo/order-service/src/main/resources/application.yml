@@ -32,3 +32,9 @@ ribbon:
 #  ribbon:
 #    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule # 负载均衡规则
 
+spring:
+  cloud:
+    sentinel:
+      web-context-unify: false # 关闭context整合
+      transport:
+        dashboard: 192.168.208.149:8090

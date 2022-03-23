@@ -1,7 +1,7 @@
 spring:
   datasource:
     druid:
-      url: jdbc:mysql://192.168.208.148:3306/cloud_order?useSSL=false
+      url: jdbc:mysql://192.168.208.129:3306/cloud_order?useSSL=false
       username: root
       password: 19970311
       driver-class-name: com.mysql.cj.jdbc.Driver

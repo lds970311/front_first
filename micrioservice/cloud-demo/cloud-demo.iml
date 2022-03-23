@@ -7,11 +7,11 @@
       <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/ZeppelinRemoteNotebooks" />
       <excludeFolder url="file://$MODULE_DIR$/eureka_server/target" />
-      <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/order-service/target/generated-sources" />
       <excludeFolder url="file://$MODULE_DIR$/order-service/target/generated-test-sources" />
       <excludeFolder url="file://$MODULE_DIR$/user-service/target/generated-sources" />
       <excludeFolder url="file://$MODULE_DIR$/user-service/target/generated-test-sources" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

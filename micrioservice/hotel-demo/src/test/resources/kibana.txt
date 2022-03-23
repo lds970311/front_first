@@ -1,0 +1,276 @@
+GET _search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+GET /_analyze
+{
+  "analyzer": "ik_max_word",
+  "text": "黑马程序员学习java太棒了,牛逼,白嫖一下,习大大"
+}
+
+PUT /person
+{
+  "mappings": {
+    "properties": {
+      "age":{
+        "type": "integer"
+      },
+
+      "weight":{
+        "type": "double"
+      },
+
+       "isMarried":{
+        "type": "boolean"
+      },
+
+      "info":{
+        "type": "text",
+        "analyzer": "ik_smart"
+      },
+
+      "email":{
+        "type": "keyword",
+        "index": false
+      },
+      "socre":{
+        "type": "double"
+      },
+      "name":{
+        "type": "object",
+        "properties": {
+          "firstName":{
+            "type":"keyword"
+          },
+          "lastName":{
+            "type":"keyword"
+          }
+        }
+      }
+    }
+  }
+}
+
+GET /person
+
+POST /person/_doc/1
+{
+    "info": "黑马程序员Java讲师",
+    "email": "zy@itcast.cn",
+    "name": {
+        "firstName": "云",
+        "lastName": "赵"
+    }
+}
+
+GET /person/_doc/1
+
+GET /_license
+
+POST /_license/start_trial?acknowledge=true&pretty
+
+PUT /hotel
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "name":{
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "copy_to": "all"
+      },
+      "address":{
+        "type": "keyword",
+        "index": false
+      },
+      "price":{
+        "type": "integer"
+      },
+      "score":{
+        "type": "integer"
+      },
+      "brand":{
+        "type": "keyword",
+        "copy_to": "all"
+      },
+      "city":{
+        "type": "keyword",
+        "copy_to": "all"
+      },
+      "starName":{
+        "type": "keyword"
+      },
+      "business":{
+        "type": "keyword"
+      },
+      "location":{
+        "type": "geo_point"
+      },
+      "pic":{
+        "type": "keyword",
+        "index": false
+      },
+      "all":{
+        "type": "text",
+        "analyzer": "ik_max_word"
+      }
+    }
+  }
+}
+GET /hotel
+
+DELETE /hotel
+
+GET /hotel/_doc/61083
+
+GET /hotel/_search
+
+GET /hotel/_search
+{
+  "query": {
+    "multi_match": {
+      "query": "外滩如家",
+      "fields":["brand","name"]
+    }
+  }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "term": {
+      "city": {
+        "value": "北京"
+      }
+    }
+  }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "range": {
+      "price": {
+        "gte": 100,
+        "lte": 500
+      }
+    }
+  }
+}
+
+GET /hotel/_search
+{
+ "query": {
+   "geo_distance":{
+      "distance": "15km",
+      "location": "31.21, 121.5"
+   }
+ }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "function_score": {
+      "query": {
+        "match": {
+          "all": "外滩"
+        }
+      },
+      "functions": [
+        {
+          "filter": {
+            "term": {
+              "brand": "如家"
+            }
+          }
+          , "weight": 4
+        }
+      ]
+      , "boost_mode": "sum"
+    }
+  }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "brand": "如家"
+          }
+        }
+      ]
+      , "must_not": [
+        {
+          "range": {
+            "price": {
+              "gt": 4000
+            }
+          }
+        }
+      ]
+      , "filter": [
+        {
+          "geo_distance": {
+            "distance": "50km",
+            "location": {
+              "lat": 32.21,
+              "lon": 121.5
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "match": {
+      "all": "七天"
+    }
+  },
+  "highlight": {
+    "fields": {
+      "name": {
+        "pre_tags": "<em>",
+        "post_tags": "</em>" ,
+        "require_field_match":"false"
+      }
+    }
+  }
+}
+
+POST /hotel/_update/1902197537
+{
+    "doc": {
+        "isAD": true
+    }
+}
+POST /hotel/_update/2056126831
+{
+    "doc": {
+        "isAD": true
+    }
+}
+POST /hotel/_update/1989806195
+{
+    "doc": {
+        "isAD": true
+    }
+}
+POST /hotel/_update/2056105938
+{
+    "doc": {
+        "isAD": true
+    }
+}

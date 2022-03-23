@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 页面meta -->
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>美年旅游</title>
+    <meta content="美年旅游" name="description">
+    <meta content="美年旅游" name="keywords">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <!-- 引入样式 -->
+    <link href="../plugins/elementui/index.css" rel="stylesheet">
+    <link href="../plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../favicon.ico" rel="icon" type="image/x-icon"/>
+    <style>
+        .el-main {
+            position: absolute;
+            top: 70px;
+            bottom: 0;
+            left: 200px;
+            right: 10px;
+            padding: 0;
+        }
+    </style>
+</head>
+<body class="hold-transition skin-purple sidebar-mini">
+<div id="app">
+    <el-container>
+        <el-header class="main-header" style="height:70px;">
+            <nav class="navbar navbar-static-top">
+                <!-- Logo -->
+                <a class="logo" href="#" style="text-align:center">
+                    <span class="logo-lg">
+                        <img alt="" src="../img/logo.png">
+                    </span>
+                </a>
+                <div class="right-menu">
+                    <span class="help"><i aria-hidden="true" class="fa fa-exclamation-circle"></i>帮助</span>
+                    <el-dropdown class="avatar-container right-menu-item" trigger="click">
+                        <div class="avatar-wrapper">
+                            <img class="user-avatar" src="../img/user2-160x160.jpg">
+                            尚硅谷
+                        </div>
+                        <el-dropdown-menu slot="dropdown">
+                            <el-dropdown-item divided>
+                                <span style="display:block;">修改密码</span>
+                            </el-dropdown-item>
+                            <el-dropdown-item divided>
+                                <span style="display:block;"><a href="">退出</a></span>
+                            </el-dropdown-item>
+                        </el-dropdown-menu>
+                    </el-dropdown>
+                </div>
+            </nav>
+        </el-header>
+        <el-container>
+            <el-aside width="200px">
+                <el-menu>
+                    <el-submenu :index="menu.path" v-for="menu in menuList">
+                        <template slot="title">
+                            <i :class="menu.icon" class="fa"></i>
+                            {{ menu.title }}
+                        </template>
+                        <template v-for="child in menu.children">
+                            <el-menu-item :index="child.path">
+                                <a :href="child.linkUrl" target="right">{{ child.title }}</a>
+                            </el-menu-item>
+                        </template>
+                    </el-submenu>
+                </el-menu>
+            </el-aside>
+            <el-container>
+                <iframe class="el-main" height="90%" name="right" src="travelItem.html" width="100%"></iframe>
+            </el-container>
+        </el-container>
+    </el-container>
+</div>
+</body>
+<!-- 引入组件库 -->
+<script src="../js/vue.js"></script>
+<script src="../plugins/elementui/index.js"></script>
+<script src="../js/axios-0.18.0.js"></script>
+<script src="../js/jquery.min.js" type="text/javascript"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            menuList: [
+                {
+                    "path": "1",
+                    "title": "旅行社",
+                    "icon": "fa-dashboard",
+                    "children": []
+                },
+                {
+                    "path": "2",
+                    "title": "旅行管理",
+                    "icon": "fa-user-md",
+                    "children": [
+                        {
+                            "path": "/2-1",
+                            "title": "会员档案",
+                            "linkUrl": "member.html",
+                            "children": []
+                        },
+                        {
+                            "path": "/2-2",
+                            "title": "会员信息上传",
+                            "children": []
+                        },
+                        {
+                            "path": "/2-3",
+                            "title": "会员统计",
+                            "linkUrl": "all-item-list.html",
+                            "children": []
+                        },
+                    ]
+                },
+                {
+                    "path": "3",
+                    "title": "旅游后台",
+                    "icon": "fa-tty",
+                    "children": [
+                        {
+                            "path": "/3-1",
+                            "title": "分公司地址",
+                            "linkUrl": "address.html",
+                            "children": []
+                        },
+                        {
+                            "path": "/3-2",
+                            "title": "旅游预约",
+                            "linkUrl": "ordersetting.html",
+                            "children": []
+                        },
+                        {
+                            "path": "/3-3",
+                            "title": "套餐游",
+                            "linkUrl": "setmeal.html",
+                            "children": []
+                        },
+                        {
+                            "path": "/3-4",
+                            "title": "跟团游",
+                            "linkUrl": "travelgroup.html",
+                            "children": []
+                        },
+                        {
+                            "path": "/3-5",
+                            "title": "自由行",
+                            "linkUrl": "travelItem.html",
+                            "children": []
+                        },
+                    ]
+                },
+                {
+                    "path": "4",
+                    "title": "旅游评估",
+                    "icon": "fa-stethoscope",
+                    "children": [
+                        {
+                            "path": "/4-1",
+                            "title": "大家一起游",
+                            "linkUrl": "all-medical-list.html",
+                            "children": []
+                        },
+                    ]
+                },
+                {
+                    "path": "5",     //菜单项所对应的路由路径
+                    "title": "信息系统",     //菜单项名称
+                    "icon": "fa-heartbeat",
+                    "children": [//是否有子菜单，若没有，则为[]
+                        {
+                            "path": "/5-1",
+                            "title": "注册会员按月份数量统计",
+                            "linkUrl": "report_member.html",
+                            "children": []
+                        },
+                        {
+                            "path": "/5-2",
+                            "title": "预约套餐人数比例统计",
+                            "linkUrl": "report_setmeal.html",
+                            "children": []
+                        },
+                        {
+                            "path": "/5-3",
+                            "title": "运营数据统计",
+                            "linkUrl": "report_business.html",
+                            "children": []
+                        }
+                    ]
+                }
+            ],
+            username: null  // 显示用户名
+        },
+        //发送请求获取当前登录用户的用户名
+        created() {
+            //发送请求获取当前登录用户的用户名
+
+        }
+    });
+    $(function () {
+        const wd = 200;
+        $(".el-main").css('width', $('body').width() - wd + 'px');
+    });
+</script>
+</html>
