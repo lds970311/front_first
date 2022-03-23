@@ -4,6 +4,8 @@
     <file type="web" url="file://$PROJECT_DIR$/javaweb/mvn_web" />
     <file type="web" url="file://$PROJECT_DIR$/programs/health_parent/backend" />
     <file type="web" url="file://$PROJECT_DIR$/programs/health_parent/service_provider" />
+    <file type="web" url="file://$PROJECT_DIR$/programs/meinian_parent/meinian_service" />
+    <file type="web" url="file://$PROJECT_DIR$/programs/meinian_parent/meinian_web" />
     <file type="web" url="file://$PROJECT_DIR$/programs/yun_note" />
     <file type="web" url="file://$PROJECT_DIR$/ssm/mvc_annotation" />
     <file type="web" url="file://$PROJECT_DIR$/ssm/my_spring" />
@@ -37,12 +39,17 @@
         <option value="$PROJECT_DIR$/micrioservice/zookeeper_stu/pom.xml" />
         <option value="$PROJECT_DIR$/java_advance/concurrent/pom.xml" />
         <option value="$PROJECT_DIR$/micrioservice/hotel-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/programs/meinian_parent/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/micrioservice/cloud-demo/order-service/pom.xml" />
         <option value="$PROJECT_DIR$/micrioservice/cloud-demo/user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/programs/meinian_parent/meinian_common/pom.xml" />
+        <option value="$PROJECT_DIR$/programs/meinian_parent/meinian_dao/pom.xml" />
+        <option value="$PROJECT_DIR$/programs/meinian_parent/meinian_interface/pom.xml" />
+        <option value="$PROJECT_DIR$/programs/meinian_parent/meinian_pojo/pom.xml" />
       </set>
     </option>
   </component>

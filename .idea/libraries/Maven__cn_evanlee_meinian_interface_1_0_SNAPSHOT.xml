@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: cn.evanlee:meinian_interface:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://H:/Java/repository/cn/evanlee/meinian_interface/1.0-SNAPSHOT/meinian_interface-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://H:/Java/repository/cn/evanlee/meinian_interface/1.0-SNAPSHOT/meinian_interface-1.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://H:/Java/repository/cn/evanlee/meinian_interface/1.0-SNAPSHOT/meinian_interface-1.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

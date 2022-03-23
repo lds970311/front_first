@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="meinian_interface" />
         <module name="mvc_annotation" />
         <module name="design_pattern" />
         <module name="mybatis_generator" />
@@ -16,7 +17,10 @@
         <module name="boot_first" />
         <module name="boot_mp" />
         <module name="feign-api" />
+        <module name="meinian_common" />
+        <module name="meinian_web" />
         <module name="common" />
+        <module name="meinian_dao" />
         <module name="spring_mvc" />
         <module name="backend" />
         <module name="my_spring" />
@@ -25,7 +29,9 @@
         <module name="interfaces" />
         <module name="mvn_web" />
         <module name="service_provider" />
+        <module name="meinian_pojo" />
         <module name="zookeeper_stu" />
+        <module name="meinian_service" />
         <module name="yun_note" />
         <module name="jedis" />
         <module name="boot_webflux" />
@@ -56,6 +62,13 @@
       <module name="hotel-demo" target="11" />
       <module name="interfaces" target="11" />
       <module name="jedis" target="11" />
+      <module name="meinian_common" target="11" />
+      <module name="meinian_dao" target="11" />
+      <module name="meinian_interface" target="11" />
+      <module name="meinian_parent" target="11" />
+      <module name="meinian_pojo" target="11" />
+      <module name="meinian_service" target="11" />
+      <module name="meinian_web" target="11" />
       <module name="mvc_annotation" target="11" />
       <module name="mvn_web" target="11" />
       <module name="my_spring" target="11" />

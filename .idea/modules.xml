@@ -30,6 +30,13 @@
       <module fileurl="file://$PROJECT_DIR$/javaweb/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/javaweb/jdbc/jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/jedis/jedis.iml" filepath="$PROJECT_DIR$/javaweb/jedis/jedis.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/jsoup/jsoup.iml" filepath="$PROJECT_DIR$/javaweb/jsoup/jsoup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/programs/meinian_parent/meinian_common/meinian_common.iml" filepath="$PROJECT_DIR$/programs/meinian_parent/meinian_common/meinian_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/programs/meinian_parent/meinian_dao/meinian_dao.iml" filepath="$PROJECT_DIR$/programs/meinian_parent/meinian_dao/meinian_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/programs/meinian_parent/meinian_interface/meinian_interface.iml" filepath="$PROJECT_DIR$/programs/meinian_parent/meinian_interface/meinian_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/programs/meinian_parent/meinian_parent.iml" filepath="$PROJECT_DIR$/programs/meinian_parent/meinian_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/programs/meinian_parent/meinian_pojo/meinian_pojo.iml" filepath="$PROJECT_DIR$/programs/meinian_parent/meinian_pojo/meinian_pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/programs/meinian_parent/meinian_service/meinian_service.iml" filepath="$PROJECT_DIR$/programs/meinian_parent/meinian_service/meinian_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/programs/meinian_parent/meinian_web/meinian_web.iml" filepath="$PROJECT_DIR$/programs/meinian_parent/meinian_web/meinian_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/micrioservice.iml" filepath="$PROJECT_DIR$/micrioservice/micrioservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/mvc_annotation/mvc_annotation.iml" filepath="$PROJECT_DIR$/ssm/mvc_annotation/mvc_annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/mvn_web/mvn_web.iml" filepath="$PROJECT_DIR$/javaweb/mvn_web/mvn_web.iml" />
