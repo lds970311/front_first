@@ -51,7 +51,7 @@
       <module name="boot_webflux" target="11" />
       <module name="cloud-demo" target="11" />
       <module name="common" target="11" />
-      <module name="concurrent" target="17" />
+      <module name="concurrent" target="11" />
       <module name="consumer" target="11" />
       <module name="design_pattern" target="11" />
       <module name="feign-api" target="11" />
