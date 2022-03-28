@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/automatic_test/automatic_test.iml" filepath="$PROJECT_DIR$/automatic_test/automatic_test.iml" />
       <module fileurl="file://$PROJECT_DIR$/programs/health_parent/backend/backend.iml" filepath="$PROJECT_DIR$/programs/health_parent/backend/backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot/boot_first/boot_first.iml" filepath="$PROJECT_DIR$/springboot/boot_first/boot_first.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot/boot_mongodb/boot_mongodb.iml" filepath="$PROJECT_DIR$/springboot/boot_mongodb/boot_mongodb.iml" />
