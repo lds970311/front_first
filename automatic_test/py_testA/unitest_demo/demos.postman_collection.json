@@ -1,0 +1,272 @@
+{
+  "info": {
+    "_postman_id": "e300f72d-f7f6-4945-8d7f-d2eceb81dac9",
+    "name": "demos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"mobile\":\"13800000002\", \"password\":\"123456\"}"
+        },
+        "url": {
+          "raw": "http://ihrm-test.itheima.net/api/sys/login",
+          "protocol": "http",
+          "host": [
+            "ihrm-test",
+            "itheima",
+            "net"
+          ],
+          "path": [
+            "api",
+            "sys",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "const r = Math.random()\r",
+              "console.log(r)\r",
+              "\r",
+              "pm.environment.set(\"r\",r)"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://192.168.208.129:92/index.php?m=Home&c=User&a=verify&r={{r}}",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "208",
+            "129"
+          ],
+          "port": "92",
+          "path": [
+            "index.php"
+          ],
+          "query": [
+            {
+              "key": "m",
+              "value": "Home"
+            },
+            {
+              "key": "c",
+              "value": "User"
+            },
+            {
+              "key": "a",
+              "value": "verify"
+            },
+            {
+              "key": "r",
+              "value": "{{r}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "验证码获取",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "const r = Math.random()\r",
+              "console.log(r)\r",
+              "\r",
+              "pm.environment.set(\"r\",r)"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://192.168.208.129:92/index.php?m=Home&c=User&a=verify&r={{r}}",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "208",
+            "129"
+          ],
+          "port": "92",
+          "path": [
+            "index.php"
+          ],
+          "query": [
+            {
+              "key": "m",
+              "value": "Home"
+            },
+            {
+              "key": "c",
+              "value": "User"
+            },
+            {
+              "key": "a",
+              "value": "verify"
+            },
+            {
+              "key": "r",
+              "value": "{{r}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取天气数据",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const jsonData = pm.response.json()\r",
+              "\r",
+              "const city = jsonData.weatherinfo.city\r",
+              "\r",
+              "pm.globals.set(\"city\",city)"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://www.weather.com.cn/data/sk/101010100.html",
+          "protocol": "http",
+          "host": [
+            "www",
+            "weather",
+            "com",
+            "cn"
+          ],
+          "path": [
+            "data",
+            "sk",
+            "101010100.html"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://www.baidu.com/s?wd={{city}}",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://www.baidu.com/s?wd={{city}}",
+          "protocol": "http",
+          "host": [
+            "www",
+            "baidu",
+            "com"
+          ],
+          "path": [
+            "s"
+          ],
+          "query": [
+            {
+              "key": "wd",
+              "value": "{{city}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取手机号码",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "console.log(\"运营商名称=\",data.sp)\r",
+              "\r",
+              "//断言\r",
+              "pm.test(\"校验运营商数据\",function() {\r",
+              "    const jsonData = pm.response.json()\r",
+              "    console.log(jsonData)\r",
+              "    pm.expect(jsonData.data.sp).to.eql(data.sp)\r",
+              "})\r",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://cx.shouji.360.cn/phonearea.php?number={{phone}}",
+          "protocol": "http",
+          "host": [
+            "cx",
+            "shouji",
+            "360",
+            "cn"
+          ],
+          "path": [
+            "phonearea.php"
+          ],
+          "query": [
+            {
+              "key": "number",
+              "value": "{{phone}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
