@@ -28,16 +28,16 @@ class MysqlUtil:
         return cls.__connection
 
     @classmethod
-    def __get_cursor(cls):
+    def get_cursor(cls):
         if cls.__cursor is None:
             cls.__cursor = cls.__get_connection().cursor()
 
         return cls.__cursor
 
     @classmethod
-    def exec_sql(cls, sql):
+    def exec_sql(cls, sql, cursor):
         try:
-            cursor = cls.__get_cursor()
+
             cursor.execute(sql)
 
             # 如果是查询
@@ -51,9 +51,9 @@ class MysqlUtil:
         except Exception as e:
             cls.__connection.rollback()
             print(e)
-        finally:
-            cls.__close_cursor()
-            cls.__close_connection()
+        # finally:
+        #     cls.__close_cursor()
+        #     cls.__close_connection()
 
     @classmethod
     def __close_cursor(cls):

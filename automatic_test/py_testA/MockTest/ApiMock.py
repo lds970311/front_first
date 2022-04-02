@@ -9,9 +9,11 @@ import json
 
 from flask import Flask, jsonify, request
 
+from mysql_handle.DBUtil import MysqlUtil
+
 app = Flask(__name__)
 
-from mysql_handle.DBUtil import MysqlUtil
+cursor = MysqlUtil.get_cursor()
 
 
 @app.route("/index")
@@ -45,7 +47,7 @@ def login():
 
 @app.route("/heros/list", methods=["GET"])
 def get_all_heros():
-    result = MysqlUtil.exec_sql("select * from t_hero")
+    result = MysqlUtil.exec_sql("select * from t_hero", cursor)
     return jsonify(result)
 
 
