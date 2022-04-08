@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>注册A</title>
+    <style type="text/css">
+        span {
+            display: none
+        }
+
+        .ball {
+            border: 1px solid #e54724;
+        }
+
+        #scrollup {
+            background: #777;
+            color: #eee;
+            font-size: 40px;
+            text-align: center;
+            text-decoration: none;
+            bottom: 65px;
+            right: 20px;
+            overflow: hidden;
+            width: 46px;
+            height: 46px;
+            border: none;
+            opacity: .8;
+        }
+
+
+    </style>
+    <script type="text/javascript">
+        function al() {
+            alert('我被点击啦！')
+            //var ret = confirm('确定要删除吗？');
+            //alert(ret)
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" type='text/css' media="all"/>
+</head>
+<body>
+<legend>用户注册</legend>
+<div class="wrapper clearfix">
+    <div class="left zc">
+        <fieldset>
+            <form>
+                <p id="pa">
+                    <label for="userA">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</label>
+                    <input type="text" name="userA" id="userA" placeholder="请输入用户名"/>
+                </p>
+                <p>
+                    <label for="passwordA">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+                    <input type="password" name="passwordA" id="passwordA" placeholder="请输入密码"/>
+                </p>
+                <p>
+                    <label for="telA">电话号码：</label>
+                    <input type="text" name="telA" id="telA" class="telA" placeholder="请输入电话号码"/>
+                </p>
+                <p>
+                    <label>电子邮箱：</label>
+                    <input type="email" name="emailA" class="emailA dzyxA" placeholder="请输入电子邮箱"/>
+                </p>
+                <p>
+                    <button>注&nbsp;&nbsp;册</button>
+                    <input type="reset" value="取消" disabled="disabled" id="cancelA">
+                    <span name="sp1">我隐身了</span>
+                </p>
+                <p>
+                    <label for="country">所在城市:</label>
+                    <select name="selecta" id="selectA">
+                        <option value="bj">北京</option>
+                        <option value="sh">上海</option>
+                        <option value="gz">广州</option>
+                        <option value="sz">深圳</option>
+                    </select>
+                </p>
+                <p class="clearfix">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" value="alert" id="alerta" onclick="alert('我被点击啦！')">
+                    <input type="button" value="confirm" id="confirma" onclick="confirm('确定要删除吗？')">
+                    <input type="button" value="prompt" id="prompta" onclick="prompt('请输入用户名：')">
+                </p>
+                <p id='linkto'>当前窗口打开：
+                    <a href="http://www.sina.com.cn">新浪</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;新窗口打开：<a href="http://www.sina.com.cn" id="fw" target="_blank">访问 新浪 网站</a>
+                </p>
+                <p id='fruit'>
+                    <label>水果</label>
+                    <label for="pga"><input type="radio" name="fruit" value="pga" id="pga">苹果</label>
+                    <label for="jza"><input type="radio" name="fruit" value="jza" id="jza">橘子</label>
+                    <label for="xja"><input type="radio" name="fruit" value="xja" id="xja">香蕉</label>
+                    <label for="lia"><input type="radio" name="fruit" value="lia" id="lia" checked="checked">梨</label>
+                    <label for="xga"><input type="radio" name="fruit" value="xga" id="xga">西瓜</label>
+                </p>
+                <p style="color:white;">
+                    <label>爱好</label>
+                    <input type="checkbox" name="hobby" value="汽车" id="qcA">汽车
+                    <input type="checkbox" name="hobby" value="购物" id="gwA">购物
+                    <input type="checkbox" name="hobby" value="旅游" id="lyA" checked="checked">旅游
+                    <input type="checkbox" name="hobby" value="音乐" id="yyA">音乐 <br>
+                </p>
+                <div>
+                    <input type="file" name="upfilea"/>
+                </div>
+            </form>
+        </fieldset>
+        <div>
+            <div>
+                <p id="p1">
+                    <label>test1:</label>
+                    <input type="text" name="user" class="login"/>
+                </p>
+                <p id="p2">
+                    <label>test2:</label>
+                    <input type="text" name="user" class="login-test"/>
+                </p>
+                <p id="p3">
+                    <label>test3:</label>
+                    <input type="text" name="user-test" class="login-test"/>
+                </p>
+                <p id="p4">
+                    <label>test4:</label>
+                    <input type="text" name="user-test" class="login"/>
+                </p>
+            </div>
+            <a href="http://www.baidu.com">打开百度</a>
+        </div>
+        <div>
+            <div id='wait'>
+                <a id="waitA" style="color:#F00">我加载比较慢！请稍等！</a>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <iframe src="./html/注册A.html" frameborder="1" name="myframe1" id="idframe1" class="cframe"
+                scrolling="no"></iframe>
+        <iframe src="./html/注册B.html" frameborder="1" name="myframe2" id="idframe2" class="cframe"
+                scrolling="no"></iframe>
+    </div>
+    <a id="scrollup" href="#top" style="position:fixed;z-index: 999;display: none;">^</a>
+</div>
+</body>
+
+<script type="text/javascript">
+    //操作滚动条显示返回顶部按钮
+    window.onscroll = function () {
+        //变量t是滚动条滚动时，距离顶部的距离
+        var t = document.documentElement.scrollTop || document.body.scrollTop;
+        var scrollup = document.getElementById('scrollup');
+        //当滚动到距离顶部200px时，返回顶部的锚点显示
+        if (t > 100) {
+            scrollup.style.display = "block";
+        } else {          //恢复正常
+            scrollup.style.display = "none";
+        }
+    }
+
+    //延时加载的元素
+    setTimeout("changeState()", 5000);
+
+    function changeState() {
+        document.getElementById("waitA").style.display = "none"
+        var para = document.createElement("input")
+        para.setAttribute("type", "text")
+        para.setAttribute("name", "userA")
+        para.setAttribute("id", "userA")
+        para.setAttribute("placeholder", "延时加载的输入框")
+        var element = document.getElementById("wait")
+        element.appendChild(para)
+    }
+</script>
+</html>

@@ -1,0 +1,100 @@
+/* reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* start editing from here */
+
+/*end reset*/
+/*-- form --*/
+
+legend {
+    text-align: center;
+    font-size: 1.5em;
+    color: #2F0000;
+    letter-spacing: 2px;
+    float: center;
+}
+
+
+.zc {
+    border: 4px solid #32CD32;
+    width: 100%;
+    max-width: 700px;
+    min-width: 430px;
+    background-color: #3C3C3C;
+    float: center;
+    margin-right: 5em;
+    padding: 3em 2em;
+    box-sizing: border-box;
+}
+
+input, select {
+    margin-bottom: 17px;
+    padding: 10px;
+    color: #5d5c5c;
+    font-size: .9em;
+    outline: none;
+    border: none;
+    background: #fff;
+    width: 60%;
+    font-family: 'Hind Siliguri', sans-serif;
+    letter-spacing: 1px;
+    border: 3px double #03A9F4;
+    border-radius: 4px;
+}
+
+
+button:hover {
+    color: #FF0000;
+    background: #DC143C;
+}
+
+button, #cancelA {
+    color: #fff;
+    font-size: 1em;
+    width: 25%;
+    border: none;
+    background: #03A9F4;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin: 1.5em 0 0;
+    text-align: center;
+    margin-left: 60px;
+}
+
+#cancelA {
+    background: #778899
+}
+
+label {
+    color: #F8F8FF;
+    padding: 10px 15px;
+}
+
+[type='button'] {
+    color: #fff;
+    width: 20%;
+    border: 1px solid #000;
+    margin: 37px 17px;
+    float: left;
+    background: #008080;
+    text-align: center;
+    margin-left: 20px;
+}
+
+
+/*--//responsive--*/
