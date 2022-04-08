@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>表单综合实例</title>
+    <style type="text/css">
+        body {
+            background: #F0F0F0
+        }
+
+        form {
+            width: 500px;
+            padding: 10px;
+            margin-top: 20px;
+            margin-left: 30%
+        }
+
+        fieldset {
+            background: #C7C7E2;
+        }
+
+        input {
+            padding: 5px;
+            background: #f8f8f8
+        }
+
+        button {
+            padding: 8px;
+            background: #f8f8f8;
+            border-radius: 5px
+        }
+
+        button:hover {
+            padding: 10px;
+            background: #2F4F4F
+        }
+
+        input:focus {
+            background: #FFC0CB
+        }
+
+        span {
+            display: none
+        }
+    </style>
+</head>
+<body>
+<form action="">
+    <div id="zc">
+        <fieldset>
+            <legend>注册用户</legend>
+            <p id="p1">
+                <label for="user">账号</label>
+                <input type="text" name="user" id="user" placeholder="账号" required="" value="">
+            </p>
+            <p>
+                <label for="password">密码</label>
+                <input type="password" name="password" id="password" placeholder="密码" value="">
+            </p>
+            <p>
+                <button type="submit" value="注册">注册</button>
+            <hr>
+            </p>
+
+            <p><a href="注册A.html" id="ZCA" target="_blank">注册A页面</a></p>
+            <p><a href="注册B.html" id="ZCB" target="_blank">注册B页面</a></p>
+        </fieldset>
+    </div>
+</form>
+<a href="http://www.sina.com.cn" target="myframe1">新浪</a>
+<a href="http://www.hao123.com" target="myframe1">hao123</a>
+<a href="http://www.taobao.com" target="myframe2">淘宝</a>
+<a href="http://www.baidu.com" target="myframe2">百度</a><br>
+<iframe src="注册A.html" frameborder="1" height="500" width="48%" name="myframe1" id="idframe1" class="cframe"></iframe>
+<iframe src="注册B.html" frameborder="1" height="500" width="48%" name="myframe2"></iframe>
+</body>
+</html>

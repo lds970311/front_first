@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>注册A</title>
+    <style type="text/css">
+        body {
+            background: #F0F0F0
+        }
+
+        .zc {
+            width: 500px;
+            padding: 10px;
+            margin-top: 20px;
+            margin-left: 30%
+        }
+
+        fieldset {
+            background: #C7C7E2;
+        }
+
+        input {
+            padding: 5px;
+            background: #f8f8f8
+        }
+
+        button {
+            padding: 8px;
+            background: #f8f8f8;
+            border-radius: 5px
+        }
+
+        button:hover {
+            padding: 10px;
+            background: #2F4F4F
+        }
+
+        input:focus {
+            background: #FFC0CB
+        }
+
+        span {
+            display: none
+        }
+
+        .ball {
+            border: 1px solid #e54724;
+        }
+    </style>
+    <script type="text/javascript">
+        function al() {
+            alert('我被点击啦！')
+            //var ret = confirm('确定要删除吗？');
+            //alert(ret)
+        }
+    </script>
+</head>
+<body>
+<div class="zc">
+    <fieldset>
+        <legend>注册用户A</legend>
+        <form>
+            <p id="pa">
+                <label for="userA">账号：</label>
+                <input type="text" name="userA" id="userA" placeholder="请输入用户名"/>
+            </p>
+            <p>
+                <label for="passwordA">密码：</label>
+                <input type="password" name="passwordA" id="passwordA" placeholder="请输入密码"/>
+            </p>
+            <p>
+                <label for="telA">电话号码：</label>
+                <input type="text" name="telA" id="telA" class="telA" placeholder="请输入电话号码"/>
+            </p>
+            <p>
+                <label>电子邮箱：</label>
+                <input type="email" name="emailA" class="emailA dzyxA" placeholder="请输入电子邮箱"/>
+            </p>
+            <p>
+                <button>注&nbsp;&nbsp;册</button>
+                <span name="sp1">我隐身了</span>
+            <hr>
+            </p>
+            <p>
+                当前窗口打开：<a href="http://www.sina.com.cn">新浪</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                新窗口打开：<a href="http://www.sina.com.cn" id="fw" target="_blank">访问 新浪 网站</a>
+            <hr>
+            </p>
+            <p>
+                <input type="reset" value="取消" disabled="disabled" id="cancelA">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="button" value="alert" id="alerta" onclick="alert('我被点击啦！')">
+                <input type="button" value="confirm" id="confirma" onclick="confirm('确定要删除吗？')">
+                <input type="button" value="prompt" id="prompta" onclick="prompt('请输入用户名：')">
+            <hr>
+            </p>
+            <p>
+                城市：
+                <select name="selecta" id="selectA">
+                    <option value="bj">A北京</option>
+                    <option value="sh">A上海</option>
+                    <option value="gz">A广州</option>
+                    <option value="sz">A深圳</option>
+                </select>
+            </p>
+            <hr>
+            <p>
+                水果：
+                <label for="pga"><input type="radio" name="fruit" value="pga" id="pga">苹果A</label>
+                <label for="jza"><input type="radio" name="fruit" value="jza" id="jza">橘子A</label>
+                <label for="xja"><input type="radio" name="fruit" value="xja" id="xja">香蕉A</label>
+                <label for="lia"><input type="radio" name="fruit" value="lia" id="lia" checked="checked">梨A</label>
+                <label for="xga"><input type="radio" name="fruit" value="xga" id="xga">西瓜A</label>
+            </p>
+            <hr>
+            <p>
+                爱好：
+                <input type="checkbox" name="hobby" value="汽车" id="qcA">汽车A
+                <input type="checkbox" name="hobby" value="购物" id="gwA">购物A
+                <input type="checkbox" name="hobby" value="旅游" id="lyA" checked="checked">旅游A
+                <input type="checkbox" name="hobby" value="音乐" id="yyA">音乐A <br>
+            </p>
+            <hr>
+            <div>
+                <input type="file" name="upfilea"/>
+            </div>
+        </form>
+    </fieldset>
+    <div style="background: #C7C7E2;margin-top: 20px; padding: 10px">
+        <div>
+            <p id="p1">
+                <label>test1:</label>
+                <input type="text" name="user" class="login"/>
+            </p>
+            <p id="p2">
+                <label>test2:</label>
+                <input type="text" name="user" class="login-test"/>
+            </p>
+            <p id="p3">
+                <label>test3:</label>
+                <input type="text" name="user-test" class="login-test"/>
+            </p>
+            <p id="p4">
+                <label>test4:</label>
+                <input type="text" name="user-test" class="login"/>
+            </p>
+        </div>
+        <a href="http://www.baidu.com">打开百度</a>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript">
+    // window.scrollTo(0, 100);
+
+</script>
+</html>
