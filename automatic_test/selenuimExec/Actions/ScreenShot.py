@@ -1,14 +1,14 @@
 # _*_ coding : UTF-8 _*_
 # Author : CSR丶WARRIOR
-# Time ： 2022-04-07  23:21
+# Time ： 2022-04-08  22:15
 # TOOLS : Pycharm
-# FILENAME : windowAction.py
+# FILENAME : ScreenShot.py
 # STATEMENT:
 import os
 import time
 
 from selenium import webdriver
-from appium import webdriver
+
 
 def get_path():
     return os.path.abspath("../pages/注册A.html")
@@ -18,7 +18,7 @@ def init_driver():
     return webdriver.Chrome()
 
 
-def handle_window():
+def handle_screenshot():
     driver = init_driver()
     driver.maximize_window()
     driver.get(get_path())
@@ -30,9 +30,12 @@ def handle_window():
     for i in handle:
         print(i)
     driver.switch_to.window(handle[0])
+    # 截图
+    driver.get_screenshot_as_file(os.path.abspath("../contents/sina.png"))
     driver.close()
-    time.sleep(100)
+    time.sleep(10)
+    driver.quit()
 
 
 if __name__ == '__main__':
-    handle_window()
+    handle_screenshot()
