@@ -7,8 +7,9 @@
 import os
 import time
 
-from selenium import webdriver
 from appium import webdriver
+from selenium import webdriver
+
 
 def get_path():
     return os.path.abspath("../pages/注册A.html")
