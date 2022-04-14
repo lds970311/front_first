@@ -39,7 +39,8 @@ def element_is_exist(driver, element, value):  # element 表示的元素定位�
 
 def get_toast(driver, message, timeout=3):
     # xpath = "//*[contains(@text, '" + message + "')]"   #.format(message)   # 通过{} 符号将message当参数传到xpath表达式中去
-    xpath = F"//*[contains(@text, '{message}')]"
+    xpath = "//*[contains(@text, '{}')]".format(message)
+    print(xpath)
     wait = WebDriverWait(driver, timeout, 1)
     element = wait.until(lambda x: x.find_element(By.XPATH, xpath))
     return element.text
