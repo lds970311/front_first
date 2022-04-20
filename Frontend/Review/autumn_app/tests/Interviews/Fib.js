@@ -13,4 +13,3 @@ function fib(n) {
     return result;
 }
 console.log(fib(6));
-//# sourceMappingURL=Fib.js.map
