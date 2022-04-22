@@ -1,0 +1,21 @@
+.filmItem img {
+    width: 100px;
+    float: left;
+    margin-right: 15px;
+}
+
+.filmItem {
+    overflow: hidden;
+    padding: 10px;
+}
+
+.filmDetail {
+    position: fixed;
+    right: 0;
+    top: 100px;
+    background: #91bfe7;
+    width: 300px;
+    min-height: 100px;
+    padding: 16px;
+    font-family: "Adobe 繁黑體 Std B";
+}
