@@ -1,10 +1,10 @@
 // import Header from "./components/Header";
-import Swither from "./components/Swither";
+import IndexRouter from "./router";
 
 function App() {
     return (
         <div className="App">
-            <Swither/>
+            <IndexRouter/>
         </div>
     );
 }

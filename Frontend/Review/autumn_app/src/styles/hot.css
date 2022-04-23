@@ -1,0 +1,27 @@
+.hot-topic {
+    list-style: none;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: #fff;
+}
+
+.consumer {
+    margin-top: 50px;
+}
+
+.movies {
+    position: static;
+}
+
+.swiper {
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+}
