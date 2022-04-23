@@ -11,6 +11,7 @@ class Swither extends Component {
 
     constructor(props, context) {
         super(props, context);
+        console.log(this.props)
         this.state = {
             list: [
                 {

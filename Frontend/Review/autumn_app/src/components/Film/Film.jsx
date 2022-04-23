@@ -1,5 +1,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import StateHooks from "../FC/StateHooks";
+import MemoryHooks from "../FC/MemoryHooks";
+import ReducerHooks from "../FC/ReducerHooks";
 
 class Film extends PureComponent {
     static propTypes = {
@@ -24,6 +27,11 @@ class Film extends PureComponent {
                                     onChange={(e) => this.handleChange(e)}/>
                 </label>
                 {name}
+                <StateHooks/>
+                <hr/>
+                <MemoryHooks/>
+                <hr/>
+                <ReducerHooks/>
             </div>
         );
     }
