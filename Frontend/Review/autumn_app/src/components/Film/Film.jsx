@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import StateHooks from "../FC/StateHooks";
 import MemoryHooks from "../FC/MemoryHooks";
 import ReducerHooks from "../FC/ReducerHooks";
+import Style from "../../styles/file.module.css"
 
 class Film extends PureComponent {
     static propTypes = {
@@ -32,6 +33,7 @@ class Film extends PureComponent {
                 <MemoryHooks/>
                 <hr/>
                 <ReducerHooks/>
+                <div className={Style.style}>current div</div>
             </div>
         );
     }

@@ -3,6 +3,7 @@ import {Consumer} from "../../utils/myContext";
 import "../../styles/hot.css"
 import axios from "axios";
 import PropTypes from "prop-types";
+import {useHistory} from "react-router-dom";
 
 /*import MySwiper from "../MySwiper/MySwiper"*/
 
@@ -55,6 +56,15 @@ class Hot extends Component {
                     >
                         即将上映
                     </li>
+                    <li style={{cursor: 'pointer'}}
+                        onClick={() => {
+                            this.setState({
+                                type: 3,
+                            });
+                        }}
+                    >
+                        经典电影
+                    </li>
                 </ul>
 
                 <Consumer>
@@ -80,6 +90,7 @@ class Hot extends Component {
 
 const FilmList = ({type}) => {
     const [list, setList] = useState([])
+    const history = useHistory()
 
     useLayoutEffect(() => {
         window.onresize = () => {
@@ -87,7 +98,6 @@ const FilmList = ({type}) => {
         };
 
         const timer = setInterval(() => {
-            console.log("111");
         }, 1000);
 
         return () => {
@@ -112,7 +122,7 @@ const FilmList = ({type}) => {
             }).then((res) => {
                 setList(res.data.data.films)
             });
-        } else {
+        } else if (type === 2) {
             //请求卖座即将上映的数据
 
             console.log("请求卖座即将上映的数据");
@@ -127,6 +137,13 @@ const FilmList = ({type}) => {
             }).then((res) => {
                 setList(res.data.data.films)
             });
+        } else {
+            console.log("经典电影数据: ")
+            axios.get("/ajax/moreClassicList?sortId=1&showType=3&limit=10&offset=10&optimus_uuid=B7186F20C34E11EC9556B19FB19558B18CD577F033F9463AB27E5C36DE9F8B77&optimus_risk_level=71&optimus_code=10")
+                .then(res => {
+                    console.log(res)
+                    setList(res.data.classicMovies.list)
+                })
         }
     }, [type])
 
@@ -135,7 +152,8 @@ const FilmList = ({type}) => {
             <div>
                 <ol className={"movies"}>
                     {list.map((item) => (
-                        <li key={item.filmId}>{item.name}</li>
+                        <li key={item.filmId}
+                            onClick={() => history.push(`/detail/${item.filmId}`)}>{item.name}</li>
                     ))}
                 </ol>
             </div>

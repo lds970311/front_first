@@ -6,6 +6,7 @@ import Film from "./Film/Film";
 import TabBar from "./Film/TabBar";
 import Hot from "./Film/Hot"
 import {Provider} from "../utils/myContext";
+import store from "../store";
 
 class Swither extends Component {
 
@@ -33,6 +34,9 @@ class Swither extends Component {
             ],
             current: 1
         }
+        store.subscribe(() => {
+            console.log("swithcer 中订阅")
+        })
     }
 
     selectComponent() {
