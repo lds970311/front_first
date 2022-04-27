@@ -1,4 +1,4 @@
-import React, {Component, useEffect, useLayoutEffect, useState} from 'react';
+import React, {Component, useCallback, useEffect, useLayoutEffect, useRef, useState} from 'react';
 import {Consumer} from "../../utils/myContext";
 import "../../styles/hot.css"
 import axios from "axios";
@@ -6,16 +6,39 @@ import PropTypes from "prop-types";
 import {useHistory} from "react-router-dom";
 
 /*import MySwiper from "../MySwiper/MySwiper"*/
+import {Badge, TabBar} from 'antd-mobile'
+import {Image, List, InfiniteScroll} from "antd-mobile";
 
+
+const tabs = [
+    {
+        key: 1,
+        title: '正在热映',
+        type: 1,
+        badge: Badge.dot,
+    },
+    {
+        key: 2,
+        title: '即将上映',
+        type: 2,
+        badge: '5',
+    },
+    {
+        key: 3,
+        title: '经典电影',
+        type: 3,
+        badge: '99+',
+    },
+]
 
 class Hot extends Component {
 
     state = {
-        type: 1
+        type: 1,
+
     }
 
     componentDidMount() {
-
     }
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
@@ -33,39 +56,21 @@ class Hot extends Component {
 
     }
 
+    handleTabChange(key) {
+        const type = Number(key)
+        this.setState({
+            type
+        })
+    }
+
     render() {
         return (
             <div>
-
-                <ul className="hot-topic">
-                    <li style={{cursor: 'pointer'}}
-                        onClick={() => {
-                            this.setState({
-                                type: 1,
-                            });
-                        }}
-                    >
-                        正在热映
-                    </li>
-                    <li style={{cursor: 'pointer'}}
-                        onClick={() => {
-                            this.setState({
-                                type: 2,
-                            });
-                        }}
-                    >
-                        即将上映
-                    </li>
-                    <li style={{cursor: 'pointer'}}
-                        onClick={() => {
-                            this.setState({
-                                type: 3,
-                            });
-                        }}
-                    >
-                        经典电影
-                    </li>
-                </ul>
+                <TabBar onChange={(key) => this.handleTabChange(key)}>
+                    {tabs.map(item => (
+                        <TabBar.Item key={item.key} title={item.title}/>
+                    ))}
+                </TabBar>
 
                 <Consumer>
                     {
@@ -81,8 +86,6 @@ class Hot extends Component {
                 </Consumer>
                 <FilmList type={this.state.type}/>
             </div>
-
-
         );
     }
 }
@@ -91,6 +94,8 @@ class Hot extends Component {
 const FilmList = ({type}) => {
     const [list, setList] = useState([])
     const history = useHistory()
+    const [hasMore, sethasMore] = useState(true);
+    const count = useRef(0);
 
     useLayoutEffect(() => {
         window.onresize = () => {
@@ -107,6 +112,26 @@ const FilmList = ({type}) => {
             clearInterval(timer);
         };
     }, []);
+
+    const loadMore = useCallback(() => {
+        console.log("到底了 ");
+        count.current++;
+
+        sethasMore(false);
+        axios({
+            url: `https://m.maizuo.com/gateway?cityId=110100&pageNum=${count.current}&pageSize=10&type=1&k=1886067`,
+            headers: {
+                "X-Client-Info":
+                    '{"a":"3000","ch":"1002","v":"5.2.0","e":"16395416565231270166529","bc":"110100"}',
+                "X-Host": "mall.film-ticket.film.list",
+            },
+        }).then((res) => {
+            // console.log(res.data.data.films)
+            setList([...list, ...res.data.data.films]);
+
+            sethasMore(res.data.data.films.length > 0);
+        });
+    }, [list]);
 
     useEffect(() => {
         if (type === 1) {
@@ -149,14 +174,36 @@ const FilmList = ({type}) => {
 
     return (
         <div>
-            <div>
-                <ol className={"movies"}>
-                    {list.map((item) => (
-                        <li key={item.filmId}
-                            onClick={() => history.push(`/detail/${item.filmId}`)}>{item.name}</li>
-                    ))}
-                </ol>
-            </div>
+            <List>
+                {list.map((item) => (
+                    <List.Item onClick={() => history.push(`/detail/${item.filmId}`)
+                    } key={item.filmId}
+                               prefix={
+                                   <Image
+                                       src={item.poster}
+                                       // style={{ borderRadius: 20 }}
+                                       // fit='cover'
+                                       width={80}
+                                       // height={40}
+                                   />
+                               }
+                               description={
+                                   <div>
+                                       {item.grade ? (
+                                           <div>观众评分:{item.grade}</div>
+                                       ) : (
+                                           <div style={{visibility: "hidden"}}>观众评分</div>
+                                       )}
+
+                                       <div>主演：{item.director}</div>
+                                       <div>
+                                           {item.nation}|{item.runtime}分钟
+                                       </div>
+                                   </div>
+                               }>{item.name}</List.Item>
+                ))}
+                <InfiniteScroll loadMore={loadMore} hasMore={hasMore}/>
+            </List>
         </div>
     );
 };
