@@ -1,0 +1,17 @@
+{
+    "presets":[
+        "@babel/preset-env"
+    ],
+    "plugins":[
+        "@babel/plugin-proposal-decorators",
+        {
+            "legacy": true
+        }
+    ],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "babelOptions": {
+           "presets": ["@babel/preset-react"]
+        },
+    }
+}
