@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import StyledCompA from "../styled-components/StyledCompA";
+import StyledCompB from "../styled-components/StyledCompB";
 
 interface IState {
     title: string,
@@ -6,7 +8,7 @@ interface IState {
 }
 
 class ClassView extends Component<any, IState> {
-   
+
 
     state = {
         title: 't',
@@ -23,6 +25,8 @@ class ClassView extends Component<any, IState> {
                 }}>click me
                 </button>
                 <p>{this.state.title}</p>
+                <StyledCompA/>
+                <StyledCompB/>
             </div>
         );
     }
