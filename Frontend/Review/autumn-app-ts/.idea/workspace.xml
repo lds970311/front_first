@@ -2,37 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da5a2f8e-0753-443a-b1b8-6ba125f1d63c" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/autumn-app-ts.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.test.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/router/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/FunctionView.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../autumn_app/ .babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../autumn_app/config-overrides.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../autumn_app/src/mobx/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../autumn_app/src/utils/Data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../autumn_app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../autumn_app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../autumn_app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../autumn_app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../autumn_app/src/mobx/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ClassView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../autumn_app/src/views/MobxComp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../autumn_app/src/views/MobxComp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../autumn_app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../autumn_app/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/@types/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/MyAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/MyReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/saga/watchSaga.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styled-components/StyledCompA.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styled-components/StyledCompB.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/Todo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/render.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Sega.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ClassView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ClassView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +28,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JSX File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -69,6 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "js.last.introduce.type": "LET",
     "last_opened_file_path": "F:/Java/front_first/Frontend/Review/autumn-app-ts",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -78,7 +67,34 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Jest.renders learn react link (1)">
+  <component name="RunManager" selected="Jest.react-test-render">
+    <configuration name="react-test-render" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/tests/render.test.js" />
+      <test-names>
+        <test-name value="react-test-render" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="react-test-render.app 的名字事kerwin-todo" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/tests/render.test.ts" />
+      <test-names>
+        <test-name value="react-test-render" />
+        <test-name value="app 的名字事kerwin-todo" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="renders learn react link (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -117,6 +133,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.react-test-render" />
+        <item itemvalue="Jest.react-test-render.app 的名字事kerwin-todo" />
         <item itemvalue="npm.start" />
         <item itemvalue="Jest.renders learn react link (1)" />
         <item itemvalue="Jest.renders learn react link" />
@@ -131,8 +149,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651078572492</updated>
-      <workItem from="1651078574015" duration="6762000" />
+      <workItem from="1651078574015" duration="17232000" />
     </task>
+    <task id="LOCAL-00001" summary="react复习&#10;1. react-ts项目创建&#10;2. 类组件&amp; 函数组件">
+      <created>1651155509039</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651155509039</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,5 +166,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="react复习&#10;1. react-ts项目创建&#10;2. 类组件&amp; 函数组件" />
+    <option name="LAST_COMMIT_MESSAGE" value="react复习&#10;1. react-ts项目创建&#10;2. 类组件&amp; 函数组件" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
