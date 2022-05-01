@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da5a2f8e-0753-443a-b1b8-6ba125f1d63c" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/@types/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/MyAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/MyReducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/saga/watchSaga.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styled-components/StyledCompA.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styled-components/StyledCompB.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/Todo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/render.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Sega.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/ProtalView.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/RefForward.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ClassView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ClassView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +16,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JSX File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -149,7 +136,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651078572492</updated>
-      <workItem from="1651078574015" duration="17232000" />
+      <workItem from="1651078574015" duration="21629000" />
     </task>
     <task id="LOCAL-00001" summary="react复习&#10;1. react-ts项目创建&#10;2. 类组件&amp; 函数组件">
       <created>1651155509039</created>
@@ -158,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651155509039</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="react复习&#10;1. react-saga中间件的使用&#10;2. styled-components&#10;3. 单元测试">
+      <created>1651275227284</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651275227284</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +161,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="react复习&#10;1. react-ts项目创建&#10;2. 类组件&amp; 函数组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="react复习&#10;1. react-ts项目创建&#10;2. 类组件&amp; 函数组件" />
+    <MESSAGE value="react复习&#10;1. react-saga中间件的使用&#10;2. styled-components&#10;3. 单元测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="react复习&#10;1. react-saga中间件的使用&#10;2. styled-components&#10;3. 单元测试" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
