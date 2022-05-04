@@ -6,6 +6,7 @@ import FunctionView from "../views/FunctionView";
 import Sega from '../views/Sega'
 
 const ProtalView = React.lazy(() => import("../views/ProtalView"))
+const GraphqlView = React.lazy(() => import("../views/GraphqlView"))
 
 const IndexRouter = () => {
     return (
@@ -16,6 +17,7 @@ const IndexRouter = () => {
                     <Route path="/func" component={FunctionView}/>
                     <Route path="/sega" component={Sega}/>
                     <Route path="/protal" component={ProtalView}></Route>
+                    <Route path="/graphql" component={GraphqlView}></Route>
                 </Suspense>
             </Switch>
         </BrowserRouter>

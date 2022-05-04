@@ -18,6 +18,12 @@ const schema = buildSchema(`
        poster:String,
        price:Int
    }
+   
+   input FilmInput{
+        name:String,
+        poster:String,
+        price:Int
+   }
 
    type Query{
        hello: String,
@@ -29,9 +35,15 @@ const schema = buildSchema(`
        getNowplayingList:[Film],
        geteFilmDetail(id:Int!):Film
    }
+   
+    type Mutation{
+        createFilm(input: FilmInput):Film,
+        updateFilm(id:Int!,input:FilmInput):Film,
+        deleteFilm(id:Int!):Int
+    }
 `);
 
-const faskeDb = [
+let faskeDb = [
     {
         id: 1,
         name: "1111",
@@ -89,6 +101,27 @@ const root = {
 
         return faskeDb.filter((item) => item.id === id)[0];
     },
+    createFilm({input}) {
+        const obj = {...input, id: faskeDb.length + 1}
+        faskeDb.push(obj)
+        return obj
+    },
+    updateFilm({id, input}) {
+        let current = null;
+        faskeDb = faskeDb.map((item) => {
+            if (item.id === id) {
+                current = {...item, ...input};
+                return {...item, ...input};
+            }
+
+            return item;
+        });
+
+        return current;
+    },
+    deleteFilm({id}) {
+        faskeDb = faskeDb.filter(item => item.id !== id)
+    }
 };
 
 app.get('/', (req, res, next) => {

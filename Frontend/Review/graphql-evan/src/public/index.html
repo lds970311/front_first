@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" user-scalable="no">
+</head>
+<body>
+<h1>home</h1>
+
+<button onclick="getData()">查询数据</button>
+<button onclick="createData()">创建数据</button>
+<button onclick="updateData()">更新数据</button>
+<button onclick="deleteData()">删除数据</button>
+
+<script>
+    function getData() {
+
+        const myquery = `
+            query {
+                getNowPlayingList {
+                    id,
+                    name,
+                    price,
+                    poster
+                }
+            }
+            `
+        fetch("/graphql", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify({
+                query: myquery
+            })
+        }).then(res => res.json()).then(res => {
+            console.log(res)
+        })
+    }
+
+    function createData() {
+        const myquery = `
+            mutation ($input:FilmInput){
+
+                createFilm(input:$input) {
+                    id,
+                    name
+                }
+            }
+            `
+        fetch("/graphql", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify({
+                query: myquery,
+                variables: {
+                    input: {
+                        name: "6666",
+                        price: 60,
+                        poster: "http://6666"
+                    }
+                }
+            })
+        }).then(res => res.json()).then(res => {
+            console.log(res)
+        })
+    }
+
+    function updateData() {
+        const myquery = `
+            mutation ($id:String!,$input:FilmInput){
+
+                updateFilm(id:$id,input:$input) {
+                    id,
+                    name
+                }
+            }
+            `
+        fetch("/graphql", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify({
+                query: myquery,
+                variables: {
+                    id: "61e520b322f995d3f88f3faa",
+                    input: {
+                        name: "6666-修改",
+                        price: 66,
+                        poster: "http://6666-修改"
+                    }
+                }
+            })
+        }).then(res => res.json()).then(res => {
+            console.log(res)
+        })
+    }
+
+    function deleteData() {
+        const myquery = `
+            mutation ($id:String!){
+
+                deleteFilm(id:$id)
+            }
+            `
+        fetch("/graphql", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify({
+                query: myquery,
+                variables: {
+                    id: "61e520b322f995d3f88f3faa"
+                }
+            })
+        }).then(res => res.json()).then(res => {
+            console.log(res)
+        })
+    }
+
+</script>
+</body>
+</html>
