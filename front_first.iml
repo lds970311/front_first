@@ -7,6 +7,18 @@
       <excludeFolder url="file://$MODULE_DIR$/.idea/ZeppelinRemoteNotebooks" />
       <excludeFolder url="file://$MODULE_DIR$/Frontend/Framework/react/advertise-app-react/build" />
       <excludeFolder url="file://$MODULE_DIR$/Frontend/Framework/vue2/my-vue-plugins/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/automatic_test/apiTestFramework/venv/Lib" />
+      <excludeFolder url="file://$MODULE_DIR$/automatic_test/apiTestFramework/venv/Scripts" />
+      <excludeFolder url="file://$MODULE_DIR$/automatic_test/AutoTest/AppAutoTest/.idea/dataSources" />
+      <excludeFolder url="file://$MODULE_DIR$/automatic_test/AutoTest/AppAutoTest/.pytest_cache/v" />
+      <excludeFolder url="file://$MODULE_DIR$/automatic_test/AutoTest/PyTestCases/.idea/dataSources" />
+      <excludeFolder url="file://$MODULE_DIR$/automatic_test/AutoTest/PyTestCases/.pytest_cache/v" />
+      <excludeFolder url="file://$MODULE_DIR$/automatic_test/locust/venv/include" />
+      <excludeFolder url="file://$MODULE_DIR$/automatic_test/locust/venv/Lib" />
+      <excludeFolder url="file://$MODULE_DIR$/automatic_test/locust/venv/Scripts" />
+      <excludeFolder url="file://$MODULE_DIR$/automatic_test/py_testA/.idea/dataSources" />
+      <excludeFolder url="file://$MODULE_DIR$/automatic_test/py_testA/venv/Lib" />
+      <excludeFolder url="file://$MODULE_DIR$/automatic_test/py_testA/venv/Scripts" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
