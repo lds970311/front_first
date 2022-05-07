@@ -2,46 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd5f982f-834d-4b39-8b05-44bca44f0ee7" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/../dva-demo/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dva-demo/.idea/dva-demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dva-demo/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dva-demo/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dva-demo/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dva-demo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/umi-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.umirc.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mock/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mock/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/CityModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/cinemaModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/404.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Cinema.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/City.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Login.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/detail/[id].tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/film/ComingSoon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/film/NowPlaying.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/film/_layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/wrappers/Auth.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/typings.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../front_first.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../front_first.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../programs/meinian_parent/meinian_parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../programs/meinian_parent/meinian_parent.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,11 +79,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651688376937</updated>
-      <workItem from="1651688394230" duration="12673000" />
+      <workItem from="1651688394230" duration="14099000" />
     </task>
+    <task id="LOCAL-00001" summary="umi结合dva实践">
+      <created>1651790961315</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651790961315</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="umi结合dva实践" />
+    <option name="LAST_COMMIT_MESSAGE" value="umi结合dva实践" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
