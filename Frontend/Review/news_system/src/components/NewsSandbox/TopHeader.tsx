@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Avatar, Dropdown, Layout, Menu, Space} from 'antd'
 import {useSelector, useDispatch} from 'react-redux'
 import {collapsedAction} from "../../store/actions/MenuAction"
-import {DownOutlined, SmileOutlined} from '@ant-design/icons';
+
 import {
     MenuUnfoldOutlined,
     MenuFoldOutlined,
@@ -34,7 +34,7 @@ const TopHeader = () => {
     );
     return (
 
-        <Header className="site-layout-background" style={{padding: 0}}>
+        <Header className="site-layout-background" style={{padding: '0 24px'}}>
             {React.createElement(isCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
                 className: 'trigger',
                 onClick: toggle,

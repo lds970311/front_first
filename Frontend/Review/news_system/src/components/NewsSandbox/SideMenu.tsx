@@ -5,13 +5,43 @@ import {useNavigate} from 'react-router-dom'
 import {useSelector} from "react-redux";
 import {getItem} from "../../utils/menuUtils";
 import useAxios from "../../hooks/useAxios";
+import {useLocation} from 'react-router-dom'
+import {
+    UserOutlined,
+    AppstoreOutlined,
+    BuildOutlined,
+    ContainerOutlined,
+    DesktopOutlined,
+    FolderOutlined,
+    LinkOutlined,
+    OneToOneOutlined, ToTopOutlined
+
+} from '@ant-design/icons';
 
 const {Sider} = Layout;
 type MenuItem = Required<MenuProps>['items'][number];
 
+interface Icon {
+    [key: string]: React.ReactNode;
+}
+
+const iconList: Icon = {
+    "/home": <UserOutlined/>,
+    "/user-manage": <AppstoreOutlined/>,
+    "/user-manage/list": <BuildOutlined/>,
+    "/right-manage": <ContainerOutlined/>,
+    "/right-manage/role/list": <DesktopOutlined/>,
+    "/right-manage/right/list": <FolderOutlined/>,
+    "/news-manage": <LinkOutlined/>,
+    "/audit-manage": <OneToOneOutlined/>,
+    "/publish-manage": <ToTopOutlined/>
+    //.......
+}
+
 const SideMenu: React.FunctionComponent = () => {
     // @ts-ignore
     const {isCollapsed} = useSelector(state => state.menuReducer)
+    const location = useLocation()
     const navigate = useNavigate()
     const {loading, data} = useAxios("http://localhost:3000/rights?_embed=children", 'get')
     let newItem: MenuItem[] = []
@@ -22,9 +52,9 @@ const SideMenu: React.FunctionComponent = () => {
     function renderMenu(data) {
         return data.map(item => {
             if (item.children && item.children.length !== 0) {
-                return getItem(item.title, item.key, null, renderMenu(item.children))
+                return checkPagePermission(item) && getItem(item.title, item.key, iconList[item.key], renderMenu(item.children))
             }
-            return getItem(item.title, item.key, null)
+            return checkPagePermission(item) && getItem(item.title, item.key, iconList[item.key])
         })
     }
 
@@ -34,11 +64,15 @@ const SideMenu: React.FunctionComponent = () => {
         navigate(key, {replace: true})
     }
 
+    function checkPagePermission(item): boolean {
+        return item.pagepermisson === 1
+    }
+
     return (
         <Sider trigger={null} collapsible collapsed={isCollapsed}>
             {isCollapsed ? null : (<div className="logo">新闻发布管理系统</div>)}
             <Menu
-                defaultSelectedKeys={['1']}
+                selectedKeys={["/" + location.pathname.split("/")[1]]}
                 defaultOpenKeys={['/home']}
                 mode="inline"
                 theme="dark"

@@ -1,10 +1,11 @@
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import axios from "axios";
 
 const useAxios = (url: string, type: string, headers?: any, body?: object) => {
     const [loading, setLoading] = useState<boolean>(true)
     const [data, setData] = useState<any>({})
-    useEffect(() => {
+    const request = useCallback(() => {
+        console.log("exec")
         axios({
             url,
             method: type,
@@ -17,8 +18,11 @@ const useAxios = (url: string, type: string, headers?: any, body?: object) => {
             setLoading(false)
             setData(err)
         })
-
     }, [headers, type, url])
+
+    useEffect(() => {
+        request()
+    }, [request])
     return {
         loading, data
     }

@@ -4,6 +4,9 @@ import {Spin} from 'antd';
 import NotFound from "../views/NotFound";
 import AutoRoute from "../utils/AuthRoute"
 import Home from "../components/Home/Home";
+import RightManage from "../components/Right/RightManage";
+import RoleManage from "../components/Right/RoleManage";
+import UserList from "../components/User/UserList";
 
 const Login = React.lazy(() => import('../views/Login'))
 const NewsSandbox = React.lazy(() => import('../views/NewsSandbox'))
@@ -34,6 +37,9 @@ const IndexRouter = () => {
                         <NewsSandbox/>
                     </AutoRoute>}>
                         <Route path="home" element={<Home/>}/>
+                        <Route path="right-manage/role/list" element={<RoleManage/>}/>
+                        <Route path="right-manage/right/list" element={<RightManage/>}/>
+                        <Route path="user-manage/list" element={<UserList/>}/>
                     </Route>
                     <Route path='/login' element={<Login/>}/>
                     <Route path="*" element={<NotFound/>}/>
