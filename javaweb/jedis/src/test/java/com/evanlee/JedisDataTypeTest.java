@@ -5,6 +5,7 @@
 
 package com.evanlee;
 
+import org.junit.AfterClass;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
 
@@ -94,5 +95,12 @@ public class JedisDataTypeTest {
           l4
           z3
          */
+    }
+
+    @AfterClass
+    public void release() {
+        if (jedis != null) {
+            jedis.close();
+        }
     }
 }

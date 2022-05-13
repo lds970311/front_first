@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8f04acda-9a97-4e65-94b2-13fbf87054f4" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/../../javaweb/jedis/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../javaweb/jedis/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../javaweb/jedis/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../javaweb/jedis/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../javaweb/jedis/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../javaweb/jedis/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../javaweb/jedis/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../javaweb/jedis/src/test/java/com/evanlee/JedisPoolTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springdata-redis-demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/redis/SpringdataRedisDemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/redis/config/RedisTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/redis/pojo/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/evan/redis/RedisTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/evan/redis/SpringdataRedisDemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/evan/redis/StringRedisTemplateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/Review/news_system/src/components/User/UserList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/Review/news_system/src/components/User/UserList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/Review/news_system/src/data/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/Review/news_system/src/data/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front_first.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../front_first.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javaweb/jedis/src/main/java/com/evanlee/jedis/JedisFirst.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../javaweb/jedis/src/main/java/com/evanlee/jedis/JedisFirst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javaweb/jedis/src/main/java/com/evanlee/jedis/JedisPoolUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../javaweb/jedis/src/main/java/com/evanlee/jedis/JedisPoolUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javaweb/jedis/src/test/java/com/evanlee/JedisDataTypeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../javaweb/jedis/src/test/java/com/evanlee/JedisDataTypeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../programs/meinian_parent/meinian_parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../programs/meinian_parent/meinian_parent.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="H:/Java/utils/apache-maven-3.6.1" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="296ZIqoI1pkuD6IFFTVKjyQNKGm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "F:/Java/front_first/springboot/springdata-redis-demo",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.import",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.StringRedisTemplateTest.hashTest">
+    <configuration name="RedisTest.saveStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springdata-redis-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.redis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evan.redis" />
+      <option name="MAIN_CLASS_NAME" value="com.evan.redis.RedisTest" />
+      <option name="METHOD_NAME" value="saveStudent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTest.stringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springdata-redis-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.redis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evan.redis" />
+      <option name="MAIN_CLASS_NAME" value="com.evan.redis.RedisTest" />
+      <option name="METHOD_NAME" value="stringTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringRedisTemplateTest.hashTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springdata-redis-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.redis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evan.redis" />
+      <option name="MAIN_CLASS_NAME" value="com.evan.redis.StringRedisTemplateTest" />
+      <option name="METHOD_NAME" value="hashTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringRedisTemplateTest.stringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springdata-redis-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.redis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evan.redis" />
+      <option name="MAIN_CLASS_NAME" value="com.evan.redis.StringRedisTemplateTest" />
+      <option name="METHOD_NAME" value="stringTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringdataRedisDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springdata-redis-demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.evan.redis.SpringdataRedisDemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.StringRedisTemplateTest.hashTest" />
+        <item itemvalue="JUnit.StringRedisTemplateTest.stringTest" />
+        <item itemvalue="JUnit.RedisTest.saveStudent" />
+        <item itemvalue="JUnit.RedisTest.stringTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="8f04acda-9a97-4e65-94b2-13fbf87054f4" name="变更" comment="" />
+      <created>1652435419330</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652435419330</updated>
+      <workItem from="1652435420928" duration="6957000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

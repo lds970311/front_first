@@ -19,6 +19,7 @@
       <excludeFolder url="file://$MODULE_DIR$/automatic_test/py_testA/.idea/dataSources" />
       <excludeFolder url="file://$MODULE_DIR$/automatic_test/py_testA/venv/Lib" />
       <excludeFolder url="file://$MODULE_DIR$/automatic_test/py_testA/venv/Scripts" />
+      <excludeFolder url="file://$MODULE_DIR$/Frontend/Review/umi-app/src/.umi" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
