@@ -22,6 +22,7 @@
       <module fileurl="file://$PROJECT_DIR$/front_first.iml" filepath="$PROJECT_DIR$/front_first.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/cloud-demo/gateway/gateway.iml" filepath="$PROJECT_DIR$/micrioservice/cloud-demo/gateway/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/programs/health_parent/health_parent.iml" filepath="$PROJECT_DIR$/programs/health_parent/health_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/hm-dianping/hm-dianping.iml" filepath="$PROJECT_DIR$/springboot/hm-dianping/hm-dianping.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/hotel-admin/hotel-admin.iml" filepath="$PROJECT_DIR$/micrioservice/hotel-admin/hotel-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/hotel-demo/hotel-demo.iml" filepath="$PROJECT_DIR$/micrioservice/hotel-demo/hotel-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/programs/health_parent/interfaces/interfaces.iml" filepath="$PROJECT_DIR$/programs/health_parent/interfaces/interfaces.iml" />
@@ -51,6 +52,7 @@
       <module fileurl="file://$PROJECT_DIR$/programs/health_parent/service_provider/service_provider.iml" filepath="$PROJECT_DIR$/programs/health_parent/service_provider/service_provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/spring_mvc/spring_mvc.iml" filepath="$PROJECT_DIR$/ssm/spring_mvc/spring_mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/springdata-redis-demo/springdata-redis-demo.iml" filepath="$PROJECT_DIR$/springboot/springdata-redis-demo/springdata-redis-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/ssm.iml" filepath="$PROJECT_DIR$/ssm/ssm.iml" />
       <module fileurl="file://$PROJECT_DIR$/programs/yun_note/yun_note.iml" filepath="$PROJECT_DIR$/programs/yun_note/yun_note.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/zookeeper_stu/zookeeper_stu.iml" filepath="$PROJECT_DIR$/micrioservice/zookeeper_stu/zookeeper_stu.iml" />

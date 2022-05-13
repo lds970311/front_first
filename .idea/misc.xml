@@ -40,6 +40,7 @@
         <option value="$PROJECT_DIR$/java_advance/concurrent/pom.xml" />
         <option value="$PROJECT_DIR$/micrioservice/hotel-admin/pom.xml" />
         <option value="$PROJECT_DIR$/programs/meinian_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot/hm-dianping/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -53,7 +54,12 @@
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="corretto-11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="corretto-11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SwUserDefinedSpecifications">
+    <option name="specTypeByUrl">
+      <map />
+    </option>
   </component>
 </project>

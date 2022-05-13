@@ -9,8 +9,8 @@ import redis.clients.jedis.Jedis;
 
 public class JedisFirst {
     public static void main(String[] args) {
-        Jedis jedis = new Jedis("192.168.208.146", 6379);
-        jedis.auth("123456");
+        Jedis jedis = new Jedis("192.168.208.129", 6379);
+        jedis.auth("19970311");
         String val = jedis.ping();
         System.out.println(val);
     }
