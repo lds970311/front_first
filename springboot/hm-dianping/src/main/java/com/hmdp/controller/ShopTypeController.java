@@ -31,4 +31,5 @@ public class ShopTypeController {
                 .query().orderByAsc("sort").list();
         return Result.ok(typeList);
     }
+
 }
