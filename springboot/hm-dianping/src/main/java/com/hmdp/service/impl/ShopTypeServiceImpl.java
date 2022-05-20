@@ -6,7 +6,7 @@ import com.hmdp.dto.Result;
 import com.hmdp.entity.ShopType;
 import com.hmdp.mapper.ShopTypeMapper;
 import com.hmdp.service.IShopTypeService;
-import com.hmdp.utils.RedisConstants;
+import com.hmdp.service.utils.RedisConstants;
 import org.springframework.data.redis.core.ListOperations;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
@@ -27,6 +27,7 @@ public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> i
 
     @Resource
     private StringRedisTemplate stringRedisTemplate;
+
 
     @Override
     public Result queryType() {
