@@ -7,7 +7,9 @@ import com.hmdp.dto.Result;
 import com.hmdp.entity.Shop;
 import com.hmdp.mapper.ShopMapper;
 import com.hmdp.service.IShopService;
-import com.hmdp.utils.RedisConstants;
+import com.hmdp.service.utils.CacheClient;
+import com.hmdp.service.utils.RedisConstants;
+import com.hmdp.service.utils.RedisMutexUtils;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
@@ -23,6 +25,9 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
+    @Resource
+    private CacheClient cacheClient;
+
     @Override
     public Result queryShopById(Long id) {
         //从redis查询商户缓存`
@@ -33,18 +38,35 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
             Shop bean = JSONUtil.toBean(shop, Shop.class);
             return Result.ok(bean);
         }
+        //shop是"", 解决缓存穿透
         if (shop != null) {
             //返回错误信息
             return Result.fail("店铺不存在!");
         }
-        Shop shop1 = this.getById(id);
-        if (shop1 == null) {
-            //将null值写入redis,避免缓存穿透
-            valueOperations.set(RedisConstants.CACHE_SHOP_KEY + id, "", RedisConstants.CACHE_NULL_TTL, TimeUnit.MINUTES);
-            return Result.fail("店铺不存在!");
+        Shop shop1 = null;
+        //缓存未命中, 尝试获取互斥锁,解决缓存击穿!
+        try {
+            boolean isLock = RedisMutexUtils.tryLock(stringRedisTemplate, RedisConstants.LOCK_SHOP_KEY);
+            //获取失败, 休眠则重试
+            if (!isLock) {
+                Thread.sleep(100);
+                queryShopById(id);
+            }
+            //获取成功,则查询数据库, 更新缓存, 释放锁
+            shop1 = this.getById(id);
+            if (shop1 == null) {
+                //将null值写入redis,避免缓存穿透
+                valueOperations.set(RedisConstants.CACHE_SHOP_KEY + id, "", RedisConstants.CACHE_NULL_TTL, TimeUnit.MINUTES);
+                return Result.fail("店铺不存在!");
+            }
+            //存在,写入redis
+            valueOperations.set(RedisConstants.CACHE_SHOP_KEY + id, JSONUtil.toJsonStr(shop1), 30L, TimeUnit.MINUTES);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            RedisMutexUtils.unLock(stringRedisTemplate, RedisConstants.LOCK_SHOP_KEY);
         }
-        //存在,写入redis
-        valueOperations.set(RedisConstants.CACHE_SHOP_KEY + id, JSONUtil.toJsonStr(shop1), 30L, TimeUnit.MINUTES);
+
         return Result.ok(shop1);
     }
 

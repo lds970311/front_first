@@ -1,4 +1,4 @@
-package com.hmdp.utils;
+package com.hmdp.service.utils;
 
 import cn.hutool.core.util.StrUtil;
 
