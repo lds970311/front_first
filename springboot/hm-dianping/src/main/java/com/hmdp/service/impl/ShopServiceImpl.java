@@ -1,17 +1,13 @@
 package com.hmdp.service.impl;
 
-import cn.hutool.core.util.StrUtil;
-import cn.hutool.json.JSONUtil;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hmdp.dto.Result;
 import com.hmdp.entity.Shop;
 import com.hmdp.mapper.ShopMapper;
 import com.hmdp.service.IShopService;
-import com.hmdp.service.utils.CacheClient;
-import com.hmdp.service.utils.RedisConstants;
-import com.hmdp.service.utils.RedisMutexUtils;
+import com.hmdp.utils.CacheClient;
+import com.hmdp.utils.RedisConstants;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,7 +27,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
     @Override
     public Result queryShopById(Long id) {
         //从redis查询商户缓存`
-        ValueOperations<String, String> valueOperations = stringRedisTemplate.opsForValue();
+        /*ValueOperations<String, String> valueOperations = stringRedisTemplate.opsForValue();
         String shop = valueOperations.get(RedisConstants.CACHE_SHOP_KEY + id);
         //判断商户是否存在
         if (StrUtil.isNotBlank(shop)) {
@@ -67,6 +63,18 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
             RedisMutexUtils.unLock(stringRedisTemplate, RedisConstants.LOCK_SHOP_KEY);
         }
 
+        return Result.ok(shop1);*/
+        Shop shop = null;
+        shop = cacheClient.queryCache(RedisConstants.CACHE_SHOP_KEY, id, Shop.class,
+                this::getById, RedisConstants.CACHE_SHOP_TTL, TimeUnit.MINUTES);
+        if (shop == null) {
+            return Result.fail("店铺不存在！");
+        }
+        Shop shop1 = cacheClient.queryWithMutex(RedisConstants.CACHE_SHOP_KEY, id, Shop.class,
+                this::getById, RedisConstants.CACHE_SHOP_TTL, TimeUnit.MINUTES);
+        if (shop1 == null) {
+            return Result.fail("店铺不存在！");
+        }
         return Result.ok(shop1);
     }
 

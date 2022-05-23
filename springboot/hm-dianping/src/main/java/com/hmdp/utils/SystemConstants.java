@@ -1,4 +1,4 @@
-package com.hmdp.service.utils;
+package com.hmdp.utils;
 
 public class SystemConstants {
     public static final String IMAGE_UPLOAD_DIR = "D:\\lesson\\nginx-1.18.0\\html\\hmdp\\imgs\\";

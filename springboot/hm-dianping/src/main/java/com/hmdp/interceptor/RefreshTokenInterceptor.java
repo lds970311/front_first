@@ -8,8 +8,8 @@ package com.hmdp.interceptor;
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.StrUtil;
 import com.hmdp.dto.UserDTO;
-import com.hmdp.service.utils.RedisConstants;
-import com.hmdp.service.utils.UserHolder;
+import com.hmdp.utils.RedisConstants;
+import com.hmdp.utils.UserHolder;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.servlet.HandlerInterceptor;
 

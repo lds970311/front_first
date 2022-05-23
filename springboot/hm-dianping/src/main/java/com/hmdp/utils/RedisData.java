@@ -1,4 +1,4 @@
-package com.hmdp.service.utils;
+package com.hmdp.utils;
 
 import lombok.Data;
 
