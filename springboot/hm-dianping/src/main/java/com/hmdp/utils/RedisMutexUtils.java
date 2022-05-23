@@ -3,7 +3,7 @@
 // FILENAME : RedisMutexUtils.java
 // STATEMENT: 
 
-package com.hmdp.service.utils;
+package com.hmdp.utils;
 
 import cn.hutool.core.util.BooleanUtil;
 import org.springframework.data.redis.core.StringRedisTemplate;
