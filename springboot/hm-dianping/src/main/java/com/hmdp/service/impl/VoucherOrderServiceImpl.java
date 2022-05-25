@@ -9,13 +9,18 @@ import com.hmdp.service.ISeckillVoucherService;
 import com.hmdp.service.IVoucherOrderService;
 import com.hmdp.utils.RedisIDUtil;
 import com.hmdp.utils.UserHolder;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
 import org.springframework.aop.framework.AopContext;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
+import java.util.concurrent.TimeUnit;
 
 
 @Service
@@ -25,8 +30,14 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
     @Resource
     private ISeckillVoucherService seckillVoucherService;
 
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+
     @Resource
     private RedisIDUtil redisIDUtil;
+
+    @Resource
+    private RedissonClient redissonClient;
 
     @Override
     @Transactional
@@ -48,11 +59,41 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
             return Result.fail("库存不足!");
         }
         Long id = UserHolder.getUser().getId();
-        synchronized (id.toString().intern()) {
+        /*synchronized (id.toString().intern()) {
             //解决spring失误失效
             IVoucherOrderService orderService = (IVoucherOrderService) AopContext.currentProxy();//获取代理对象
             return orderService.createVoucherOrder(voucherId, voucher, id);
+        }*/
+
+        //创建锁对象(分布式锁)
+//        SimpleRedisLock simpleRedisLock = new SimpleRedisLock("order:" + id, stringRedisTemplate);
+        //redisson实现分布式锁
+        RLock lock = redissonClient.getLock("lock:order:" + id);
+        boolean isLock = false;
+        try {
+            isLock = lock.tryLock(1, TimeUnit.SECONDS);
+            if (isLock) {
+                IVoucherOrderService orderService = (IVoucherOrderService) AopContext.currentProxy();//获取代理对象
+                return orderService.createVoucherOrder(voucherId, voucher, id);
+            }
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        } finally {
+            lock.unlock();
         }
+       /* if (!isLock) {
+            //获取锁失败
+            return Result.fail("不允许重复下单!");
+        }
+        //获取锁成功
+        try {
+            IVoucherOrderService orderService = (IVoucherOrderService) AopContext.currentProxy();//获取代理对象
+            return orderService.createVoucherOrder(voucherId, voucher, id);
+        } finally {
+            //释放锁
+            simpleRedisLock.unlock();
+        }*/
+        return Result.fail("秒杀失败!");
     }
 
     @Transactional
