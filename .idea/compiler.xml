@@ -24,6 +24,7 @@
         <module name="meinian_dao" />
         <module name="spring_mvc" />
         <module name="backend" />
+        <module name="hadoop" />
         <module name="my_spring" />
         <module name="consumer" />
         <module name="boot_mongodb" />
@@ -44,45 +45,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="backend" target="11" />
-      <module name="boot_first" target="11" />
-      <module name="boot_mongodb" target="11" />
-      <module name="boot_mp" target="11" />
-      <module name="boot_ssmp" target="11" />
-      <module name="boot_webflux" target="11" />
-      <module name="cloud-demo" target="11" />
-      <module name="common" target="11" />
-      <module name="concurrent" target="11" />
-      <module name="consumer" target="11" />
-      <module name="design_pattern" target="11" />
-      <module name="feign-api" target="11" />
+      <module name="bigData" target="11" />
       <module name="first_maven" target="11" />
-      <module name="gateway" target="11" />
-      <module name="health_parent" target="11" />
-      <module name="hm-dianping" target="11" />
-      <module name="hotel-admin" target="11" />
-      <module name="hotel-demo" target="11" />
-      <module name="interfaces" target="11" />
-      <module name="jedis" target="11" />
       <module name="meinian_common" target="11" />
       <module name="meinian_dao" target="11" />
       <module name="meinian_interface" target="11" />
-      <module name="meinian_parent" target="11" />
       <module name="meinian_pojo" target="11" />
-      <module name="meinian_service" target="11" />
-      <module name="meinian_web" target="11" />
-      <module name="mvc_annotation" target="11" />
-      <module name="mvn_web" target="11" />
-      <module name="my_spring" target="11" />
-      <module name="mybatis" target="11" />
-      <module name="mybatis_generator" target="11" />
-      <module name="mybatis_ssm" target="11" />
-      <module name="publisher" target="11" />
-      <module name="rabbitmq-demo" target="11" />
-      <module name="service_provider" target="11" />
-      <module name="spring_mvc" target="11" />
-      <module name="yun_note" target="11" />
-      <module name="zookeeper_stu" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

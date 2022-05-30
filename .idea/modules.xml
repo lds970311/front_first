@@ -3,59 +3,26 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/automatic_test/automatic_test.iml" filepath="$PROJECT_DIR$/automatic_test/automatic_test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/programs/health_parent/backend/backend.iml" filepath="$PROJECT_DIR$/programs/health_parent/backend/backend.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot/boot_first/boot_first.iml" filepath="$PROJECT_DIR$/springboot/boot_first/boot_first.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot/boot_mongodb/boot_mongodb.iml" filepath="$PROJECT_DIR$/springboot/boot_mongodb/boot_mongodb.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot/boot_mp/boot_mp.iml" filepath="$PROJECT_DIR$/springboot/boot_mp/boot_mp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot/boot_ssmp/boot_ssmp.iml" filepath="$PROJECT_DIR$/springboot/boot_ssmp/boot_ssmp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot/boot_webflux/boot_webflux.iml" filepath="$PROJECT_DIR$/springboot/boot_webflux/boot_webflux.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bigData/bigData.iml" filepath="$PROJECT_DIR$/bigData/bigData.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/case/case.iml" filepath="$PROJECT_DIR$/javaweb/case/case.iml" />
-      <module fileurl="file://$PROJECT_DIR$/micrioservice/cloud-demo/cloud-demo.iml" filepath="$PROJECT_DIR$/micrioservice/cloud-demo/cloud-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/programs/health_parent/common/common.iml" filepath="$PROJECT_DIR$/programs/health_parent/common/common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java_advance/concurrent/concurrent.iml" filepath="$PROJECT_DIR$/java_advance/concurrent/concurrent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/micrioservice/rabbitmq-demo/consumer/consumer.iml" filepath="$PROJECT_DIR$/micrioservice/rabbitmq-demo/consumer/consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/datastrcuture/datastrcuture.iml" filepath="$PROJECT_DIR$/datastrcuture/datastrcuture.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java_advance/design_pattern/design_pattern.iml" filepath="$PROJECT_DIR$/java_advance/design_pattern/design_pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/dobbo_proj/dobbo_proj.iml" filepath="$PROJECT_DIR$/micrioservice/dobbo_proj/dobbo_proj.iml" />
-      <module fileurl="file://$PROJECT_DIR$/micrioservice/cloud-demo/feign-api/feign-api.iml" filepath="$PROJECT_DIR$/micrioservice/cloud-demo/feign-api/feign-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/first_web_proj/first_web_proj.iml" filepath="$PROJECT_DIR$/javaweb/first_web_proj/first_web_proj.iml" />
       <module fileurl="file://$PROJECT_DIR$/front_first.iml" filepath="$PROJECT_DIR$/front_first.iml" />
-      <module fileurl="file://$PROJECT_DIR$/micrioservice/cloud-demo/gateway/gateway.iml" filepath="$PROJECT_DIR$/micrioservice/cloud-demo/gateway/gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/programs/health_parent/health_parent.iml" filepath="$PROJECT_DIR$/programs/health_parent/health_parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot/hm-dianping/hm-dianping.iml" filepath="$PROJECT_DIR$/springboot/hm-dianping/hm-dianping.iml" />
-      <module fileurl="file://$PROJECT_DIR$/micrioservice/hotel-admin/hotel-admin.iml" filepath="$PROJECT_DIR$/micrioservice/hotel-admin/hotel-admin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/micrioservice/hotel-demo/hotel-demo.iml" filepath="$PROJECT_DIR$/micrioservice/hotel-demo/hotel-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/programs/health_parent/interfaces/interfaces.iml" filepath="$PROJECT_DIR$/programs/health_parent/interfaces/interfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_advance/java_advance.iml" filepath="$PROJECT_DIR$/java_advance/java_advance.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_base/java_base.iml" filepath="$PROJECT_DIR$/java_base/java_base.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/javaweb.iml" filepath="$PROJECT_DIR$/javaweb/javaweb.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/javaweb/jdbc/jdbc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/javaweb/jedis/jedis.iml" filepath="$PROJECT_DIR$/javaweb/jedis/jedis.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaweb/jsoup/jsoup.iml" filepath="$PROJECT_DIR$/javaweb/jsoup/jsoup.iml" />
       <module fileurl="file://$PROJECT_DIR$/programs/meinian_parent/meinian_common/meinian_common.iml" filepath="$PROJECT_DIR$/programs/meinian_parent/meinian_common/meinian_common.iml" />
       <module fileurl="file://$PROJECT_DIR$/programs/meinian_parent/meinian_dao/meinian_dao.iml" filepath="$PROJECT_DIR$/programs/meinian_parent/meinian_dao/meinian_dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/programs/meinian_parent/meinian_interface/meinian_interface.iml" filepath="$PROJECT_DIR$/programs/meinian_parent/meinian_interface/meinian_interface.iml" />
-      <module fileurl="file://$PROJECT_DIR$/programs/meinian_parent/meinian_parent.iml" filepath="$PROJECT_DIR$/programs/meinian_parent/meinian_parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/programs/meinian_parent/meinian_pojo/meinian_pojo.iml" filepath="$PROJECT_DIR$/programs/meinian_parent/meinian_pojo/meinian_pojo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/programs/meinian_parent/meinian_service/meinian_service.iml" filepath="$PROJECT_DIR$/programs/meinian_parent/meinian_service/meinian_service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/programs/meinian_parent/meinian_web/meinian_web.iml" filepath="$PROJECT_DIR$/programs/meinian_parent/meinian_web/meinian_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/micrioservice/micrioservice.iml" filepath="$PROJECT_DIR$/micrioservice/micrioservice.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ssm/mvc_annotation/mvc_annotation.iml" filepath="$PROJECT_DIR$/ssm/mvc_annotation/mvc_annotation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/javaweb/mvn_web/mvn_web.iml" filepath="$PROJECT_DIR$/javaweb/mvn_web/mvn_web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ssm/my_spring/my_spring.iml" filepath="$PROJECT_DIR$/ssm/my_spring/my_spring.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ssm/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/ssm/mybatis/mybatis.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ssm/mybatis_generator/mybatis_generator.iml" filepath="$PROJECT_DIR$/ssm/mybatis_generator/mybatis_generator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ssm/mybatis_ssm/mybatis_ssm.iml" filepath="$PROJECT_DIR$/ssm/mybatis_ssm/mybatis_ssm.iml" />
       <module fileurl="file://$PROJECT_DIR$/programs/programs.iml" filepath="$PROJECT_DIR$/programs/programs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/micrioservice/rabbitmq-demo/publisher/publisher.iml" filepath="$PROJECT_DIR$/micrioservice/rabbitmq-demo/publisher/publisher.iml" />
-      <module fileurl="file://$PROJECT_DIR$/micrioservice/rabbitmq-demo/rabbitmq-demo.iml" filepath="$PROJECT_DIR$/micrioservice/rabbitmq-demo/rabbitmq-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/programs/health_parent/service_provider/service_provider.iml" filepath="$PROJECT_DIR$/programs/health_parent/service_provider/service_provider.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ssm/spring_mvc/spring_mvc.iml" filepath="$PROJECT_DIR$/ssm/spring_mvc/spring_mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot/springdata-redis-demo/springdata-redis-demo.iml" filepath="$PROJECT_DIR$/springboot/springdata-redis-demo/springdata-redis-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/ssm.iml" filepath="$PROJECT_DIR$/ssm/ssm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/programs/yun_note/yun_note.iml" filepath="$PROJECT_DIR$/programs/yun_note/yun_note.iml" />
-      <module fileurl="file://$PROJECT_DIR$/micrioservice/zookeeper_stu/zookeeper_stu.iml" filepath="$PROJECT_DIR$/micrioservice/zookeeper_stu/zookeeper_stu.iml" />
     </modules>
   </component>
 </project>
