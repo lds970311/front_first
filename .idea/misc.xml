@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/javaweb/mvn_web" />
     <file type="web" url="file://$PROJECT_DIR$/programs/health_parent/backend" />
@@ -41,6 +42,7 @@
         <option value="$PROJECT_DIR$/micrioservice/hotel-admin/pom.xml" />
         <option value="$PROJECT_DIR$/programs/meinian_parent/pom.xml" />
         <option value="$PROJECT_DIR$/springboot/hm-dianping/pom.xml" />
+        <option value="$PROJECT_DIR$/bigData/hadoop/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
