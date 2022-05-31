@@ -5,56 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e16a9216-825c-4f87-b548-9cb36c52acca" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/../bigData.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/hadoop_cluster.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/jpsall.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/refresh_node.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/xsync.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java_advance/concurrent/concurrent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../java_advance/concurrent/concurrent.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java_advance/design_pattern/design_pattern.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../java_advance/design_pattern/design_pattern.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaweb/jedis/jedis.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaweb/mvn_web/mvn_web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../javaweb/mvn_web/mvn_web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../micrioservice/cloud-demo/cloud-demo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../micrioservice/cloud-demo/feign-api/feign-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../micrioservice/cloud-demo/feign-api/feign-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../micrioservice/cloud-demo/gateway/gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../micrioservice/cloud-demo/gateway/gateway.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../micrioservice/hotel-admin/hotel-admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../micrioservice/hotel-admin/hotel-admin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../micrioservice/hotel-demo/hotel-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../micrioservice/hotel-demo/hotel-demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../micrioservice/rabbitmq-demo/consumer/consumer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../micrioservice/rabbitmq-demo/consumer/consumer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../micrioservice/rabbitmq-demo/publisher/publisher.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../micrioservice/rabbitmq-demo/publisher/publisher.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../micrioservice/rabbitmq-demo/rabbitmq-demo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../micrioservice/zookeeper_stu/zookeeper_stu.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../programs/health_parent/backend/backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../programs/health_parent/backend/backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../programs/health_parent/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../programs/health_parent/common/common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../programs/health_parent/health_parent.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../programs/health_parent/interfaces/interfaces.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../programs/health_parent/interfaces/interfaces.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../programs/health_parent/service_provider/service_provider.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../programs/health_parent/service_provider/service_provider.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../programs/meinian_parent/meinian_parent.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../programs/meinian_parent/meinian_service/meinian_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../programs/meinian_parent/meinian_service/meinian_service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../programs/meinian_parent/meinian_web/meinian_web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../programs/meinian_parent/meinian_web/meinian_web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../programs/yun_note/yun_note.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../programs/yun_note/yun_note.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/boot_ssmp/boot_ssmp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../springboot/boot_ssmp/boot_ssmp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ssm/mvc_annotation/mvc_annotation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ssm/mvc_annotation/mvc_annotation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ssm/my_spring/my_spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ssm/my_spring/my_spring.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ssm/mybatis/mybatis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ssm/mybatis/mybatis.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ssm/mybatis_generator/mybatis_generator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ssm/mybatis_generator/mybatis_generator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ssm/mybatis_ssm/mybatis_ssm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ssm/mybatis_ssm/mybatis_ssm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ssm/spring_mvc/spring_mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ssm/spring_mvc/spring_mvc.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/hdfs/HdfsClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/xml/configure.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/xml/fsimageA.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -92,11 +69,102 @@
     &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager" selected="JUnit.HdfsClient.fileStatusTest">
+    <configuration name="HdfsClient.deleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hadoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.hdfs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evan.hdfs" />
+      <option name="MAIN_CLASS_NAME" value="com.evan.hdfs.HdfsClient" />
+      <option name="METHOD_NAME" value="deleteTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HdfsClient.downloadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hadoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.hdfs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evan.hdfs" />
+      <option name="MAIN_CLASS_NAME" value="com.evan.hdfs.HdfsClient" />
+      <option name="METHOD_NAME" value="downloadTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HdfsClient.fileInfoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hadoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.hdfs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evan.hdfs" />
+      <option name="MAIN_CLASS_NAME" value="com.evan.hdfs.HdfsClient" />
+      <option name="METHOD_NAME" value="fileInfoTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HdfsClient.fileStatusTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hadoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.hdfs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evan.hdfs" />
+      <option name="MAIN_CLASS_NAME" value="com.evan.hdfs.HdfsClient" />
+      <option name="METHOD_NAME" value="fileStatusTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HdfsClient.putTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hadoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.hdfs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.evan.hdfs" />
+      <option name="MAIN_CLASS_NAME" value="com.evan.hdfs.HdfsClient" />
+      <option name="METHOD_NAME" value="putTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.HdfsClient.fileStatusTest" />
+        <item itemvalue="JUnit.HdfsClient.fileInfoTest" />
+        <item itemvalue="JUnit.HdfsClient.deleteTest" />
+        <item itemvalue="JUnit.HdfsClient.downloadTest" />
+        <item itemvalue="JUnit.HdfsClient.putTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -106,12 +174,27 @@
       <option name="presentableId" value="Default" />
       <updated>1653768200379</updated>
       <workItem from="1653768202034" duration="232000" />
-      <workItem from="1653768487977" duration="6298000" />
+      <workItem from="1653768487977" duration="7392000" />
+      <workItem from="1653883410269" duration="1671000" />
+      <workItem from="1653885483965" duration="7520000" />
     </task>
+    <task id="LOCAL-00001" summary="1. 编写hadoop脚本(文件同步,jps,启动/关闭集群)">
+      <created>1653870540993</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653870540993</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1. 编写hadoop脚本(文件同步,jps,启动/关闭集群)" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 编写hadoop脚本(文件同步,jps,启动/关闭集群)" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
