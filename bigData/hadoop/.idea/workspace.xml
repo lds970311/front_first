@@ -5,22 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e16a9216-825c-4f87-b548-9cb36c52acca" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/wordcount/WordCountDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/wordcount/WordCountMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/wordcount/WordCountReducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/wordcount2/WordCountDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/wordcount2/WordCountMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/wordcount2/WordCountReducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/words/hello.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writable/FlowBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writable/FlowDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writable/FlowMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writable/FlowReducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/words/phone_data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "F:/Java/front_first/bigData/hadoop/src/main/java/com/evan/mapreduce/wordcount2",
+    "last_opened_file_path": "F:/Java/front_first/bigData/hadoop/src/test/resources/words",
     "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -87,10 +77,24 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Java\front_first\bigData\hadoop\src\test\resources\words" />
       <recent name="F:\Java\front_first\bigData\hadoop\src\main\java\com\evan\mapreduce\wordcount2" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.WordCountDriver">
+  <component name="RunManager" selected="应用程序.FlowDriver">
+    <configuration name="FlowDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.evan.mapreduce.writable.FlowDriver" />
+      <module name="hadoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.mapreduce.writable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WordCountDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.evan.mapreduce.wordcount.WordCountDriver" />
       <module name="hadoop" />
@@ -115,22 +119,6 @@
       <option name="PACKAGE_NAME" value="com.evan.hdfs" />
       <option name="MAIN_CLASS_NAME" value="com.evan.hdfs.HdfsClient" />
       <option name="METHOD_NAME" value="deleteTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HdfsClient.downloadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hadoop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.evan.hdfs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.evan.hdfs" />
-      <option name="MAIN_CLASS_NAME" value="com.evan.hdfs.HdfsClient" />
-      <option name="METHOD_NAME" value="downloadTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.FlowDriver" />
         <item itemvalue="应用程序.WordCountDriver" />
         <item itemvalue="JUnit.HdfsClient.fileStatusTest" />
         <item itemvalue="JUnit.HdfsClient.fileInfoTest" />
         <item itemvalue="JUnit.HdfsClient.deleteTest" />
-        <item itemvalue="JUnit.HdfsClient.downloadTest" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +177,7 @@
       <workItem from="1653768202034" duration="232000" />
       <workItem from="1653768487977" duration="7392000" />
       <workItem from="1653883410269" duration="1671000" />
-      <workItem from="1653885483965" duration="16064000" />
+      <workItem from="1653885483965" duration="21754000" />
     </task>
     <task id="LOCAL-00001" summary="1. 编写hadoop脚本(文件同步,jps,启动/关闭集群)">
       <created>1653870540993</created>
@@ -205,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654004646160</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1. MapReduce的wordcount案例">
+      <created>1654047571326</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654047571326</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +209,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1. 编写hadoop脚本(文件同步,jps,启动/关闭集群)" />
     <MESSAGE value="1. hdfs Java API" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. hdfs Java API" />
+    <MESSAGE value="1. MapReduce的wordcount案例" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. MapReduce的wordcount案例" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
