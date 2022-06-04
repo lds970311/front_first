@@ -5,12 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e16a9216-825c-4f87-b548-9cb36c52acca" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writable/FlowBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writable/FlowDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writable/FlowMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writable/FlowReducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/words/phone_data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/combineTextInputFormat/WordCountDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/combineTextInputFormat/WordCountMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/combineTextInputFormat/WordCountReducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writable/ProvincePartitioner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writableComparable/FlowBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writableComparable/FlowDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writableComparable/FlowMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writableComparable/FlowReducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writableComparable/ProvincePartitioner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/results1/._SUCCESS.crc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/results1/.part-r-00000.crc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/results1/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/results1/part-r-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DB/.idea/DB.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DB/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DB/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DB/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writable/FlowDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/writable/FlowDriver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,29 +73,32 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "F:/Java/front_first/bigData/hadoop/src/test/resources/words",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.import",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Java/front_first/bigData/hadoop/src/main/java/com/evan/mapreduce/writableComparable&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Java\front_first\bigData\hadoop\src\main\java\com\evan\mapreduce\writableComparable" />
+      <recent name="F:\Java\front_first\bigData\hadoop\src\main\java\com\evan\mapreduce" />
+      <recent name="F:\Java\front_first\bigData\hadoop\src\main\java\com\evan\mapreduce\combineTextInputFormat" />
+      <recent name="F:\Java\front_first\bigData\hadoop\src\test\resources" />
       <recent name="F:\Java\front_first\bigData\hadoop\src\test\resources\words" />
-      <recent name="F:\Java\front_first\bigData\hadoop\src\main\java\com\evan\mapreduce\wordcount2" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.FlowDriver">
+  <component name="RunManager" selected="应用程序.com.evan.mapreduce.writableComparable.FlowDriver">
     <configuration name="FlowDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.evan.mapreduce.writable.FlowDriver" />
       <module name="hadoop" />
@@ -108,34 +125,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HdfsClient.deleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.evan.mapreduce.combineTextInputFormat.WordCountDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.evan.mapreduce.combineTextInputFormat.WordCountDriver" />
       <module name="hadoop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.evan.hdfs.*" />
+          <option name="PATTERN" value="com.evan.mapreduce.combineTextInputFormat.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.evan.hdfs" />
-      <option name="MAIN_CLASS_NAME" value="com.evan.hdfs.HdfsClient" />
-      <option name="METHOD_NAME" value="deleteTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HdfsClient.fileInfoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.evan.mapreduce.writableComparable.FlowDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.evan.mapreduce.writableComparable.FlowDriver" />
       <module name="hadoop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.evan.hdfs.*" />
+          <option name="PATTERN" value="com.evan.mapreduce.writableComparable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.evan.hdfs" />
-      <option name="MAIN_CLASS_NAME" value="com.evan.hdfs.HdfsClient" />
-      <option name="METHOD_NAME" value="fileInfoTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.com.evan.mapreduce.writableComparable.FlowDriver" />
         <item itemvalue="应用程序.FlowDriver" />
+        <item itemvalue="应用程序.com.evan.mapreduce.combineTextInputFormat.WordCountDriver" />
         <item itemvalue="应用程序.WordCountDriver" />
         <item itemvalue="JUnit.HdfsClient.fileStatusTest" />
-        <item itemvalue="JUnit.HdfsClient.fileInfoTest" />
-        <item itemvalue="JUnit.HdfsClient.deleteTest" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +188,9 @@
       <workItem from="1653768202034" duration="232000" />
       <workItem from="1653768487977" duration="7392000" />
       <workItem from="1653883410269" duration="1671000" />
-      <workItem from="1653885483965" duration="21754000" />
+      <workItem from="1653885483965" duration="22407000" />
+      <workItem from="1654168211677" duration="8446000" />
+      <workItem from="1654248820002" duration="2394000" />
     </task>
     <task id="LOCAL-00001" summary="1. 编写hadoop脚本(文件同步,jps,启动/关闭集群)">
       <created>1653870540993</created>
@@ -200,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654047571326</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1. MapReduce的序列化, 实现流量统计案例">
+      <created>1654167472077</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654167472077</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +230,8 @@
     <MESSAGE value="1. 编写hadoop脚本(文件同步,jps,启动/关闭集群)" />
     <MESSAGE value="1. hdfs Java API" />
     <MESSAGE value="1. MapReduce的wordcount案例" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. MapReduce的wordcount案例" />
+    <MESSAGE value="1. MapReduce的序列化, 实现流量统计案例" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. MapReduce的序列化, 实现流量统计案例" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

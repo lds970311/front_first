@@ -3,7 +3,7 @@
 // FILENAME : FlowDriver.java
 // STATEMENT: 
 
-package com.evan.mapreduce.writable;
+package com.evan.mapreduce.writableComparable;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -26,12 +26,13 @@ public class FlowDriver {
         job.setReducerClass(FlowReducer.class);
 
         //设置map输出的kv类型
-        job.setMapOutputKeyClass(Text.class);
-        job.setMapOutputValueClass(FlowBean.class);
+        job.setMapOutputKeyClass(FlowBean.class);
+        job.setMapOutputValueClass(Text.class);
 
         //设置最终输出类型
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(FlowBean.class);
+
 
         //8 指定自定义分区器
         job.setPartitionerClass(ProvincePartitioner.class);
@@ -39,8 +40,8 @@ public class FlowDriver {
         job.setNumReduceTasks(4);
 
         //设置输入输出路径
-        FileInputFormat.setInputPaths(job, new Path("F:\\Java\\front_first\\bigData\\hadoop\\src\\test\\resources\\words\\phone_data.txt"));
-        FileOutputFormat.setOutputPath(job, new Path("F:\\Java\\front_first\\bigData\\hadoop\\src\\test\\resources\\results1"));
+        FileInputFormat.setInputPaths(job, new Path("F:\\Java\\front_first\\bigData\\hadoop\\src\\test\\resources\\results1\\part-r-00000"));
+        FileOutputFormat.setOutputPath(job, new Path("F:\\Java\\front_first\\bigData\\hadoop\\src\\test\\resources\\results2"));
 
         boolean completion = job.waitForCompletion(true);
         System.exit(completion ? 0 : 1);
