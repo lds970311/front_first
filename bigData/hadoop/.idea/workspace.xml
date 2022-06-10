@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e16a9216-825c-4f87-b548-9cb36c52acca" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/logs/result/._SUCCESS.crc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/logs/result/.part-m-00000.crc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/logs/result/_SUCCESS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/logs/result/part-m-00000" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/yarn/wordcount/WordCount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/yarn/wordcount/WordCountDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/rmAllLogs.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/outputformat/LogDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/evan/mapreduce/outputformat/LogDriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/xml/configure.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/xml/configure.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +174,7 @@
       <workItem from="1654168211677" duration="8446000" />
       <workItem from="1654248820002" duration="21365000" />
       <workItem from="1654614870718" duration="5093000" />
-      <workItem from="1654682732012" duration="972000" />
+      <workItem from="1654682732012" duration="7426000" />
     </task>
     <task id="LOCAL-00001" summary="1. 编写hadoop脚本(文件同步,jps,启动/关闭集群)">
       <created>1653870540993</created>
@@ -234,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654596272184</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="1. map与reduce端开启数据压缩">
+      <created>1654698554915</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1654698554915</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +254,8 @@
     <MESSAGE value="1. MapReduce的Outputformat指定输出路径" />
     <MESSAGE value="1. mapjoin&amp;reduceJoin实现多表关联输出" />
     <MESSAGE value="1. etl" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. etl" />
+    <MESSAGE value="1. map与reduce端开启数据压缩" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. map与reduce端开启数据压缩" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
