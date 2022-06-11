@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e16a9216-825c-4f87-b548-9cb36c52acca" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/yarn/wordcount/WordCount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/yarn/wordcount/WordCountDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/rmAllLogs.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../automatic_test/py_testA/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../automatic_test/py_testA/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/rpc/HDFSClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/rpc/NameNodeServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/evan/rpc/RPCProtocol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/xml/configure.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/xml/configure.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +31,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -83,7 +87,20 @@
       <recent name="F:\Java\front_first\bigData\hadoop\src\main\java\com\evan\mapreduce\combiner" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.LogDriver">
+  <component name="RunManager" selected="应用程序.HDFSClient">
+    <configuration name="HDFSClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.evan.rpc.HDFSClient" />
+      <module name="hadoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.evan.rpc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LogDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.evan.mapreduce.outputformat.LogDriver" />
       <module name="hadoop" />
@@ -97,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TableDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.evan.mapreduce.reduceJoin.TableDriver" />
+    <configuration name="NameNodeServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.evan.rpc.NameNodeServer" />
       <module name="hadoop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.evan.mapreduce.reduceJoin.*" />
+          <option name="PATTERN" value="com.evan.rpc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,19 +133,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.evan.mapreduce.etl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.evan.mapreduce.combiner.WordCountDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.evan.mapreduce.combiner.WordCountDriver" />
-      <module name="hadoop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.evan.mapreduce.combiner.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -151,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.HDFSClient" />
+        <item itemvalue="应用程序.NameNodeServer" />
         <item itemvalue="应用程序.LogDriver" />
         <item itemvalue="应用程序.WebLogDriver" />
         <item itemvalue="应用程序.com.evan.mapreduce.mapjoin.TableDriver" />
-        <item itemvalue="应用程序.TableDriver" />
-        <item itemvalue="应用程序.com.evan.mapreduce.combiner.WordCountDriver" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +178,7 @@
       <workItem from="1654168211677" duration="8446000" />
       <workItem from="1654248820002" duration="21365000" />
       <workItem from="1654614870718" duration="5093000" />
-      <workItem from="1654682732012" duration="7426000" />
+      <workItem from="1654682732012" duration="14076000" />
     </task>
     <task id="LOCAL-00001" summary="1. 编写hadoop脚本(文件同步,jps,启动/关闭集群)">
       <created>1653870540993</created>
@@ -239,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654698554915</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="1. yarn: wordcount动态参数">
+      <created>1654862345093</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1654862345094</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +266,8 @@
     <MESSAGE value="1. mapjoin&amp;reduceJoin实现多表关联输出" />
     <MESSAGE value="1. etl" />
     <MESSAGE value="1. map与reduce端开启数据压缩" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. map与reduce端开启数据压缩" />
+    <MESSAGE value="1. yarn: wordcount动态参数" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. yarn: wordcount动态参数" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
