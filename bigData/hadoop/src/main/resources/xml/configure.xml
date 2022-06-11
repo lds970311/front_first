@@ -1,52 +1,54 @@
 <?xml version="1.0"?>
-<allocations>
-    <!-- 单个队列中 Application Master 占用资源的最大比例,取值 0-1 ，企业一般配置 0.1
-   -->
-    <queueMaxAMShareDefault>0.5</queueMaxAMShareDefault>
-    <!-- 单个队列最大资源的默认值 test atguigu default -->
-    <queueMaxResourcesDefault>4096mb,4vcores</queueMaxResourcesDefault>
-    <!-- 增加一个队列 test -->
-    <queue name="test">
-        <!-- 队列最小资源 -->
-        <minResources>2048mb,2vcores</minResources>
-        <!-- 队列最大资源 -->
-        <maxResources>4096mb,4vcores</maxResources>
-        <!-- 队列中最多同时运行的应用数，默认 50，根据线程数配置 -->
-        <maxRunningApps>4</maxRunningApps>
-        <!-- 队列中 Application Master 占用资源的最大比例 -->
-        <maxAMShare>0.5</maxAMShare>
-        <!-- 该队列资源权重,默认值为 1.0 -->
-        <weight>1.0</weight>
-        <!-- 队列内部的资源分配策略 -->
-        <schedulingPolicy>fair</schedulingPolicy>
-    </queue>
-    <!-- 增加一个队列 atguigu -->
-    <queue name="atguigu" type="parent">
-        <!-- 队列最小资源 -->
-        <minResources>2048mb,2vcores</minResources>
-        <!-- 队列最大资源 -->
-        <maxResources>4096mb,4vcores</maxResources>
-        <!-- 队列中最多同时运行的应用数，默认 50，根据线程数配置 -->
-        <maxRunningApps>4</maxRunningApps>
-        <!-- 队列中 Application Master 占用资源的最大比例 -->
-        <maxAMShare>0.5</maxAMShare>
-        <!-- 该队列资源权重,默认值为 1.0 -->
-        <weight>1.0</weight>
-        <!-- 队列内部的资源分配策略 -->
-        <schedulingPolicy>fair</schedulingPolicy>
-    </queue>
-    <!-- 任务队列分配策略,可配置多层规则,从第一个规则开始匹配,直到匹配成功 -->
-    <queuePlacementPolicy>
-        <!-- 提交任务时指定队列,如未指定提交队列,则继续匹配下一个规则; false 表示：如果指
-       定队列不存在,不允许自动创建-->
-        <rule name="specified" create="false"/>
-        <!-- 提交到 root.group.username 队列,若 root.group 不存在,不允许自动创建；若
-       root.group.user 不存在,允许自动创建 -->
-        <rule name="nestedUserQueue" create="true">
-            <rule name="primaryGroup" create="false"/>
-        </rule>
-        <!-- 最后一个规则必须为 reject 或者 default。Reject 表示拒绝创建提交失败，
-       default 表示把任务提交到 default 队列 -->
-        <rule name="reject"/>
-    </queuePlacementPolicy>
-</allocations>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <!-- 指定 MapReduce 程序运行在 Yarn 上 -->
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+    <property>
+        <name>yarn.app.mapreduce.am.env</name>
+        <value>HADOOP_MAPRED_HOME=/usr/local/docker_images/hadoop/hadoop-3.3.3</value>
+    </property>
+    <property>
+        <name>mapreduce.map.env</name>
+        <value>HADOOP_MAPRED_HOME=/usr/local/docker_images/hadoop/hadoop-3.3.3</value>
+    </property>
+    <property>
+        <name>mapreduce.reduce.env</name>
+        <value>HADOOP_MAPRED_HOME=/usr/local/docker_images/hadoop/hadoop-3.3.3</value>
+    </property>
+    <property>
+        <name>mapreduce.jobhistory.address</name>
+        <value>hadoop132:10020</value>
+    </property>
+    <!-- 历史服务器 web 端地址 -->
+    <property>
+        <name>mapreduce.jobhistory.webapp.address</name>
+        <value>hadoop132:19888</value>
+    </property>
+
+    <!--生产环境配置-->
+    <property>
+        <name>
+            mapreduce.task.io.sort.mb
+        </name>
+        <value>200m</value>
+    </property>
+    <property>
+        <name>mapreduce.map.sort.spill.percent</name>
+        <value>85%</value>
+    </property>
+    <property>
+        <name>mapreduce.task.io.sort.factor</name>
+        <value>20</value>
+    </property>
+    <property>
+        <name>mapreduce.map.memory.mb</name>
+        <value>2048MB</value>
+    </property>
+    <property>
+        <name></name>
+        <value></value>
+    </property>
+</configuration>
