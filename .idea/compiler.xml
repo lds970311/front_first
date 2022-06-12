@@ -30,6 +30,7 @@
         <module name="boot_mongodb" />
         <module name="interfaces" />
         <module name="mvn_web" />
+        <module name="zookeeper" />
         <module name="service_provider" />
         <module name="meinian_pojo" />
         <module name="zookeeper_stu" />
