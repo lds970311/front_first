@@ -43,6 +43,7 @@
         <option value="$PROJECT_DIR$/programs/meinian_parent/pom.xml" />
         <option value="$PROJECT_DIR$/springboot/hm-dianping/pom.xml" />
         <option value="$PROJECT_DIR$/bigData/hadoop/pom.xml" />
+        <option value="$PROJECT_DIR$/bigData/zookeeper/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
