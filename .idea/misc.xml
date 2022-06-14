@@ -44,6 +44,7 @@
         <option value="$PROJECT_DIR$/springboot/hm-dianping/pom.xml" />
         <option value="$PROJECT_DIR$/bigData/hadoop/pom.xml" />
         <option value="$PROJECT_DIR$/bigData/zookeeper/pom.xml" />
+        <option value="$PROJECT_DIR$/bigData/hive/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

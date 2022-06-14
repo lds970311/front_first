@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="meinian_interface" />
+        <module name="hive" />
         <module name="mvc_annotation" />
         <module name="design_pattern" />
         <module name="mybatis_generator" />
