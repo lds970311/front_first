@@ -36,4 +36,14 @@
         <name>hive.metastore.warehouse.dir</name>
         <value>/user/hive/warehouse</value>
     </property>
+    <!-- 指定 hiveserver2 连接的 host -->
+    <property>
+        <name>hive.server2.thrift.bind.host</name>
+        <value>hadoop149</value>
+    </property>
+    <!-- 指定 hiveserver2 连接的端口号 -->
+    <property>
+        <name>hive.server2.thrift.port</name>
+        <value>10000</value>
+    </property>
 </configuration>
