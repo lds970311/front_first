@@ -5,8 +5,7 @@ if [ ! -d $HIVE_LOG_DIR ]; then
 fi
 #检查进程是否运行正常，参数 1 为进程名，参数 2 为进程端口
 function check_process() {
-  pid=$(ps -ef 2>/dev/null | grep -v grep | grep -i $1 | awk '{print
-$2}')
+  pid=$(ps -ef 2>/dev/null | grep -v grep | grep -i $1 | awk '{print $2}')
   ppid=$(
     netstat -nltp 2>/dev/null | grep $2 | awk '{print $7}' | cut -
     d '/' -f 1
@@ -17,8 +16,7 @@ $2}')
 
 function hive_start() {
   metapid=$(check_process HiveMetastore 9083)
-  cmd="nohup hive --service metastore > $HIVE_LOG_DIR/metastore.log 2>&1
-&"
+  cmd="nohup hive --service metastore > $HIVE_LOG_DIR/metastore.log 2>&1 &"
   [ -z "$metapid" ] && eval $cmd || echo "Metastroe 服务已启动"
   server2pid=$(check_process HiveServer2 10000)
   cmd="nohup hiveserver2 >$HIVE_LOG_DIR/hiveServer2.log 2>&1 &"
