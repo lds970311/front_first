@@ -2,7 +2,10 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/main/resources/hql/01.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/hql/bucket.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/hql/dept_create.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/hql/emp.sql" dialect="HiveQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/hql/partition.sql" dialect="HiveQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/hql/test1.sql" dialect="HiveQL" />
   </component>
 </project>
