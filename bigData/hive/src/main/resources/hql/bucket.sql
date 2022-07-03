@@ -1,4 +1,4 @@
-use part;
+use business;
 
 create table stu_buck
 (
@@ -16,3 +16,12 @@ from stu_buck;
 -- 抽样查询
 select *
 from stu_buck tablesample (bucket 2 out of 4);
+
+
+create table business
+(
+    name      string,
+    orderdate string,
+    cost      int
+) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+

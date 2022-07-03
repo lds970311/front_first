@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="hadoop132" uuid="0d778291-594a-4e2c-b10a-eab6d85409ef">
+    <data-source source="LOCAL" name="hadoop132" uuid="ff85b4b1-6ec7-4650-a339-9918d3d1298d">
       <driver-ref>hive</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.apache.hive.jdbc.HiveDriver</jdbc-driver>
