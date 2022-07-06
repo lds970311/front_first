@@ -10,6 +10,7 @@ import java.util.concurrent.FutureTask;
 @Slf4j(topic = "c.CreateThread")
 public class CreateThread {
 
+
     @Test
     public void createThread() {
         Thread t1 = new Thread(
@@ -30,7 +31,8 @@ public class CreateThread {
             }
         });
 
-        new Thread(task, "t1").start();
+        Thread t1 = new Thread(task, "t1");
+        t1.start();
         Integer result = null;
         try {
             result = task.get();
@@ -40,3 +42,5 @@ public class CreateThread {
         log.info("result = {}", result);
     }
 }
+
+
