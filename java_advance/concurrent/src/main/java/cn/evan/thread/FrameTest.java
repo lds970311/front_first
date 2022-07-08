@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 public class FrameTest {
     public static void main(String[] args) {
         method1(11);
-        log.debug("end");
+        log.debug("e");
     }
 
     public static void method1(int x) {
