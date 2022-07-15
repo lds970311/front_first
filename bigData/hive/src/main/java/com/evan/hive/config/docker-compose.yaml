@@ -1,0 +1,15 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:8.0.26
+    container_name: mysql8
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - "/usr/local/docker_images/mysql8/conf:/etc/mysql/conf.d"
+      - "/usr/local/docker_images/mysql8/logs:/logs"
+      - "/usr/local/docker_images/mysql8/data:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: 19970311  #设置root帐号密码
+      sql-mode: NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+    ports:
+      - "3308:3306"
