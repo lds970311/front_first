@@ -1,5 +1,7 @@
 use business;
 
+drop table if exists student;
+
 create table stu_buck
 (
     id   int,
