@@ -8,3 +8,7 @@ const obj = {
 
 let res = obj.a === 1 && obj.a === 2 && obj.a === 3
 console.log(res)
+
+let obj1 = {
+    a: 1
+}
