@@ -2,48 +2,50 @@
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <configuration>
     <!-- jdbc 连接的 URL -->
-    <property>
+    <!--<property>
         <name>javax.jdo.option.ConnectionURL</name>
         <value>jdbc:mysql://hadoop149:3306/metastore?useSSL=false</value>
     </property>
-    <!-- jdbc 连接的 Driver-->
+    &lt;!&ndash; jdbc 连接的 Driver&ndash;&gt;
     <property>
         <name>javax.jdo.option.ConnectionDriverName</name>
         <value>com.mysql.cj.jdbc.Driver</value>
     </property>
-    <!-- jdbc 连接的 username-->
+    &lt;!&ndash; jdbc 连接的 username&ndash;&gt;
     <property>
         <name>javax.jdo.option.ConnectionUserName</name>
         <value>root</value>
     </property>
-    <!-- jdbc 连接的 password -->
+    &lt;!&ndash; jdbc 连接的 password &ndash;&gt;
     <property>
         <name>javax.jdo.option.ConnectionPassword</name>
         <value>19970311</value>
     </property>
-    <!-- Hive 元数据存储版本的验证 -->
+    &lt;!&ndash; Hive 元数据存储版本的验证 &ndash;&gt;
     <property>
         <name>hive.metastore.schema.verification</name>
         <value>false</value>
     </property>
-    <!--元数据存储授权-->
+    &lt;!&ndash;元数据存储授权&ndash;&gt;
     <property>
         <name>hive.metastore.event.db.notification.api.auth</name>
         <value>false</value>
     </property>
-    <!-- Hive 默认在 HDFS 的工作目录 -->
+    &lt;!&ndash; Hive 默认在 HDFS 的工作目录 &ndash;&gt;
     <property>
         <name>hive.metastore.warehouse.dir</name>
         <value>/user/hive/warehouse</value>
     </property>
-    <!-- 指定 hiveserver2 连接的 host -->
+    &lt;!&ndash; 指定 hiveserver2 连接的 host &ndash;&gt;
     <property>
         <name>hive.server2.thrift.bind.host</name>
         <value>hadoop149</value>
     </property>
-    <!-- 指定 hiveserver2 连接的端口号 -->
+    &lt;!&ndash; 指定 hiveserver2 连接的端口号 &ndash;&gt;
     <property>
         <name>hive.server2.thrift.port</name>
         <value>10000</value>
-    </property>
+    </property>-->
+
 </configuration>
+
