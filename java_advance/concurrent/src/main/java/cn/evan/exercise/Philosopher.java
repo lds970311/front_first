@@ -9,6 +9,8 @@ import lombok.AllArgsConstructor;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 @Slf4j(topic = "c.Philosopher")
 public class Philosopher extends Thread {
 
@@ -48,15 +50,23 @@ public class Philosopher extends Thread {
     public void run() {
         while (true) {
             // 获得左手筷子
-            synchronized (left) {
-                // 获得右手筷子
-                synchronized (right) {
-                    // 吃饭
-                    eat();
+            if (left.tryLock()) {
+                try {
+                    //获得右手筷子
+                    if (right.tryLock()) {
+                        try {
+                            this.eat();
+                        } finally {
+                            // 放下右手筷子
+                            right.unlock();
+                        }
+                    }
+                } finally {
+                    // 放下左手筷子
+                    left.unlock();
                 }
-                // 放下右手筷子
             }
-            // 放下左手筷子
+
         }
     }
 }
@@ -64,6 +74,6 @@ public class Philosopher extends Thread {
 
 @AllArgsConstructor
 @ToString
-class Chopstick {
+class Chopstick extends ReentrantLock {
     String name;
 }
